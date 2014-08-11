@@ -1,0 +1,139 @@
+!!! 5
+%html
+  %head
+    %title DEF CON CTF 2014
+    %link{rel: 'stylesheet', href: 'index.css'}
+  %body
+    .scene
+      .layer#sun
+      .layer.cloud#cloudbase
+      .layer.cloud#cloudhighlight
+    .layer.container
+      .banner.border-box
+        .junk
+          %h1 2014
+          .credit
+            %h2 DEF CON Capture the Flag
+            %h3 by
+            %h2 Legitimate Business Syndicate
+        %br.clear
+      #finals.border-box
+        .description
+          %h1 Finals
+          %p DEF CON 22, Rio Hotel & Casino, Las Vegas, USA
+          %p Conference Aug. 7-10 2014
+          %p Capture the Flag Aug. 8-10 2014
+          %p
+            %a{href: 'https://ctftime.org/live/134'} Live scoring feed from CTF Time
+          %p 
+            Find us between Track 1 and the vendor area, accessible from
+            the main hallway and the Track 1 hallway.
+          %dl
+            %dt Friday
+            %dd 10am-8pm
+            %dt Saturday
+            %dd 10am-8pm
+            %dt Sunday
+            %dd 10am-2pm
+        .map
+          %img{src: 'defcon_map.png', alt: 'CTF is between Track 1 and the vendor area, accessible from the main hallway and the Track 1 hallway' }
+        %br.clear
+      #bottom-chunk
+        #competitors.border-box
+          %h1 Finalists
+          %table
+            %thead
+              %tr
+                %th Event
+                %th Qualified Team
+            %tbody
+              %tr
+                %td DEF CON 21 CTF
+                %td Plaid Parliament of Pwning
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td [CBA]9447
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td Reckless Abandon
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td Routards
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td raon_ASRT
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td KAIST GoN
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td shellphish
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td CodeRed
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td HITCON
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td blue-lotus
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td HackingForChiMac
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td (Mostly) Men in Black Hats
+              %tr
+                %td DEF CON 22 CTF Quals
+                %td w3stormz
+              %tr
+                %td RuCTFe
+                %td More Smoked Leet Chicken
+              %tr
+                %td Ghost In The Shellcode
+                %td Dragon Sector
+              %tr
+                %td Olympic CTF
+                %td [SEWorks]penthackon
+              %tr
+                %td Boston Key Party
+                %td StratumAuhuur
+              %tr
+                %td Codegate Finals
+                %td Gallopsled
+              %tr
+                %td PHDays
+                %td BalalaikaCr3w
+              %tr
+                %td SecuInside
+                %td Binja
+        #remnants.border-box
+          #quals
+            %h1 Quals Results
+            %ul
+              %li
+                %a{:href => "/statdump_2014.tar.bz2"} Complete Data Dump
+              %li
+                %a{:href => "quals_2014.csv"} Raw CSV
+          #links
+            %h1 Links
+            %ul
+              %li
+                %a{href: 'https://blog.legitbs.net'} Blog
+              %li
+                %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
+              %li
+                %a{href: 'https://blog.legitbs.net/p/2013-releases.html'} 2013 Releases
+              %li
+                %a{href: 'https://blog.legitbs.net/p/2014-releases.html'} 2014 Releases
+      %br.clear
+    .layer#casinos
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-38870141-1', 'legitbs.net');
+      ga('send', 'pageview');
+
