@@ -1,4 +1,4 @@
-#@import url(https://fonts.googleapis.com/css?family=Exo+2:100,700|Merriweather+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,700|Merriweather+Sans:300);
 @-webkit-keyframes clouds {
   from {
     background-position: 0px 0px; }
@@ -55,6 +55,7 @@ body {
     padding: 20px; }
   .container .banner {
     margin-top: -20px;
+    margin-bottom: 0px;
     text-align: center; }
     .container .banner .junk {
       margin: auto;
@@ -76,7 +77,10 @@ body {
           margin: 0; }
 
 .border-box h1 {
-  margin-top: 0; }
+  margin-top: 0.75em;
+  margin-bottom: 0.2em; }
+  .border-box h1:first-child {
+    margin-top: 0; }
 .border-box ul {
   list-style-type: none;
   padding: 0;
@@ -87,25 +91,23 @@ body {
 .border-box p {
   margin: 0 auto 4px; }
 
-#finals .description {
-  float: left;
-  text-align: left;
-  width: 500px; }
-#finals .map {
-  float: right;
-  max-width: 460px;
-  margin: -20px;
-  margin-bottom: -25px; }
+#competitors td {
+  padding: 4px; }
 
-#bottom-chunk #competitors {
-  text-align: left;
-  width: 500px;
-  float: left; }
-  #bottom-chunk #competitors td {
-    padding-right: 20px; }
-#bottom-chunk #remnants {
-  width: 296px;
-  float: right; }
+#left-chunk {
+  width: 350px;
+  float: left;
+  margin-right: -20px; }
+
+#right-chunk {
+  width: 540px;
+  float: right;
+  text-align: left; }
+  #right-chunk p {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+    #right-chunk p img {
+      text-align: center; }
 
 .clear {
   clear: both; }

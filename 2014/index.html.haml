@@ -3,6 +3,7 @@
   %head
     %title DEF CON CTF 2014
     %link{rel: 'stylesheet', href: 'index.css'}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
   %body
     .scene
       .layer#sun
@@ -17,96 +18,81 @@
             %h3 by
             %h2 Legitimate Business Syndicate
         %br.clear
-      #finals.border-box
-        .description
+      #left-chunk
+        #competitors.border-box
+          %h1 Final Scores
+          %table
+            %thead
+              %tr
+                %th Team
+                %th Score
+            %tbody
+              %tr
+                %td Plaid Parliament of Pwning
+                %td 11263
+              %tr
+                %td HITCON
+                %td 7833
+              %tr
+                %td Dragon Sector
+                %td 4421
+              %tr
+                %td Reckless Abandon
+                %td 4020
+              %tr
+                %td blue-lotus
+                %td 3233
+              %tr
+                %td (Mostly) Men in Black Hats
+                %td 2594
+              %tr
+                %td raon_ASRT
+                %td 2281
+              %tr
+                %td StratumAuhuur
+                %td 1529
+              %tr
+                %td [CBA]9447
+                %td 1519
+              %tr
+                %td KAIST GoN
+                %td 1334
+              %tr
+                %td Routards
+                %td 1262
+              %tr
+                %td More Smoked Leet Chicken
+                %td 1248
+              %tr
+                %td Binja
+                %td 1153
+              %tr
+                %td CodeRed
+                %td 997
+              %tr
+                %td w3stormz
+                %td 987
+              %tr
+                %td [SEWorks]penthackon
+                %td 979
+              %tr
+                %td shellphish
+                %td 899
+              %tr
+                %td BalalaikaCr3w
+                %td 937
+              %tr
+                %td Gallopsled
+                %td 921
+              %tr
+                %td HackingForChiMac
+                %td 546
+        #finals.border-box
           %h1 Finals
           %p DEF CON 22, Rio Hotel & Casino, Las Vegas, USA
           %p Conference Aug. 7-10 2014
           %p Capture the Flag Aug. 8-10 2014
-          %p
-            %a{href: 'https://ctftime.org/live/134'} Live scoring feed from CTF Time
-          %p 
-            Find us between Track 1 and the vendor area, accessible from
-            the main hallway and the Track 1 hallway.
-          %dl
-            %dt Friday
-            %dd 10am-8pm
-            %dt Saturday
-            %dd 10am-8pm
-            %dt Sunday
-            %dd 10am-2pm
-        .map
-          %img{src: 'defcon_map.png', alt: 'CTF is between Track 1 and the vendor area, accessible from the main hallway and the Track 1 hallway' }
-        %br.clear
-      #bottom-chunk
-        #competitors.border-box
-          %h1 Finalists
-          %table
-            %thead
-              %tr
-                %th Event
-                %th Qualified Team
-            %tbody
-              %tr
-                %td DEF CON 21 CTF
-                %td Plaid Parliament of Pwning
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td [CBA]9447
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td Reckless Abandon
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td Routards
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td raon_ASRT
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td KAIST GoN
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td shellphish
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td CodeRed
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td HITCON
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td blue-lotus
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td HackingForChiMac
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td (Mostly) Men in Black Hats
-              %tr
-                %td DEF CON 22 CTF Quals
-                %td w3stormz
-              %tr
-                %td RuCTFe
-                %td More Smoked Leet Chicken
-              %tr
-                %td Ghost In The Shellcode
-                %td Dragon Sector
-              %tr
-                %td Olympic CTF
-                %td [SEWorks]penthackon
-              %tr
-                %td Boston Key Party
-                %td StratumAuhuur
-              %tr
-                %td Codegate Finals
-                %td Gallopsled
-              %tr
-                %td PHDays
-                %td BalalaikaCr3w
-              %tr
-                %td SecuInside
-                %td Binja
+
         #remnants.border-box
           #quals
             %h1 Quals Results
@@ -115,7 +101,6 @@
                 %a{:href => "/statdump_2014.tar.bz2"} Complete Data Dump
               %li
                 %a{:href => "quals_2014.csv"} Raw CSV
-          #links
             %h1 Links
             %ul
               %li
@@ -126,6 +111,97 @@
                 %a{href: 'https://blog.legitbs.net/p/2013-releases.html'} 2013 Releases
               %li
                 %a{href: 'https://blog.legitbs.net/p/2014-releases.html'} 2014 Releases
+      #right-chunk.border-box
+        %h1 Thanks
+        :markdown
+          2014 was our second year running DEF CON Capture the Flag, and we're 
+          still in shock at how well things went for our players and spectators.
+          Here are our final thoughts about this year's game.
+
+          ## Scoring
+
+          This year's scoring mostly worked as documented: each team's instance
+          of a service started with 417 flags, flags remained with the service
+          even as they moved through teams, and teams could in theory come back 
+          from their flags on a service zeroing out.
+
+          On Friday, we found a bug that caused round-end flag distribution to
+          be run once for each enabled service in a given round, instead of once
+          in a given round. We fixed this Friday afternoon, and re-ran the
+          scoring algorithm over the entire game Saturday. Additionally, we were
+          able to re-run scoring when teams lost SLA checks due to hardware
+          failures on our end.
+
+          ## The Badge
+
+          ![DEF CON 22 CTF badge](https://lh6.googleusercontent.com/-gWd-8uL6wm8/U-_tCwEz5DI/AAAAAAAAAIk/4urZFPfIH_M/w426-h568/14715279088_5280bf445b_o.jpg)
+
+          The DEF CON 22 CTF badge ran two openMSP430 cores, one for the radio, 
+          and one for the vulnerable "badger" service. The PCB was fabricated in
+          the USA by OSHPark. The badges were hand assembled at our secret lab
+          by Jymbolia, Duchess, Gyno, and Sirgoon.  The team badge and server 
+          software was written by Sirgoon and the VIP badge software was
+          written by grumpybear, using Adafruit LCD graphics libraries.
+
+          We would like to apologize to the two-year champions, PPP. An 
+          off-by-one error in our badger backend code made it impossible for
+          team id 0 (PPP) to score correctly.  They had a working exploit before
+          the end of day 2, but were unable to score any points because of this.
+
+          ## Visualizations
+
+          The biggest draw to our room this year was the attack visualization 
+          by Hoju and Lightning, which ran Saturday and Sunday.
+
+          <iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/1UT3qXHduts?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          Each box represents a team, and their physical position within the
+          room. The projectiles represent successful attacks from the launching
+          team against the exploding team. On Saturday morning, the colors of
+          the line indicated which service they were for. However, we found out
+          that at least one team dedicated a player to watching this display as
+          part of a forbidden defensive strategy, and Saturday afternoon and
+          evening, we switched the colors to be random.
+
+          On Sunday, we replayed the Friday and Saturday event streams with
+          per-service colors.
+
+          ## Video Content
+
+          Historically much of the CTF video content that's been played at DEF 
+          CON was extremely sexualized, and would get an R or NC-17 rating in 
+          theaters. With the DEF CON audience diversifying, maturing, and 
+          simultaneously getting younger, this material is leading to 
+          awkwardness, discomfort, embarrassment, offense, and rightful public
+          criticism.
+
+          We're not sure what the solution will be: more family-friendly music
+          videos that keep with the DEF CON CTF aesthetic, fewer music videos,
+          more visualizations, or (almost certainly) a combination of these.
+
+          Know that it is a problem with many of us at Legitimate Business 
+          Syndicate, and we hope we'll do better next year.
+
+          ## Open-Source Releases
+
+          We're planning on open-sourcing most of the vulnerable services from 
+          both our qualifiers and final games this year, as well as the 
+          registration and scoring systems for both. We hope to have these out 
+          in September.
+
+          ## Looking Forward
+
+          We're taking the next several months to relax and plan for 2015. If 
+          you're interested in Capture the Flag, check out 
+          [CTF Time](https://ctftime.org)
+          for information about other games that'll help you practice and 
+          prepare. Keep an eye on 
+          [the Legitimate Business Syndicate blog](https://blog.legitbs.net/) and 
+          [Legitimate Business Syndicate on Twitter](https://twitter.com/legitbs_ctf)
+          for more DEF CON CTF news.
+
+          See you in 2015!
+
       %br.clear
     .layer#casinos
     :javascript

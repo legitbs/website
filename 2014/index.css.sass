@@ -52,6 +52,7 @@ body
   .banner
     margin-top: -$padding_default
     $credit-width: 500px
+    margin-bottom: 0px
     text-align: center
     .junk
       margin: auto
@@ -73,7 +74,10 @@ body
           margin: 0
 .border-box
   h1
-    margin-top: 0
+    margin-top: 0.75em
+    margin-bottom: 0.2em
+    &:first-child
+      margin-top: 0
   ul
     list-style-type: none
     padding: 0
@@ -83,29 +87,22 @@ body
       padding: 0
   p
     margin: 0 auto 4px
-#finals
-  $map_width: 460px
-  .description
-    float: left
-    text-align: left
-    width: $width - $map_width
-  .map
-    float: right
-    max-width: $map_width
-    margin: -$padding_default
-    margin-bottom: (-$padding_default - 5px)
+#competitors
+  td
+    padding: 4px
 
-#bottom-chunk
-  $competitor_width: 500px
-  #competitors
-    text-align: left
-    width: $competitor_width
-    float: left
-    td
-      padding-right: $padding_default
-  #remnants
-    width: 296px
-    float: right
+#left-chunk
+  width: 350px
+  float: left
+  margin-right: -20px
+#right-chunk
+  width: 540px
+  float: right
+  text-align: left
+  p
+    margin-top: 8px
+    margin-bottom: 8px
+
 .clear
   clear: both
 
