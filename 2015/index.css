@@ -22,7 +22,7 @@ a:link, a:visited {
   background-color: #2a0044;
   mask: url("dark-grid.png") top left repeat;
   -webkit-mask: url("dark-grid.png") top left repeat;
-  z-index: -1;
+  z-index: -100;
   -webkit-transform: rotateZ(5deg) scale(2);
   -moz-transform: rotateZ(5deg) scale(2);
   -ms-transform: rotateZ(5deg) scale(2);
@@ -48,31 +48,46 @@ a:link, a:visited {
       height: 142px;
       margin: -60px auto; }
   #content .gizmo {
-    width: 60%;
-    margin: 0 auto; }
+    width: 480px;
+    margin: 0 auto;
+    position: relative;
+    height: 10em; }
     #content .gizmo:after {
       content: " ";
       display: table;
       clear: both; }
     #content .gizmo .count {
-      font-size: 8em;
+      font-size: 6em;
       float: left;
-      color: #cb4527;
+      background-color: #cb4527;
       text-shadow: 0px 0px 8px #cb4527;
-      text-align: right;
-      width: 1.5em;
-      font-family: Michroma; }
+      text-indent: -9999px;
+      z-index: 1;
+      position: absolute;
+      margin-right: -0.25em; }
+    #content .gizmo#teams .count {
+      mask: url("2015-15.png") top left /cover;
+      -webkit-mask: url("2015-15.png") top left /cover;
+      width: 1.38766em;
+      left: 0.70926em; }
     #content .gizmo#players .count {
-      margin-top: -0.1em;
-      margin-bottom: 0.1em; }
+      mask: url("2015-infinity.png") top left /cover;
+      -webkit-mask: url("2015-infinity.png") top left /cover;
+      width: 2.04946em;
+      left: 0.21291em; }
     #content .gizmo#days .count {
-      margin-left: -0.25em; }
+      mask: url("2015-start.png") top left /cover;
+      -webkit-mask: url("2015-start.png") top left /cover;
+      width: 2.41667em;
+      left: -0.0625em; }
     #content .gizmo .subject {
-      float: left;
-      margin-left: -0.75em;
-      margin-top: 1.5em;
-      z-index: -1;
-      font-size: 1.5em; }
+      margin-top: 0.15em;
+      z-index: 2;
+      font-size: 1.5em;
+      position: absolute;
+      left: 8em;
+      width: 20em;
+      top: 0em; }
       #content .gizmo .subject h1 {
         margin-bottom: -0.1em;
         text-shadow: 0px 0px 4px black; }
