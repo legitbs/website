@@ -1,7 +1,7 @@
 $base_color: #090306
 $text_color: #caa4ff
 $hot_color: rgb(203, 69, 39)
-$mask_color: #2a0044
+$grid_color: #2a0044
 
 @import "bourbon"
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma)
@@ -30,7 +30,7 @@ a:link, a:visited
   right: 0
   bottom: 0
   left: 0
-  background-color: $mask_color
+  background-color: $grid_color
   @include mask(url('dark-grid.png'), repeat)
   z-index: -1
   @include transform(rotateZ(5deg) scale(2))
