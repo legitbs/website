@@ -1,6 +1,9 @@
 $base_color: #3E2156
 $text_color: #F4C563
 
+@import "bourbon"
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400,700)
+
 body, html
   background: $base_color
   color: $text_color
@@ -13,15 +16,15 @@ body, html
   left: 0
   width: 100%
   height: 100%
-  margin: 0
+  margin: -20px 0
   padding: 0
 
 #content
-  width: 960px
+  width: 640px
   margin: 0 auto
   top: 50%
   position: relative
-  transform: translateY(-50%)
+  @include transform(translateY(-50%))
 
 #main_title
   text-align: center
