@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma);
 html {
-  background: #090306 url("dark-grid.png"); }
+  background: #090306; }
 
 body, html {
   color: #d4a;
@@ -12,6 +12,17 @@ a:link, a:visited {
   color: #cb4527;
   text-shadow: 0px 0px 4px black;
   text-decoration: none; }
+
+#background-grid {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2a0044;
+  mask: url("dark-grid.png") top left repeat;
+  -webkit-mask: url("dark-grid.png") top left repeat;
+  z-index: -1; }
 
 #content {
   width: 640px;
@@ -26,8 +37,8 @@ a:link, a:visited {
       color: #cb4527;
       text-indent: -9999px;
       background-color: #cb4527;
-      mask: url("legitbs-2015-text.png") top left/cover;
-      -webkit-mask: url("legitbs-2015-text.png") top left/cover;
+      mask: url("legitbs-2015-text.png") top left /cover;
+      -webkit-mask: url("legitbs-2015-text.png") top left /cover;
       width: 260px;
       height: 142px;
       margin: -60px auto; }

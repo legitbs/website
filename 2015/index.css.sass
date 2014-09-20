@@ -1,12 +1,17 @@
 $base_color: #090306
 $text_color: #d4a
 $hot_color: rgb(203, 69, 39)
+$mask_color: #2a0044
 
 @import "bourbon"
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma)
 
+@mixin mask($image, $size)
+  mask: $image top left $size
+  -webkit-mask: $image top left $size
+
 html
-  background: $base_color url('dark-grid.png')
+  background: $base_color
 
 body, html
   color: $text_color
@@ -18,6 +23,16 @@ a:link, a:visited
   color: $hot_color
   text-shadow: 0px 0px 4px black
   text-decoration: none
+
+#background-grid
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: $mask_color
+  @include mask(url('dark-grid.png'), repeat)
+  z-index: -1
 
 #content
   width: 640px
@@ -33,8 +48,7 @@ a:link, a:visited
       color: $hot_color
       text-indent: -9999px
       background-color: $hot_color
-      mask: url('legitbs-2015-text.png') top left / cover
-      -webkit-mask: url('legitbs-2015-text.png') top left / cover
+      @include mask(url('legitbs-2015-text.png'), / cover)
       width: 260px
       height: 142px
       margin: -60px auto
