@@ -1,0 +1,93 @@
+$base_color: #090306
+$text_color: #d4a
+$hot_color: rgb(203, 69, 39)
+
+@import "bourbon"
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma)
+
+html
+  background: $base_color url('dark-grid.png')
+
+body, html
+  color: $text_color
+  font-family: Rambla
+  transform-style: preserve-3d
+  margin-bottom: 4em
+
+a:link, a:visited
+  color: $hot_color
+  text-shadow: 0px 0px 4px black
+  text-decoration: none
+
+#content
+  width: 640px
+  margin: 0 auto
+
+  #splash
+    text-align: center
+    h1
+      font-size: 34pt
+    h2
+      font-size: 28pt
+    #year
+      color: $hot_color
+      text-indent: -9999px
+      background-color: $hot_color
+      mask: url('legitbs-2015-text.png') top left / cover
+      -webkit-mask: url('legitbs-2015-text.png') top left / cover
+      width: 260px
+      height: 142px
+      margin: -60px auto
+
+  .gizmo
+    width: 60%
+    margin: 0 auto
+    &:after
+      content: ' '
+      display: table
+      clear: both
+    .count
+      font-size: 8em
+      float: left
+      color: $hot_color
+      text-shadow: 0px 0px 8px $hot_color
+      text-align: right
+      width: 1.5em
+      font-family: Michroma
+    &#players .count
+      margin-top: -0.10em
+      margin-bottom: 0.10em
+    .subject
+      float: left
+      margin-left: -0.75em
+      margin-top: 1.5em
+      z-index: -1
+      font-size: 1.5em
+      h1
+        margin-bottom: -0.10em
+        text-shadow: 0px 0px 4px black
+      p
+        margin-top: 0
+
+  #cantwait
+    text-align: center
+    font-size: 1.5em
+    h1
+      margin-bottom: 0
+    nav
+      ul
+        list-style-type: none
+        padding: 0
+        li
+          display: inline-block
+          a:link, a:visited
+            display: inline-block
+            background-color: $text_color
+            color: black
+            border: 1px solid $text_color
+            border-radius: 4px
+            padding: 2px
+            margin: 2px
+            text-shadow: none
+          a:hover
+            background-color: $hot_color

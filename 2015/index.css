@@ -1,3 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma);
+html {
+  background: #090306 url("dark-grid.png"); }
 
+body, html {
+  color: #d4a;
+  font-family: Rambla;
+  transform-style: preserve-3d;
+  margin-bottom: 4em; }
+
+a:link, a:visited {
+  color: #cb4527;
+  text-shadow: 0px 0px 4px black;
+  text-decoration: none; }
+
+#content {
+  width: 640px;
+  margin: 0 auto; }
+  #content #splash {
+    text-align: center; }
+    #content #splash h1 {
+      font-size: 34pt; }
+    #content #splash h2 {
+      font-size: 28pt; }
+    #content #splash #year {
+      color: #cb4527;
+      text-indent: -9999px;
+      background-color: #cb4527;
+      mask: url("legitbs-2015-text.png") top left/cover;
+      -webkit-mask: url("legitbs-2015-text.png") top left/cover;
+      width: 260px;
+      height: 142px;
+      margin: -60px auto; }
+  #content .gizmo {
+    width: 60%;
+    margin: 0 auto; }
+    #content .gizmo:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    #content .gizmo .count {
+      font-size: 8em;
+      float: left;
+      color: #cb4527;
+      text-shadow: 0px 0px 8px #cb4527;
+      text-align: right;
+      width: 1.5em;
+      font-family: Michroma; }
+    #content .gizmo#players .count {
+      margin-top: -0.1em;
+      margin-bottom: 0.1em; }
+    #content .gizmo .subject {
+      float: left;
+      margin-left: -0.75em;
+      margin-top: 1.5em;
+      z-index: -1;
+      font-size: 1.5em; }
+      #content .gizmo .subject h1 {
+        margin-bottom: -0.1em;
+        text-shadow: 0px 0px 4px black; }
+      #content .gizmo .subject p {
+        margin-top: 0; }
+  #content #cantwait {
+    text-align: center;
+    font-size: 1.5em; }
+    #content #cantwait h1 {
+      margin-bottom: 0; }
+    #content #cantwait nav ul {
+      list-style-type: none;
+      padding: 0; }
+      #content #cantwait nav ul li {
+        display: inline-block; }
+        #content #cantwait nav ul li a:link, #content #cantwait nav ul li a:visited {
+          display: inline-block;
+          background-color: #d4a;
+          color: black;
+          border: 1px solid #d4a;
+          border-radius: 4px;
+          padding: 2px;
+          margin: 2px;
+          text-shadow: none; }
+        #content #cantwait nav ul li a:hover {
+          background-color: #cb4527; }
 
 /*# sourceMappingURL=index.css.map */
