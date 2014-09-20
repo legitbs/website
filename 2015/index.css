@@ -3,7 +3,7 @@ html {
   background: #090306; }
 
 body, html {
-  color: #d4a;
+  color: #caa4ff;
   font-family: Rambla;
   transform-style: preserve-3d;
   margin-bottom: 4em; }
@@ -22,7 +22,12 @@ a:link, a:visited {
   background-color: #2a0044;
   mask: url("dark-grid.png") top left repeat;
   -webkit-mask: url("dark-grid.png") top left repeat;
-  z-index: -1; }
+  z-index: -1;
+  -webkit-transform: rotateZ(5deg) scale(2);
+  -moz-transform: rotateZ(5deg) scale(2);
+  -ms-transform: rotateZ(5deg) scale(2);
+  -o-transform: rotateZ(5deg) scale(2);
+  transform: rotateZ(5deg) scale(2); }
 
 #content {
   width: 640px;
@@ -60,6 +65,8 @@ a:link, a:visited {
     #content .gizmo#players .count {
       margin-top: -0.1em;
       margin-bottom: 0.1em; }
+    #content .gizmo#days .count {
+      margin-left: -0.25em; }
     #content .gizmo .subject {
       float: left;
       margin-left: -0.75em;
@@ -83,9 +90,9 @@ a:link, a:visited {
         display: inline-block; }
         #content #cantwait nav ul li a:link, #content #cantwait nav ul li a:visited {
           display: inline-block;
-          background-color: #d4a;
+          background-color: #caa4ff;
           color: black;
-          border: 1px solid #d4a;
+          border: 1px solid #caa4ff;
           border-radius: 4px;
           padding: 2px;
           margin: 2px;

@@ -1,5 +1,5 @@
 $base_color: #090306
-$text_color: #d4a
+$text_color: #caa4ff
 $hot_color: rgb(203, 69, 39)
 $mask_color: #2a0044
 
@@ -33,6 +33,7 @@ a:link, a:visited
   background-color: $mask_color
   @include mask(url('dark-grid.png'), repeat)
   z-index: -1
+  @include transform(rotateZ(5deg) scale(2))
 
 #content
   width: 640px
@@ -71,6 +72,8 @@ a:link, a:visited
     &#players .count
       margin-top: -0.10em
       margin-bottom: 0.10em
+    &#days .count
+      margin-left: -0.25em
     .subject
       float: left
       margin-left: -0.75em
