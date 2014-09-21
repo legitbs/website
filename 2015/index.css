@@ -33,11 +33,12 @@ a:link, a:visited {
   width: 640px;
   margin: 0 auto; }
   #content #splash {
-    text-align: center; }
+    text-align: center;
+    font-family: Michroma; }
     #content #splash h1 {
-      font-size: 34pt; }
+      font-size: 24pt; }
     #content #splash h2 {
-      font-size: 28pt; }
+      font-size: 18pt; }
     #content #splash #year {
       color: #cb4527;
       text-indent: -9999px;
@@ -46,7 +47,7 @@ a:link, a:visited {
       -webkit-mask: url("legitbs-2015-text.png") top left /cover;
       width: 260px;
       height: 142px;
-      margin: -60px auto; }
+      margin: -40px auto; }
   #content .gizmo {
     width: 480px;
     margin: 0 auto;
@@ -81,11 +82,12 @@ a:link, a:visited {
       width: 2.41667em;
       left: -0.0625em; }
     #content .gizmo .subject {
+      font-family: Michroma;
       margin-top: 0.15em;
       z-index: 2;
       font-size: 1.5em;
       position: absolute;
-      left: 8em;
+      left: 7em;
       width: 20em;
       top: 0em; }
       #content .gizmo .subject h1 {
@@ -95,7 +97,8 @@ a:link, a:visited {
         margin-top: 0; }
   #content #cantwait {
     text-align: center;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    font-family: Michroma; }
     #content #cantwait h1 {
       margin-bottom: 0; }
     #content #cantwait nav ul {
@@ -109,8 +112,8 @@ a:link, a:visited {
           color: black;
           border: 1px solid #caa4ff;
           border-radius: 4px;
-          padding: 2px;
-          margin: 2px;
+          padding: 0.5em;
+          margin: 0.5em;
           text-shadow: none; }
         #content #cantwait nav ul li a:hover {
           background-color: #cb4527; }
