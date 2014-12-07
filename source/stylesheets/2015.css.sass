@@ -33,7 +33,7 @@ a:link, a:visited
   right: 0
   bottom: 0
   left: 0
-  background: url('2015-grid_03.png')
+  background: url('../../images/2015-grid_03.png')
   z-index: -100
   @include transform(rotateZ(5deg) scale(2))
 
@@ -51,7 +51,7 @@ a:link, a:visited
     #year
       color: $hot_color
       text-indent: -9999px
-      background: url('legitbs-2015-text-masked.png') 50%
+      background: url('../../images/legitbs-2015-text-masked.png') 50%
       @include cover
       width: 260px
       height: 142px
@@ -70,7 +70,7 @@ a:link, a:visited
       @return -.75 * graf_width($w, $h) 
 
     @mixin graf_text($name, $w, $h)
-      background: url('2015-' + $name + '-masked.png') 50%
+      background: url('../../images/2015-' + $name + '-masked.png') 50%
       @include cover
       width: graf_width($w, $h)
       left: 160px + left_margin($w, $h)
