@@ -1,0 +1,154 @@
+$pinku: #ff0080
+$blue: hsl(200, 100%, 50%)
+$parchment: #ffe
+$postit: #ffa
+@mixin transform($property)
+  -webkit-transform: $property
+  -moz-transform: $property
+  -o-transform: $property
+  transform: $property
+@mixin rotate($angle)
+  @include transform(rotate3d(0, 0, 1, $angle))
+@mixin perspective-origin($value)
+  -webkit-perspective-origin: $value
+  -moz-perspective-origin: $value
+  -o-perspective-origin: $value
+  perspective-origin: $value
+@mixin perspective($depth)
+  -webkit-perspective: $depth
+  -moz-perspective: $depth
+  -o-perspective: $depth
+  perspective: $depth
+
+a
+  &:link, &:visited
+    color: $pinku
+  &:hover
+    color: $blue
+.clear
+  clear: both
+body
+  background-color: $pinku
+  background-image: url("strawberry-linen.jpg")
+  font-family: Ubuntu, "Droid Sans Japanese", "Arial Unicode MS"
+  margin-bottom: 24px
+  .container 
+    width: 960px
+    margin-left: auto
+    margin-right: auto
+    @include perspective(350px)
+    @include perspective-origin(50% 20%)
+  .logo-partial
+    text-align: center
+    margin-bottom: 20px
+    h1 
+      font-weight: bold
+      font-size: 160px
+      color: yellow
+      margin-top: 0px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 20px
+      z-index: 20
+      position: relative
+      width: 676px
+      height: 260px
+      background: url("true-company.png") no-repeat top center
+      span
+        display: none
+    h2.overlay
+      font-family: Ubuntu
+      color: yellow
+      background-color: black
+      margin: -80px auto 0px auto
+      width: 500px
+      z-index: 20
+      position: relative
+  #tldr
+    @include rotate(1.5deg)
+    background-color: $postit
+    color: black
+    font-family: "Architects Daughter"m "Marker Felt", "Comic Sans MS", script
+    width: 400px
+    padding: 4px 12px 12px
+    margin: -8px auto 16px
+    font-size: 1.2em
+    box-shadow: 0 10px 10px 0px black
+    z-index: 10
+    h1
+      text-align: center
+    h1, p
+      margin: 0
+    a:link, a:visited
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+    ol
+      list-style-type: none
+      padding: 0
+  #invitation
+    @include rotate(0deg)
+    background-color: $parchment
+    padding: 12px 12px 4px
+    float: right
+    width: 480px
+    box-shadow: 0 5px 5px 0px black
+    margin: 4px auto
+    z-index: -5
+    p:first-child
+      margin-top: 0
+  #leaderboard
+    @include transform(rotateY(4deg))
+    float: left
+    background-color: $parchment
+    box-shadow: 0 5px 5px 0px black
+    padding: 4px
+    margin-top: 20px
+    margin-bottom: 20px
+    font-size: 1.5em
+    th.team
+      text-align: left
+      padding-right: 4px
+    tr
+      padding-bottom: 4px
+    tbody th
+      text-align: left
+      padding-right: 4px
+    tbody td
+      text-align: right
+
+  #schedule
+    @include rotate(1.0deg)
+    background-color: white
+    background: url("grid.png")
+    padding: 0 0 12px 0
+    width: 480px
+    box-shadow: 0 5px 5px 0px black
+    margin: 10px auto
+    z-index: -10
+    h1
+      text-align: center
+      background-color: $blue
+      color: white
+      margin: 0
+      padding: 4px
+    h2
+      text-align: center
+    dl
+      dt
+        font-weight: bold
+        text-align: center
+        margin: 4px auto 2px
+      dd
+        text-align: center
+        margin: 2px auto 4px
+    table
+      margin: 4px auto
+      text-align: left
+      tr#utc, tr#our_game
+        background-color: $blue
+        color: white
+      td
+        padding: 4px
+    p
+      text-align: center

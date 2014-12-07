@@ -1,0 +1,248 @@
+!!! 5
+%html
+  %head
+    %title Legitimate Business Syndicate
+    %link{:href => "https://fonts.googleapis.com/css?family=Ubuntu:400,700|Architects+Daughter", :rel => "stylesheet", :type => "text/css"}
+    %meta{:name => "google", :value => "notranslate"}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'index.css'}
+  %body
+    /
+      :plain                          
+           ___ Fueled by _     __   __        __   ___     __ 
+          / _ )______ __(_)___/ /  / /__ ____/ /__/ (_)___/ / 
+         / _  / __/ // / / __/ _ \/ / _ `/ _  / _  / / __/ _ \
+        /____/_/  \_,_/_/\__/_//_/_/\_,_/\_,_/\_,_/_/\__/_//_/
+                            Progressive Hebridean Distillers
+    .container
+      .logo-partial
+        %h1
+          %span 真の会社
+        .clear
+        %h2.overlay
+          Legitimate Business Syndicate
+      #tldr
+        %h1
+          %a{href: 'https://blog.legitbs.net/'} Visit our blog!
+        -# %ol#blog_links
+        -#   %li 
+        -#     %a{href: '{{link}}'} {{ title }}
+        -#     \/
+        -#     {{ date }}
+
+      %table#leaderboard
+        %thead
+          %tr
+            %th.team Team
+            %th Score
+        %tbody
+          %tr
+            %th PPP
+            %td 15002
+          %tr
+            %th men in black hats
+            %td 7924
+          %tr
+            %th raon_ASRT
+            %td 7107
+          %tr
+            %th more smoked leet chicken
+            %td 4160
+          %tr
+            %th routards
+            %td 2503
+          %tr
+            %th sutegoma2
+            %td 1540
+          %tr
+            %th shellphish
+            %td 1223
+          %tr
+            %th Alternatives
+            %td 1095
+          %tr
+            %th The European Nopsled Team
+            %td 859
+          %tr
+            %th 9447
+            %td 506
+          %tr
+            %th blue lotus
+            %td 441
+          %tr
+            %th Samurai
+            %td 12
+          %tr
+            %th APT8
+            %td 0
+          %tr
+            %th clgt
+            %td 0
+          %tr
+            %th pwnies
+            %td 0
+          %tr
+            %th pwningyeti
+            %td 0
+          %tr
+            %th Robot Mafia
+            %td 0
+          %tr
+            %th shell corp
+            %td 0
+          %tr
+            %th [Technopandas]
+            %td 0
+          %tr
+            %th WOWHacker-BI0S
+            %td 0
+
+
+      #invitation
+        :markdown
+          Hello!
+
+          We're absolutely and completely thrilled at the response to our game 
+          this year! As we said during the closing ceremonies, we're honored 
+          and proud that you all competed with us, and would like once again 
+          to thank:
+
+          * Dark Tangent and the other DEF CON organizers, for supporting our 
+          plans to host.
+          * The DEF CON Goons, for helping make the contest in Vegas a fun and 
+          enjoyable venue.
+          * The twenty teams that competed in finals, for running a friendly, 
+          honorable, and skillful game. You all did a great job, no matter 
+          where you ended up on the scoreboard.
+          * The 898 teams that competed in the qualifying game in June, for 
+          your spectacular show of skill in solving our challenges over 2400 
+          times.
+          * And last, but certainly not least, we'd like to thank our friends, 
+          families, and significant others, for forgiving our long nights and 
+          exhausting weekends over the last several months.
+
+          While we did get a small chance to explain the game during closing 
+          ceremonies on Sunday night, we'd like to share a more detailed and 
+          thoughtful set of results.
+
+          # Zero Sum
+
+          The finals game this year was zero-sum: the game started with 50,000 
+          flags, allocated 2500 per team. It ended with 50,000 flags, although 
+          less evenly distributed. Capturing a token would net you an even 
+          share of the nineteen flags that token was worth, with "remainder 
+          flags" being reallocated later.
+          
+          What this meant for the game flow was a terrible calculus for leading 
+          teams. Teams with no flags will obviously not be very lucrative 
+          targets. Teams with large stockpiles of flags were also more likely 
+          to turn any exploit launched at them around as a new attack, 
+          devaluing the exploit.
+
+          Teams competent at attacking but not focused on defense saw massive
+          flag losses that they, generally, weren't able to capture them back 
+          quick enough.
+
+          # One Hour Left
+
+          With an hour left in the game Sunday afternoon, we had PPP at the 
+          top of the leaderboard, followed by "men in black hats" and 
+          "raon_ASRT," who had finished Saturday with shockingly close scores.
+          The black-hatted gentlemen were leading by fewer than 240 flags, 
+          which meant that the Korean team might be able to mount a comeback 
+          for the second place.
+
+          Unfortunately, it was not to pass. Most of the teams stayed in the
+          same relative standings during the game's final hour, and the top
+          end of the scoreboard bled even more flags from the lower portions:
+          PPP managed to capture over a thousand flags in the last sixty
+          minutes.
+
+          As the final bars of Europe's "The Final Countdown" echoed through the
+          room, we confirmed to ourselves the final top three:
+
+          1. PPP
+          2. men in black hats
+          3. raon_ASRT
+
+          # Two Mistakes
+
+          We made a few mistakes and misjudgements during the game, from network 
+          settings causing a few captured tokens to expire without capture, to 
+          scoring logic errors that left Legitimate Business Syndicate with an 
+          incredible number of flags, we have a few things to fix next year. 
+          The two mentioned mistakes have an impact on game scoring.
+
+          The misconfigured network caused teams to be incorrectly throttled in 
+          their connections to the REST API that redeemed tokens for flag 
+          captures. This meant that some teams weren't able to redeem captured 
+          tokens due to the busy and hostile network environment. Since this was
+          discovered on Sunday morning, after a long night of discovering new
+          vulnerabilities, it was especially painful.
+
+          We have reprocessed those expired tokens based on logs and scorebot 
+          data, since they disproportionately and unfairly affected individual 
+          teams unevenly. They are included in the final results. 
+
+          The scoring logic error that left remainder flags in our possession 
+          affected all teams equally; while this may have resulted in different 
+          scores, we believe that not only did it affect all teams equally and 
+          fairly, we also hold that changing this would invalidate many teams' 
+          actions during the game. All twenty competing teams played the game 
+          as implemented, not the game we wish we did after the fact.
+
+          We have not factored the missing remainder flags into the final 
+          results.
+
+          # Three Observations
+
+          1. Each token was worth nineteen points, split between every team 
+          that redeemed it. Fourteen teams figured out that if they redeemed 
+          their own tokens, they'd deprive other teams of valuable flags.
+
+          2. Non-virtualized team hardware removed most of our concerns about 
+          CPU starvation due to malicious action. The remaining concerns were 
+          based on cooling capacity and reduction thereof when the lid was off 
+          the box holding team hardware.
+
+          3. Teams with fewer than fifty flags are pretty much a rounding error: 
+          since we processed captures and SLA failures sequentially instead of 
+          in parallel, whether or not they were rewarded for captures or
+          penalized for getting owned last was displayed in their score, 
+          although they didn’t have control of this.
+
+          # What's Next
+
+          We'd like to get more data out to you soon! Check back this weekend.
+
+          We'd also like to get next year's game scheduled. Check back when we've
+          had a long vacation.
+
+          We'd love any links, thoughts, rants, writeups, and so on that you
+          have about this year's game. Tweet them at 
+          [@legitbs_ctf](https://twitter.com/legitbs_ctf)
+          or email them to
+          [vito@legitbs.net](mailto:vito@legitbs.net).
+
+          # Links and Other Information
+
+          * [Legitimate Business Syndicate Blog](https://blog.legitbs.net): 
+          we'll be posting updates and releasing more stuff more often
+          on our blog.
+          * [Legitimate Business Syndicate on Twitter](https://twitter.com/LegitBS_CTF): we tweet a lot.
+          * [Quals Scoreboard Data Dump](https://assets-2013.legitbs.net/ctf-registrar-2013-dump.tar.bz2): Who answered what, when.
+          * [DEF CON Forums](https://forum.defcon.org/forumdisplay.php?f=716): this is totally a good place to post writeups.
+      %br.clear
+
+    -# %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js'}
+    -# %script{src: 'index.js'}
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38870141-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
