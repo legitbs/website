@@ -10,7 +10,9 @@ jQuery ($)->
   renderer.shadowMapCullFace = THREE.CullFaceBack
   document.body.appendChild renderer.domElement
 
-  wall = new Wall scene
+  manager = new THREE.LoadingManager()
+
+  room = new Room scene, manager
 
   desk = new Desk scene
   computer = new Computer scene
@@ -22,6 +24,7 @@ jQuery ($)->
 
   render = ()->
     renderer.render scene, camera
+    room.render()
     requestAnimationFrame render
 
   render()
@@ -34,17 +37,31 @@ class Updater
   render: ()->
     e.render() for e in @list
 
-class Wall
-  constructor: (@scene)->
-    @geo = new THREE.PlaneBufferGeometry 20, 20
-    @mat = new THREE.MeshPhongMaterial
-      color: 0x050505
-    @mat.color.setHSL 0.095, 1, 0.75
+class Room
+  constructor: (@scene, @manager)->
+    @loader = new THREE.OBJLoader @manager
+    @loader.load 'hacker_room.obj', @loaded.bind(this)
+  loaded: (o)->
+    # @geo = new THREE.PlaneBufferGeometry 20, 20
+    # @mat = new THREE.MeshPhongMaterial
+    #   color: 0x050505
+    # @mat.color.setHSL 0.095, 1, 0.75
 
-    @mesh = new THREE.Mesh @geo, @mat
-    @mesh.position.set 0, 5, -3
-    @mesh.receiveShadow = true
-    @scene.add @mesh
+    # @mesh = new THREE.Mesh @geo, @mat
+    @object = o.children[0]
+    @object.material = new THREE.MeshPhongMaterial
+      color: 0x73674b
+      shininess: 20
+    @object.scale.set 0.15, 0.15, 0.15
+    @object.position.set -6, -2, -2
+    @object.rotation.y = 3.0/2.0 * Math.PI
+    @object.updateMatrix()
+    @object.castShadow = true
+    @object.receiveShadow = true
+    @scene.add @object
+    @didLoad = true
+  render: ()->
+    return unless @didLoad?
 
 class Desk
   constructor: (@scene)->
@@ -69,7 +86,7 @@ class Computer
     @makeMonitor()
     @makeLight()
   makeLight: ()->
-    @light = new THREE.PointLight 0xF5B34A, .75, 3
+    @light = new THREE.PointLight 0xF5B34A, .75, 10
     @light.position.set @coords...
     @scene.add @light
     help = new THREE.PointLightHelper @light, 1
@@ -94,7 +111,7 @@ class Computer
 class DirLight
   constructor: (@scene, @target)->
     @light = new THREE.DirectionalLight 0xffffff, 0.5
-    @light.position.set -10, 25, 100
+    @light.position.set -10, 5, 10
     @light.castShadow = true
     @light.shadowMapWidth = 2048
     @light.shadowMapHeight = 2048
@@ -108,14 +125,8 @@ class DirLight
     @light.shadowBias = -0.0001
     @light.shadowDarkness = 0.35
 
-    @light.target.position.set (@target.coords)...
+    @light.target = @target.mesh
   
     @scene.add @light
     help = new THREE.DirectionalLightHelper @light, 3
     @scene.add help
-
-class SkyLight
-  constructor: (@scene)->
-    @skyLight = new THREE.HemisphereLight 0xaaaaff, 0x88aa88, 0.5
-    @skyLight.position.set 0, 500, 0
-    @scene.add @skyLight
