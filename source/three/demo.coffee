@@ -23,7 +23,20 @@ jQuery ($)->
   camera.position.y = 5
   camera.position.z = 5
 
+  # camera.position.x = dirLight.light.position.x
+  # camera.position.y = dirLight.light.position.y
+  # camera.position.z = dirLight.light.position.z
+
+  window.light = dirLight.light
+  window.camera = camera
+
+  n = 0
+
   render = ()->
+    n += 0.01
+    # camera.position.x = 10 * Math.sin(n) - 5
+  
+    camera.lookAt computer.mesh.position
     renderer.render scene, camera
     room.render()
     requestAnimationFrame render
@@ -40,8 +53,8 @@ class Updater
 
 class Room
   constructor: (@scene, @manager)->
-    @loader = new THREE.OBJLoader @manager
-    @loader.load 'hacker_room.obj', @loaded.bind(this)
+    @loader = new THREE.ColladaLoader @manager
+    @loader.load 'hacker_room.dae', @loaded.bind(this)
   loaded: (o)->
     # @geo = new THREE.PlaneBufferGeometry 20, 20
     # @mat = new THREE.MeshPhongMaterial
@@ -49,16 +62,23 @@ class Room
     # @mat.color.setHSL 0.095, 1, 0.75
 
     # @mesh = new THREE.Mesh @geo, @mat
-    @object = o.children[0]
-    @object.material = new THREE.MeshPhongMaterial
+
+    @object = o.scene.children[0]
+    mat =  new THREE.MeshPhongMaterial
       color: 0x73674b
       shininess: 20
     @object.scale.set 0.15, 0.15, 0.15
     @object.position.set -6, -2, -2
-    @object.rotation.y = 3.0/2.0 * Math.PI
+    @object.rotation.x = 3.0/2.0 * Math.PI
+    @object.rotation.z = 3.0/2.0 * Math.PI
     @object.updateMatrix()
-    @object.castShadow = true
-    @object.receiveShadow = true
+      
+    for c in @object.children
+      c.material = mat
+      c.castShadow = true
+      c.receiveShadow = true
+      c.frustrumCulling = false
+    
     @scene.add @object
     @didLoad = true
   render: ()->
@@ -118,14 +138,14 @@ class DirLight
     @light.shadowMapWidth = 2048
     @light.shadowMapHeight = 2048
 
-    shadowCameraSize = 10
+    shadowCameraSize = 8
 
     @light.shadowCameraLeft = -shadowCameraSize
     @light.shadowCameraRight = shadowCameraSize
     @light.shadowCameraTop = shadowCameraSize
     @light.shadowCameraBottom = -shadowCameraSize
 
-    @light.shadowCameraNear = 5
+    @light.shadowCameraNear = 1
     @light.shadowCameraFar = 200
     @light.shadowBias = -0.0001
     @light.shadowDarkness = 0.35
