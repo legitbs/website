@@ -19,8 +19,9 @@ jQuery ($)->
 
   dirLight = new DirLight scene, computer
 
-  camera.position.y = 4
-  camera.position.z = 20
+  camera.position.x = 0
+  camera.position.y = 5
+  camera.position.z = 5
 
   render = ()->
     renderer.render scene, camera
@@ -104,6 +105,7 @@ class Computer
     @mesh.position.set @coords...
     @mesh.rotation.y = 0.1
 
+    @mesh.receiveShadow = true
     @mesh.castShadow = true
 
     @scene.add @mesh
@@ -111,20 +113,25 @@ class Computer
 class DirLight
   constructor: (@scene, @target)->
     @light = new THREE.DirectionalLight 0xffffff, 0.5
-    @light.position.set -10, 5, 10
+    @light.position.set -20, 10, 25
     @light.castShadow = true
     @light.shadowMapWidth = 2048
     @light.shadowMapHeight = 2048
 
-    @light.shadowCameraLeft = -50
-    @light.shadowCameraRight = 50
-    @light.shadowCameraTop = 50
-    @light.shadowCameraBottom = -50
+    shadowCameraSize = 10
 
-    @light.shadowCameraFar = 3500
+    @light.shadowCameraLeft = -shadowCameraSize
+    @light.shadowCameraRight = shadowCameraSize
+    @light.shadowCameraTop = shadowCameraSize
+    @light.shadowCameraBottom = -shadowCameraSize
+
+    @light.shadowCameraNear = 5
+    @light.shadowCameraFar = 200
     @light.shadowBias = -0.0001
     @light.shadowDarkness = 0.35
 
+    @light.shadowCameraVisible = true
+  
     @light.target = @target.mesh
   
     @scene.add @light
