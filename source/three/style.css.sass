@@ -1,19 +1,77 @@
 @charset "utf-8"
 
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma)
+@import "bourbon"
+
+$amber: #F5B34A
+$dark_amber: darken($amber, 55%)
+
 body
   margin: 0
+  padding: 0
+  background: $dark_amber
+  font-family: Rambla
+  font-size: 1.2em
   #main_column
-    width: 800px
+    width: 960px
+    height: 640px
     margin: 0 auto
-    > div
-      margin-top: 20px
+    text-align: center
+    position: relative
     #title_zone
-      float: left
-      width: 240px
+      padding: 1em
+      color: $amber
+      margin-top: 20px
+      h1, h2, h3, h4, h5, h6
+        font-family: Michroma
+        text-shadow: 4px black
+        margin: 0
+      #year
+        background: url('/images/legitbs-2015-text-amber.png') 50% no-repeat
+        @include prefixer(background-size, contain, webkit spec)
+        height: 128px
+        margin-bottom: -1em
+      #yearText
+        text-indent: -9999px
+        height: 0px
+        margin: 0
+    ul
+      list-style-type: none
+      padding-left: 0
+      li
+        color: $amber
+        display: inline-block
+        border-left: 1px solid $amber
+        padding: 0 0.4em
+        margin: 0
+        &:first-child
+          border-left: none
+    nav
+      position: absolute
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+      ul
+        li
+          border: none
+          padding: 0
+          a:link, a:visited
+            color: $dark_amber
+            border: 1px solid $dark_amber
+            border-radius: 0.4em
+            background-color: $amber
+            padding: 0.4em
+            margin: 0.1em
+            text-decoration: none
 
-    #scene
-      float: right
-      margin: 20 20px
-      canvas
-        width: 540px
-        height: 640px
+  #scene
+    width: 960px
+    left: 0
+    right: 0
+    margin: 0 auto
+    position: fixed
+    z-index: -1
+    margin-top: 10px
+    canvas
+      border: 1px solid $amber

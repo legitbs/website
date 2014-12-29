@@ -17,14 +17,14 @@ jQuery ($)->
 
   room = new Room scene, manager
 
-  computer = new Computer scene
+  computer = new Computer scene, room.displayPanel
 
   dirLight = new DirLight scene, computer
 
-  camera.position.x = -2
+  camera.position.x = 0
   camera.position.y = 4
   camera.position.z = 5
-  camera.lookAt new THREE.Vector3(-2, 4, 1)
+  camera.lookAt new THREE.Vector3(-0.5, 4, 1)
   
   window.light = dirLight.light
   window.camera = camera
@@ -79,36 +79,23 @@ class Room extends Renderable
     for c in @object.children
       c.material = mat
 
+    me = this
+
     o.scene.traverse (c) ->
       c.castShadow = true
       c.receiveShadow = true
       c.frustrumCulling = false
+      if c.name == 'display-panel'
+        me.displayPanel = c
     
     @scene.add @object
     @didLoad = true
   render: ()->
     return unless @didLoad?
 
-class Desk extends Renderable
-  constructor: (@scene)->
-    @geo = new THREE.BoxGeometry 10, 0.1, 3
-    @mat = new THREE.MeshPhongMaterial
-      color: 0x73674B
-      shininess: 10
-      vertexColors: THREE.FaceColors
-      shading: THREE.FlatShading
-
-    @mesh = new THREE.Mesh @geo, @mat
-    @mesh.position.y = 3
-
-    @mesh.castShadow = true
-    @mesh.receiveShadow = true
-    
-    @scene.add @mesh
-
 class Computer extends Renderable
-  constructor: (@scene)->
-    @coords = [-3.18, 3.65, .7]
+  constructor: (@scene, @displayPanel)->
+    @coords = @displayPanel.position
     @makeMonitor()
     @makeLight()
   makeLight: ()->
@@ -118,7 +105,7 @@ class Computer extends Renderable
     help = new THREE.PointLightHelper @light, 1
     @scene.add help
   makeMonitor: ()->
-    @geo = new THREE.BoxGeometry 2.6, 1.5, 0.01
+    @geo = new THREE.BoxGeometry 2.0, 1.5, 0.01
     @mat = new THREE.MeshPhongMaterial
       color: 0x73674B
       specular: 0x73674B
