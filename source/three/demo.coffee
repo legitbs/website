@@ -1,155 +1,153 @@
 jQuery ($)->
-  Three = THREE
 
-  canvas = document.getElementById 'actualScene'
+  TTT = THREE
 
-  scene = new THREE.Scene()
-  camera = new THREE.PerspectiveCamera(75,
-    (1.0 * canvas.width) / canvas.height,
-    0.1,
-    1000)
-  renderer = new THREE.WebGLRenderer canvas: canvas
+  class HackerRoom
+    constructor: (@canvas)->
+      @updater = new Updater
+      @initializeLoader()
+      @initializeScene()
+      @initializeRoom()
+      @initializeRenderer()
+    initializeLoader: ()->
+      @loader = new TTT.LoadingManager()
+    initializeScene: ()->
+      @scene = new TTT.Scene
+    initializeCamera: ()->
+      @camera = new TTT.PerspectiveCamera(75,
+        (1.0 * @canvas.width) / @canvas.height,
+        0.1,
+        1000)
+      @camera.position.set 0, 4, 5
+      @camera.lookAt new TTT.Vector3 -0.5, 4, 1
+    initializeRenderer: ()->
+      @renderer = new TTT.WebGLRenderer canvas: @canvas
+      @renderer.shadowMapEnabled = true
+      @renderer.shadowMapCullFace = THREE.CullFaceBack
+    initializeRoom: ()->
+      @room = new Room @scene, @loader, @roomFinished.bind(this)
+      @updater.add @room
+    roomFinished: ()->
+      @updater.add @room
+      @initializeBadgeLights @room.badgeLights()
+      @initializeDirLight()
+      @initializeComputer()
+      @initializeCamera()
+      requestAnimationFrame @renderLoop.bind(this)
+    initializeDirLight: ()->
+      @dirLight = new DirLight @scene, @room.displayPanel()
+    initializeBadgeLights: (badgeLeds)->
+      @badgeLights = for light in badgeLeds
+        l = new TTT.PointLight 0xddddff, 0.5, 1
+        l.position.setFromMatrixPosition light.matrixWorld
+        l.updateMatrix()
+        @scene.add l
+        light.children[0].material.emissive = new TTT.Color 0xddddff
+        l
+    initializeComputer: ()->
+      @computer = new Computer @scene, @room.displayPanel()
+    renderLoop: ()->
+      @updater.render()
+      @renderer.render @scene, @camera
+      requestAnimationFrame @renderLoop.bind(this)
 
-  renderer.shadowMapEnabled = true
-  renderer.shadowMapCullFace = THREE.CullFaceBack
+  class Updater
+    constructor: ()->
+      @list = []
+    add: (obj)->
+      @list.push obj
+    render: ()->
+      e.render() for e in @list
 
-  manager = new THREE.LoadingManager()
+  class Renderable
+    render: ()->
+      # noop
 
-  room = new Room scene, manager
+  class Room extends Renderable
+    constructor: (@scene, @manager, @callback)->
+      @loader = new THREE.ColladaLoader @manager
+      @loader.load 'hacker_room.dae', @loaded.bind(this)
+    loaded: (o)->
+      @sceneParent = o.scene.children[0]
+      @sceneParent.scale.set 0.15, 0.15, 0.15
+      @sceneParent.position.set -6, -2, -2
+      @sceneParent.rotation.x = 3.0/2.0 * Math.PI
+      @sceneParent.rotation.z = 3.0/2.0 * Math.PI
+      @sceneParent.updateMatrix()
 
-  computer = new Computer scene, room.displayPanel
+      @sceneParent.traverse (c) =>
+        c.castShadow = true
+        c.receiveShadow = true
+        c.frustrumCulling = false
 
-  dirLight = new DirLight scene, computer
+      @scene.add @sceneParent
+      @sceneParent.updateMatrixWorld()
+      @didLoad = true
+      @callback()
+    displayPanel: ()->
+      return @_displayPanel if @_displayPanel?
+      @scene.traverse (c) =>
+        if c.name == 'display-panel'
+          @_displayPanel = c
+      return @_displayPanel
+    badgeLights: ()->
+      return @_badgeLights if @badgeLight?
+      @_badgeLights = []
+      @scene.traverse (c) =>
+        if c.name == 'BsdgeEye1'
+          @_badgeLights.push c
+      return @_badgeLights
 
-  camera.position.x = 0
-  camera.position.y = 4
-  camera.position.z = 5
-  camera.lookAt new THREE.Vector3(-0.5, 4, 1)
-  
-  window.light = dirLight.light
-  window.camera = camera
+  class Computer extends Renderable
+    constructor: (@scene, @displayPanel)->
+      @makeLight()
+      @makeScreen()
+    makeLight: ()->
+      @light = new THREE.PointLight 0xF5B34A, .75, 10
+      @light.position.setFromMatrixPosition @displayPanel.matrixWorld
+      @light.updateMatrix()
+      @scene.add @light
+      help = new THREE.PointLightHelper @light, 1
+      @scene.add help
+    makeScreen: ()->
+      mesh = @displayPanel.children[0]
+      mesh.receiveShadow = false
+      mesh.material =
+        new TTT.MeshPhongMaterial
+          color: new TTT.Color 0x444444
+          emissive: new TTT.Color 0xF5B34A
+          specular: new TTT.Color 0xffffff
+          shininess: 30
 
-  updater = new Updater
-  updater.add room
-  updater.add computer
-  updater.add dirLight
+  class DirLight extends Renderable
+    constructor: (@scene, @target)->
+      @light = new THREE.DirectionalLight 0xffffff, 0.5
+      @light.position.set -20, 10, 25
+      @light.castShadow = true
+      @light.shadowMapWidth = 2048
+      @light.shadowMapHeight = 2048
 
-  render = ()->
-    updater.render()
-    renderer.render scene, camera
-    room.render()
-    requestAnimationFrame render
+      shadowCameraSize = 8
 
-  render()
+      @light.shadowCameraLeft = -shadowCameraSize
+      @light.shadowCameraRight = shadowCameraSize
+      @light.shadowCameraTop = shadowCameraSize
+      @light.shadowCameraBottom = -shadowCameraSize
 
-class Updater
-  constructor: ()->
-    @list = []
-  add: (obj)->
-    @list.push obj
-  render: ()->
-    e.render() for e in @list
+      @light.shadowCameraNear = 1
+      @light.shadowCameraFar = 200
+      @light.shadowBias = -0.0001
+      @light.shadowDarkness = 0.35
 
-class Renderable
-  render: ()->
-    # noop
+      @light.shadowCameraVisible = true
 
-class Room extends Renderable
-  constructor: (@scene, @manager)->
-    @loader = new THREE.ColladaLoader @manager
-    @loader.load 'hacker_room.dae', @loaded.bind(this)
-  loaded: (o)->
-    # @geo = new THREE.PlaneBufferGeometry 20, 20
-    # @mat = new THREE.MeshPhongMaterial
-    #   color: 0x050505
-    # @mat.color.setHSL 0.095, 1, 0.75
+      @light.lookAt @target.position
 
-    # @mesh = new THREE.Mesh @geo, @mat
+      @scene.add @light
+    render: () ->
+      xCycle = 0.2 * Math.sin(Date.now() / 10000.0)
+      yCycle = 0.5 * Math.cos(Date.now() / 20000.0)
+      @light.position.set(-21 + xCycle, 10 + yCycle, 25)
 
-    @object = o.scene.children[0]
-    mat =  new THREE.MeshPhongMaterial
-      color: 0x73674b
-      shininess: 20
-    @object.scale.set 0.15, 0.15, 0.15
-    @object.position.set -6, -2, -2
-    @object.rotation.x = 3.0/2.0 * Math.PI
-    @object.rotation.z = 3.0/2.0 * Math.PI
-    @object.updateMatrix()
-      
-    for c in @object.children
-      c.material = mat
 
-    me = this
-
-    o.scene.traverse (c) ->
-      c.castShadow = true
-      c.receiveShadow = true
-      c.frustrumCulling = false
-      if c.name == 'display-panel'
-        me.displayPanel = c
-    
-    @scene.add @object
-    @didLoad = true
-  render: ()->
-    return unless @didLoad?
-
-class Computer extends Renderable
-  constructor: (@scene, @displayPanel)->
-    @coords = @displayPanel.position
-    @makeMonitor()
-    @makeLight()
-  makeLight: ()->
-    @light = new THREE.PointLight 0xF5B34A, .75, 10
-    @light.position.set @coords...
-    @scene.add @light
-    help = new THREE.PointLightHelper @light, 1
-    @scene.add help
-  makeMonitor: ()->
-    @geo = new THREE.BoxGeometry 2.0, 1.5, 0.01
-    @mat = new THREE.MeshPhongMaterial
-      color: 0x73674B
-      specular: 0x73674B
-      shininess: 30
-      vertexColors: THREE.FaceColors
-      shading: THREE.FlatShading
-
-    @mesh = new THREE.Mesh @geo, @mat
-    @mesh.position.set @coords...
-    @mesh.rotation.y = 0.24
-    window.computer = @mesh
-    @mesh.receiveShadow = true
-    @mesh.castShadow = true
-
-    @scene.add @mesh
-
-class DirLight extends Renderable
-  constructor: (@scene, @target)->
-    @light = new THREE.DirectionalLight 0xffffff, 0.5
-    @light.position.set -20, 10, 25
-    @light.castShadow = true
-    @light.shadowMapWidth = 2048
-    @light.shadowMapHeight = 2048
-
-    shadowCameraSize = 8
-
-    @light.shadowCameraLeft = -shadowCameraSize
-    @light.shadowCameraRight = shadowCameraSize
-    @light.shadowCameraTop = shadowCameraSize
-    @light.shadowCameraBottom = -shadowCameraSize
-
-    @light.shadowCameraNear = 1
-    @light.shadowCameraFar = 200
-    @light.shadowBias = -0.0001
-    @light.shadowDarkness = 0.35
-
-    @light.shadowCameraVisible = true
-  
-    @light.target = @target.mesh
-  
-    @scene.add @light
-    help = new THREE.DirectionalLightHelper @light, 3
-    @scene.add help
-  render: () ->
-    xCycle = 0.2 * Math.sin(Date.now() / 10000.0)
-    yCycle = 0.5 * Math.cos(Date.now() / 20000.0)
-    @light.position.set(-21 + xCycle, 10 + yCycle, 25)
+  window.hackerRoom = new HackerRoom(document.getElementById 'actualScene')
