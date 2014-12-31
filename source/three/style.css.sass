@@ -5,6 +5,7 @@
 
 $amber: #F5B34A
 $dark_amber: darken($amber, 55%)
+$light_amber: lighten($amber, 15%)
 
 body
   margin: 0
@@ -27,7 +28,7 @@ body
         text-shadow: 4px black
         margin: 0
       #year
-        background: url('/images/legitbs-2015-text-amber.png') 50% no-repeat
+        background: url('legitbs-2015-text.png') 50% no-repeat
         @include prefixer(background-size, contain, webkit spec)
         height: 128px
         margin-bottom: -1em
@@ -64,6 +65,8 @@ body
             padding: 0.4em
             margin: 0.1em
             text-decoration: none
+          a:hover
+            background-color: $light_amber
 
   #scene
     width: 960px
@@ -75,3 +78,4 @@ body
     margin-top: 10px
     canvas
       border: 1px solid $amber
+      background-color: $dark_amber

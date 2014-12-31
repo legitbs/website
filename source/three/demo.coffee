@@ -2,6 +2,8 @@ jQuery ($)->
 
   TTT = THREE
 
+  AMBER = 0xF5B34A
+
   class HackerRoom
     constructor: (@canvas)->
       @updater = new Updater
@@ -19,7 +21,7 @@ jQuery ($)->
         0.1,
         1000)
       @camera.position.set 0, 4, 5
-      @camera.lookAt new TTT.Vector3 -0.5, 4, 1
+      @camera.lookAt new TTT.Vector3 -0.5, 4.0, 1
     initializeRenderer: ()->
       @renderer = new TTT.WebGLRenderer canvas: @canvas
       @renderer.shadowMapEnabled = true
@@ -112,12 +114,19 @@ jQuery ($)->
     makeScreen: ()->
       mesh = @displayPanel.children[0]
       mesh.receiveShadow = false
+      @screenTexture = TTT.ImageUtils.loadTexture 'legitbs-2015-text.png'
+      @screenTexture.anisotropy = 1
+      @screenTexture.repeat.set 1, 1
+      @screenTexture.mapFilter = @screenTexture.magFilter = TTT.LinearFilter
+      @screenTexture.mapping = TTT.UVMapping
+      @screenTexture.wrapS = @screenTexture.wrapT = TTT.ClampToEdgeWrapping
       mesh.material =
         new TTT.MeshPhongMaterial
           color: new TTT.Color 0x444444
-          emissive: new TTT.Color 0xF5B34A
+          emissive: new TTT.Color AMBER
           specular: new TTT.Color 0xffffff
           shininess: 30
+          map: @screenTexture
 
   class DirLight extends Renderable
     constructor: (@scene, @target)->
@@ -127,7 +136,7 @@ jQuery ($)->
       @light.shadowMapWidth = 2048
       @light.shadowMapHeight = 2048
 
-      shadowCameraSize = 8
+      shadowCameraSize = 10
 
       @light.shadowCameraLeft = -shadowCameraSize
       @light.shadowCameraRight = shadowCameraSize
