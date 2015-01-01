@@ -44,6 +44,8 @@ configure :development do
   activate :livereload
 end
 
+activate :gzip, exts: %w(.js .css .html .htm .dae)
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
