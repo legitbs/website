@@ -20,8 +20,8 @@ jQuery ($)->
         (1.0 * @canvas.width) / @canvas.height,
         0.1,
         1000)
-      @camera.position.set 0, 4, 5
-      @camera.lookAt new TTT.Vector3 -0.5, 4.0, 1
+      @camera.position.set 0, 4, 4
+      @camera.lookAt new TTT.Vector3 -0.25, 4.0, 1
     initializeRenderer: ()->
       @renderer = new TTT.WebGLRenderer canvas: @canvas
       @renderer.shadowMapEnabled = true
@@ -31,21 +31,13 @@ jQuery ($)->
       @updater.add @room
     roomFinished: ()->
       @updater.add @room
-      @initializeBadgeLights @room.badgeLights()
       @initializeDirLight()
       @initializeComputer()
       @initializeCamera()
       requestAnimationFrame @renderLoop.bind(this)
     initializeDirLight: ()->
       @dirLight = new DirLight @scene, @room.displayPanel()
-    initializeBadgeLights: (badgeLeds)->
-      @badgeLights = for light in badgeLeds
-        l = new TTT.PointLight 0xddddff, 0.5, 1
-        l.position.setFromMatrixPosition light.matrixWorld
-        l.updateMatrix()
-        @scene.add l
-        light.children[0].material.emissive = new TTT.Color 0xddddff
-        l
+      @updater.add @dirLight
     initializeComputer: ()->
       @computer = new Computer @scene, @room.displayPanel()
     renderLoop: ()->
@@ -78,7 +70,7 @@ jQuery ($)->
       @sceneParent.updateMatrix()
 
       @sceneParent.traverse (c) =>
-        c.castShadow = true
+        c.castShadow = true unless c.type == 'PointLight'
         c.receiveShadow = true
         c.frustrumCulling = false
 
@@ -92,25 +84,10 @@ jQuery ($)->
         if c.name == 'display-panel'
           @_displayPanel = c
       return @_displayPanel
-    badgeLights: ()->
-      return @_badgeLights if @badgeLight?
-      @_badgeLights = []
-      @scene.traverse (c) =>
-        if c.name == 'BsdgeEye1'
-          @_badgeLights.push c
-      return @_badgeLights
 
   class Computer extends Renderable
     constructor: (@scene, @displayPanel)->
-      @makeLight()
       @makeScreen()
-    makeLight: ()->
-      @light = new THREE.PointLight 0xF5B34A, .75, 10
-      @light.position.setFromMatrixPosition @displayPanel.matrixWorld
-      @light.updateMatrix()
-      @scene.add @light
-      help = new THREE.PointLightHelper @light, 1
-      @scene.add help
     makeScreen: ()->
       mesh = @displayPanel.children[0]
       mesh.receiveShadow = false
@@ -154,8 +131,8 @@ jQuery ($)->
 
       @scene.add @light
     render: () ->
-      xCycle = 0.2 * Math.sin(Date.now() / 10000.0)
-      yCycle = 0.5 * Math.cos(Date.now() / 20000.0)
+      xCycle = 0.4 * Math.sin(Date.now() / 10000.0)
+      yCycle = 0.8 * Math.cos(Date.now() / 20000.0)
       @light.position.set(-21 + xCycle, 10 + yCycle, 25)
 
 
