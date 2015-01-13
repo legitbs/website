@@ -93,8 +93,8 @@ jQuery ($)->
       @createTexture()
     createTexture: ()->
       @texture = TTT.ImageUtils.loadTexture 'uv-idabook.png'
-      @texture.anisotropy = 0
-      @texture.repeat.set 0, 0
+      @texture.anisotropy = 1
+      @texture.repeat.set 1, 1
       @texture.mapFilter = @texture.magFilter = TTT.LinearFilter
       @texture.mapping = TTT.UVMapping
       @mesh.material =
