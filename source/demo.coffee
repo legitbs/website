@@ -73,6 +73,8 @@ jQuery ($)->
         c.castShadow = true unless c.type == 'PointLight'
         c.receiveShadow = true
         c.frustrumCulling = false
+        if c.name == 'IDA Book'
+          @idabook = new IdaBook c
 
       @scene.add @sceneParent
       @sceneParent.updateMatrixWorld()
@@ -84,6 +86,24 @@ jQuery ($)->
         if c.name == 'display-panel'
           @_displayPanel = c
       return @_displayPanel
+
+  class IdaBook
+    constructor: (@object)->
+      @mesh = @object.children[0]
+      @createTexture()
+    createTexture: ()->
+      @texture = TTT.ImageUtils.loadTexture 'uv-idabook.png'
+      @texture.anisotropy = 0
+      @texture.repeat.set 0, 0
+      @texture.mapFilter = @texture.magFilter = TTT.LinearFilter
+      @texture.mapping = TTT.UVMapping
+      @mesh.material =
+        new TTT.MeshPhongMaterial
+          color: new TTT.Color 0x444444
+          emissive: new TTT.Color 0x444444
+          specular: new TTT.Color 0x444444
+          shininess: 10
+          map: @texture
 
   class Computer extends Renderable
     constructor: (@scene, @displayPanel)->

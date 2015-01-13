@@ -2,48 +2,35 @@
 %html
   %head
     %title DEF CON CTF 2015
-    = stylesheet_link_tag '2015'
+    %link{rel: 'stylesheet', href: 'style.css'}
+    %meta{name: 'viewport', content: 'width=device-width, minimum-scale=1.0'}
   %body
-    #background-grid &nbsp;
-    #content
-      #splash
+    %script{type: 'text/javascript', src: 'jquery-2.1.1.min.js'}
+    %script{type: 'text/javascript', src: 'three.min.js'}
+    %script{type: 'text/javascript', src: 'ColladaLoader.js'}
+    %script{type: 'text/javascript', src: 'demo.js'}
+    #scene
+      %canvas#actualScene{width: 960, height: 640}
+    #main_column
+      #title_zone
         %h1 DEF CON Capture the Flag
-        #year 2015
-        %h2 Legitimate Business Syndicate
-      #teams.gizmo
-        .count 15
-        .subject
-          %h1 Teams
-      #players.gizmo
-        .count &infin;
-        .subject
-          %h1 Players
-      #days.gizmo
-        .count Start
-        .subject
-          %h1 Thursday
-      #cantwait
-        %p More information in 2015.
-        %nav
-          %ul
-            %li
-              %a{href: 'https://blog.legitbs.net'} Blog
-            %li
-              %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
-            %li
-              %a{href: 'https://github.com/legitbs'} GitHub
-            %li
-              %a{href: 'https://defcon.org'} DEF CON
-            %li
-              %a{href: '/2013/'} 2013
-            %li
-              %a{href: '/2014/'} 2014
-    :javascript
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-38870141-1', 'legitbs.net');
-      ga('send', 'pageview');
-
+        %h1 Legitimate Business Syndicate
+        %h2#yearText 2015
+      %ul#schedule
+        %li Quals May 16-17
+        %li Finals August 6
+        %li Fifteen teams, &infin; players
+      %nav
+        %ul
+          %li
+            %a{href: 'https://blog.legitbs.net'} Blog
+          %li
+            %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
+          %li
+            %a{href: 'https://github.com/legitbs'} GitHub
+          %li
+            %a{href: 'https://defcon.org'} DEF CON
+          %li
+            %a{href: '/2013/'} 2013
+          %li
+            %a{href: '/2014/'} 2014
