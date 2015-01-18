@@ -144,17 +144,17 @@ jQuery ($)->
       @initializeCamera()
       @initializeRenderer()
     initializeCamera: ()->
-      @camera = new TTT.PerspectiveCamera(75,
+      @camera = new TTT.PerspectiveCamera(55,
         (1.0 * @canvas.width) / @canvas.height,
         0.1,
         1000)
-      @camera.position.set 0, 4, 4
+      @camera.position.set 0, 4.5, 5
     initializeRenderer: ()->
       @renderer = new TTT.WebGLRenderer canvas: @canvas
       @renderer.shadowMapEnabled = true
       @renderer.shadowMapCullFace = THREE.CullFaceBack
     render: ()->
-      xCycle = -0.2 - (0.1 * Math.cos(Date.now() / 10000.0))
+      xCycle = -0.25 - (0.08 * Math.cos(Date.now() / 10000.0))
       yCycle = 0.1 * Math.sin((Date.now() + 1000) / 20000.0)
       @camera.rotation.set xCycle, yCycle, 0
       @renderer.render @scene, @camera
