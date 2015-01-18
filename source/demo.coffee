@@ -10,22 +10,13 @@ jQuery ($)->
       @initializeLoader()
       @initializeScene()
       @initializeRoom()
-      @initializeRenderer()
     initializeLoader: ()->
       @loader = new TTT.LoadingManager()
     initializeScene: ()->
       @scene = new TTT.Scene
     initializeCamera: ()->
-      @camera = new TTT.PerspectiveCamera(75,
-        (1.0 * @canvas.width) / @canvas.height,
-        0.1,
-        1000)
-      @camera.position.set 0, 4, 4
-      @camera.lookAt new TTT.Vector3 -0.25, 4.0, 1
-    initializeRenderer: ()->
-      @renderer = new TTT.WebGLRenderer canvas: @canvas
-      @renderer.shadowMapEnabled = true
-      @renderer.shadowMapCullFace = THREE.CullFaceBack
+      @camera = new Camera @canvas, @scene
+      @updater.add @camera
     initializeRoom: ()->
       @room = new Room @scene, @loader, @roomFinished.bind(this)
       @updater.add @room
@@ -42,7 +33,6 @@ jQuery ($)->
       @computer = new Computer @scene, @room.displayPanel()
     renderLoop: ()->
       @updater.render()
-      @renderer.render @scene, @camera
       requestAnimationFrame @renderLoop.bind(this)
 
   class Updater
@@ -56,6 +46,25 @@ jQuery ($)->
   class Renderable
     render: ()->
       # noop
+
+  class TexturedMesh
+    constructor: (@object)->
+      @mesh = @object.children[0]
+      @createTexture()
+    createTexture: ()->
+      @texture = TTT.ImageUtils.loadTexture @textureFilePicker()
+      @texture.anisotropy = 16
+      @texture.repeat.set 1, 1
+      @texture.mapFilter = @texture.magFilter = TTT.LinearFilter
+      @texture.mapping = TTT.UVMapping
+      @mesh.material =
+        new TTT.MeshPhongMaterial
+          color: new TTT.Color 0x444444
+          emissive: new TTT.Color 0x444444
+          specular: new TTT.Color 0x444444
+          shininess: 10
+          map: @texture
+    textureFilePicker: ()-> @textureFile
 
   class Room extends Renderable
     constructor: (@scene, @manager, @callback)->
@@ -75,6 +84,13 @@ jQuery ($)->
         c.frustrumCulling = false
         if c.name == 'IDA Book'
           @idabook = new IdaBook c
+        else if c.name == 'BeerBottle'
+          @bottle = new Bottle c
+        else if c.name == 'paper'
+          @paper = new Paper c
+        else if c.name.match /Cylinder00\d/
+          @cans ?= []
+          @cans.push new Can c
 
       @scene.add @sceneParent
       @sceneParent.updateMatrixWorld()
@@ -87,23 +103,21 @@ jQuery ($)->
           @_displayPanel = c
       return @_displayPanel
 
-  class IdaBook
-    constructor: (@object)->
-      @mesh = @object.children[0]
-      @createTexture()
-    createTexture: ()->
-      @texture = TTT.ImageUtils.loadTexture 'uv-idabook.png'
-      @texture.anisotropy = 1
-      @texture.repeat.set 1, 1
-      @texture.mapFilter = @texture.magFilter = TTT.LinearFilter
-      @texture.mapping = TTT.UVMapping
-      @mesh.material =
-        new TTT.MeshPhongMaterial
-          color: new TTT.Color 0x444444
-          emissive: new TTT.Color 0x444444
-          specular: new TTT.Color 0x444444
-          shininess: 10
-          map: @texture
+  class IdaBook extends TexturedMesh
+    textureFile: 'hacker_room/uv-idabook.png'
+
+  class Bottle extends TexturedMesh
+    textureFile: 'hacker_room/uv-bottle.png'
+
+  class Paper extends TexturedMesh
+    textureFilePicker: ()->
+      idx = Math.floor(Math.random() * @textureNames.length)
+      pick = @textureNames[idx]
+      "hacker_room/#{pick}"
+    textureNames: ['choripan.png']
+
+  class Can extends TexturedMesh
+    textureFile: 'hacker_room/uv-can.png'
 
   class Computer extends Renderable
     constructor: (@scene, @displayPanel)->
@@ -111,8 +125,8 @@ jQuery ($)->
     makeScreen: ()->
       mesh = @displayPanel.children[0]
       mesh.receiveShadow = false
-      @screenTexture = TTT.ImageUtils.loadTexture 'legitbs-2015-text.png'
-      @screenTexture.anisotropy = 1
+      @screenTexture = TTT.ImageUtils.loadTexture 'hacker_room/legitbs-2015-text.png'
+      @screenTexture.anisotropy = 16
       @screenTexture.repeat.set 1, 1
       @screenTexture.mapFilter = @screenTexture.magFilter = TTT.LinearFilter
       @screenTexture.mapping = TTT.UVMapping
@@ -124,6 +138,26 @@ jQuery ($)->
           specular: new TTT.Color 0xffffff
           shininess: 30
           map: @screenTexture
+
+  class Camera extends Renderable
+    constructor: (@canvas, @scene)->
+      @initializeCamera()
+      @initializeRenderer()
+    initializeCamera: ()->
+      @camera = new TTT.PerspectiveCamera(75,
+        (1.0 * @canvas.width) / @canvas.height,
+        0.1,
+        1000)
+      @camera.position.set 0, 4, 4
+    initializeRenderer: ()->
+      @renderer = new TTT.WebGLRenderer canvas: @canvas
+      @renderer.shadowMapEnabled = true
+      @renderer.shadowMapCullFace = THREE.CullFaceBack
+    render: ()->
+      xCycle = -0.2 - (0.1 * Math.cos(Date.now() / 10000.0))
+      yCycle = 0.1 * Math.sin((Date.now() + 1000) / 20000.0)
+      @camera.rotation.set xCycle, yCycle, 0
+      @renderer.render @scene, @camera
 
   class DirLight extends Renderable
     constructor: (@scene, @target)->
