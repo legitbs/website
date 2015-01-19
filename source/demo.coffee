@@ -93,7 +93,10 @@ jQuery ($)->
           @cans.push new Can c
         else if c.name == 'odroid heartbeat'
           @heartbeat = new OdroidHeartbeat c
-
+        else if c.name.match /badge/i
+          @badge ?= new Badge
+          @badge.addObject c
+          
       @scene.add @sceneParent
       @sceneParent.updateMatrixWorld()
       @didLoad = true
@@ -132,6 +135,31 @@ jQuery ($)->
         @light.intensity = 0.25
       else
         @light.intensity = 0
+
+  class Badge
+    constructor: ()->
+      @eyes = []
+      @eyeMaterials = []
+      hackerRoom.updater.add this
+    addObject: (object)->
+      if object.name.match /BadgeEye/
+        @addEye object
+      else if object.name == 'badge-light'
+        @addLight object
+    addEye: (eye)->
+      @eyes.push eye
+      @eyeMaterials.push eye.children[0].material
+    addLight: (light)->
+      @light = light.children[0]
+      @light.distance = 5
+    render: ()->
+      cycle = 0.1 + Math.sin((Date.now() * 0.003) + .1)
+      if cycle > 1
+        @light?.intensity = 0.5
+        i.emissive.set 0xaaccff for i in @eyeMaterials
+      else
+        @light?.intensity = 0.25
+        i.emissive.set 0x000000 for i in @eyeMaterials
 
   class Computer extends Renderable
     constructor: (@scene, @displayPanel)->
