@@ -69,7 +69,7 @@ jQuery ($)->
   class Room extends Renderable
     constructor: (@scene, @manager, @callback)->
       @loader = new THREE.ColladaLoader @manager
-      @loader.load 'hacker_room.dae', @loaded.bind(this)
+      @loader.load 'hacker_room.xml', @loaded.bind(this)
     loaded: (o)->
       @sceneParent = o.scene.children[0]
       @sceneParent.scale.set 0.15, 0.15, 0.15
