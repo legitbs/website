@@ -44,8 +44,6 @@ configure :development do
   activate :livereload
 end
 
-activate :gzip, exts: %w(.js .css .html .htm .dae)
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -71,8 +69,14 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+  deploy.remote = 'github'
 end
