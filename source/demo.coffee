@@ -91,6 +91,8 @@ jQuery ($)->
         else if c.name.match /Cylinder00\d/
           @cans ?= []
           @cans.push new Can c
+        else if c.name == 'odroid heartbeat'
+          @heartbeat = new OdroidHeartbeat c
 
       @scene.add @sceneParent
       @sceneParent.updateMatrixWorld()
@@ -118,6 +120,18 @@ jQuery ($)->
 
   class Can extends TexturedMesh
     textureFile: 'hacker_room/uv-can.png'
+
+  class OdroidHeartbeat
+    constructor: (@object3d)->
+      @light = @object3d.children[0]
+      @light.distance = 5
+      hackerRoom.updater.add this
+    render: ()->
+      cycle = 0.1 + Math.sin(Date.now() * 0.005)
+      if cycle > 1
+        @light.intensity = 0.25
+      else
+        @light.intensity = 0
 
   class Computer extends Renderable
     constructor: (@scene, @displayPanel)->
@@ -153,6 +167,7 @@ jQuery ($)->
       @renderer = new TTT.WebGLRenderer
         canvas: @canvas
         antialias: true
+        alpha: true
       @renderer.shadowMapEnabled = true
       @renderer.shadowMapCullFace = THREE.CullFaceBack
     render: ()->
@@ -163,11 +178,12 @@ jQuery ($)->
 
   class DirLight extends Renderable
     constructor: (@scene, @target)->
-      @light = new THREE.DirectionalLight 0xffffff, 0.5
+      @light = new THREE.DirectionalLight 0xffffff, 0.15
       @light.position.set -20, 10, 25
       @light.castShadow = true
       @light.shadowMapWidth = 2048
       @light.shadowMapHeight = 2048
+      @light.onlyShadow = false
 
       shadowCameraSize = 10
 
