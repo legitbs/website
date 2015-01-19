@@ -150,7 +150,9 @@ jQuery ($)->
         1000)
       @camera.position.set 0, 4.5, 5
     initializeRenderer: ()->
-      @renderer = new TTT.WebGLRenderer canvas: @canvas
+      @renderer = new TTT.WebGLRenderer
+        canvas: @canvas
+        antialias: true
       @renderer.shadowMapEnabled = true
       @renderer.shadowMapCullFace = THREE.CullFaceBack
     render: ()->
