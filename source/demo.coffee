@@ -206,7 +206,7 @@ jQuery ($)->
 
   class DirLight extends Renderable
     constructor: (@scene, @target)->
-      @light = new THREE.DirectionalLight 0xffffff, 0.15
+      @light = new THREE.DirectionalLight 0xffffff, 0.25
       @light.position.set -20, 10, 25
       @light.castShadow = true
       @light.shadowMapWidth = 2048
