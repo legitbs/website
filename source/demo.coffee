@@ -200,7 +200,7 @@ jQuery ($)->
       @renderer.shadowMapCullFace = THREE.CullFaceBack
     render: ()->
       xCycle = -0.25 - (0.08 * Math.cos(Date.now() / 10000.0))
-      yCycle = 0.1 * Math.sin((Date.now() + 1000) / 20000.0)
+      yCycle = 0.1 * Math.sin((Date.now() + 1000) / 19000.0)
       @camera.rotation.set xCycle, yCycle, 0
       @renderer.render @scene, @camera
 
