@@ -2,7 +2,7 @@
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
   <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2015-01-20T03:13:30Z</created><keywords></keywords><modified>2015-01-20T03:13:30Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_images>
-    <image id="ID12-image" name="ID12"><init_from>file://C:\Users\Bryce\SkyDrive\Documents\legitbs-2015-text.png</init_from></image>
+    <image id="ID12-image" name="ID12"><init_from>file://C:\Users\Vito\SkyDrive\Documents\legitbs-2015-text.png</init_from></image>
   </library_images>
   <library_materials>
     <material id="walls" name="walls">
