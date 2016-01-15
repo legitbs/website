@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,700|Merriweather+Sans:300)
+
+$body_font: "Merriweather Sans", "Helvetica Neue", Helvetica, sans-serif, Arial
+$display_font: "Exo 2", Exo, "Helvetica Neue", Helvetica, sans-serif, Arial
+
+$background_color: #3C0452
+$foreground_color: #eee
+$link_color: lighten($foreground_color, 30%)
+
+@import "bourbon/bourbon"
+@import "neat/neat"
+
+body
+  font-family: $body_font
+  background-color: $background_color
+  color: $foreground_color
+
+h1, h2, h3, h4, h5, h6
+  font-family: $display_font
+
+dl
+  @include outer-container
+  dt
+    @include span-columns(4)
+    text-align: right
+    font-family: $display_font
+    font-weight: bold
+  dd
+    @include span-columns(8)
+    @include omega
+    -webkit-margin-start: 0
+    a:link, a:visited
+      display: inline-block
+      text-decoration: none
+      color: $link_color
+      padding: 0.33em
+      margin-bottom: 0.33em
+      border: 1px solid $link_color
+      border-radius: 4px
+
+ul
+  -webkit-padding-start: 0
+
+section#hero
+  @include outer-container
+  text-align: center
+  margin-bottom: 2em
+  h1, h2
+    @include span-columns(8)
+    @include shift(2)
+    margin-bottom: 0
+
+section#dates
+  dt, dd
+    margin-bottom: 2 * 0.33em
+
+section#links
+  dt
+    padding: 0.33em
