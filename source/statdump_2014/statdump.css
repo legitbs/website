@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,400,700,400italic;Merriweather+Sans:400,400italic,700,700italic;Ubuntu+Mono:400);
+a:link, a:visited {
+  color: #dab7ff; }
+
+body, input, button {
+  font-family: "Merriweather Sans", Ubuntu, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Exo 2", Exo, sans-serif; }
+
+.explanation {
+  font-size: 0.8em;
+  color: #dbc9ed; }
+
+.small {
+  font-size: 0.6em; }
+
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(#1e0533 0%, #4a2966 100%) fixed no-repeat;
+  background-size: cover;
+  color: white; }
+  body #content {
+    width: 980px;
+    margin: 12px auto;
+    border: 1px solid #dab7ff;
+    padding: 12px; }
+    body #content nav {
+      padding: 12px; }
+      body #content nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        body #content nav ul li {
+          display: inline-block; }
+          body #content nav ul li a {
+            display: inline-block;
+            border: 1px solid #dab7ff;
+            margin: 4px;
+            padding: 24px;
+            width: 160px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px; }
+            body #content nav ul li a:hover {
+              background-color: #dab7ff;
+              color: #1e0533; }
