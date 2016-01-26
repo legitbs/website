@@ -15,9 +15,9 @@
 $body_font: "Overpass", "Helvetica Neue", Helvetica, sans-serif, Arial
 $display_font: "Exo 2", Exo, "Helvetica Neue", Helvetica, sans-serif, Arial
 
-$background_color: #3C0452
-$foreground_color: #eee
-$link_color: lighten($foreground_color, 30%)
+$background_color: #1C0432
+$foreground_color: lighten($background_color, 75%)
+$link_color: lighten($foreground_color, 10%)
 
 @import "bourbon/bourbon"
 @import "neat/neat"
@@ -37,6 +37,7 @@ dl
     text-align: right
     font-family: $display_font
     font-weight: bold
+    padding-top: 0.1em
   dd
     @include span-columns(8)
     @include omega
@@ -68,4 +69,4 @@ section#dates
 
 section#links
   dt
-    padding: 0.33em
+    padding: 0.5em 0.1em 0.33em
