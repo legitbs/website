@@ -30,19 +30,17 @@ body
 h1, h2, h3, h4, h5, h6
   font-family: $display_font
 
-dl
+.heady
   @include outer-container
-  dt
+  .subhead
     @include span-columns(4)
     text-align: right
     font-family: $display_font
     font-weight: bold
     padding-top: 0.1em
-  dd
+  .info
     @include span-columns(8)
     @include omega
-    margin-left: -1em
-    padding-left: 1em
     a:link, a:visited
       display: inline-block
       text-decoration: none
@@ -65,9 +63,9 @@ section#hero
     margin-bottom: 0
 
 section#dates
-  dt, dd
+  .subhead, .info
     margin-bottom: 2 * 0.33em
 
 section#links
-  dt
+  .subhead
     padding: 0.5em 0.1em 0.33em
