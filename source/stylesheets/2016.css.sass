@@ -1,71 +1,129 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:100,700)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800,800italic)
 
-@font-face
-  font-family: 'Overpass'
-  font-style: normal
-  font-weight: 300
-  src: local('Overpass Regular'), local('Overpass-Reg'), url(/fonts/Overpass-Regular.ttf)
-
-@font-face
-  font-family: 'Overpass'
-  font-style: italic
-  font-weight: 300
-  src: local('Overpass Italic'), local('Overpass-Italic'), url('/fonts/Overpass-Italic.ttf')
-
-$body_font: "Overpass", "Helvetica Neue", Helvetica, sans-serif, Arial
-$display_font: "Exo 2", Exo, "Helvetica Neue", Helvetica, sans-serif, Arial
+$body_font: "Open Sans", "Helvetica Neue", Helvetica, sans-serif, Arial
 
 $background_color: #1C0432
 $foreground_color: lighten($background_color, 75%)
 $link_color: lighten($foreground_color, 10%)
+
+$teeth: #e7d0c6
+$tan: #d19269
+$honky: #f3c6b5
+$shirt: #d4e1f4
+$lefty: #493733
+$bluegrey: #817d89
+$light_bluegrey: lighten($bluegrey, 25%)
+$tielight: #8b858b
+$light_tielight: lighten($tielight, 25%)
 
 @import "bourbon/bourbon"
 @import "neat/neat"
 
 body
   font-family: $body_font
-  background-color: $background_color
-  color: $foreground_color
+  color: $lefty
+  background-color: lighten($shirt, 6%)
 
 h1, h2, h3, h4, h5, h6
-  font-family: $display_font
+  font-family: $body_font
 
-.heady
-  @include outer-container
-  .subhead
-    @include span-columns(4)
-    text-align: right
-    font-family: $display_font
-    font-weight: bold
-    padding-top: 0.1em
-  .info
-    @include span-columns(8)
-    @include omega
-    a:link, a:visited
-      display: inline-block
-      text-decoration: none
-      color: $link_color
-      padding: 0.33em
-      margin-bottom: 0.33em
-      border: 1px solid $link_color
-      border-radius: 4px
-
-ul
-  -webkit-padding-start: 0
+a:link, a:visited
+  color: black
+a:hover
+  color: $bluegrey
 
 section#hero
-  @include outer-container
-  text-align: center
-  margin-bottom: 2em
+  background-image: url("/images/AdobeStock_69625568_WM.jpeg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  padding-top: 1em
+  $overlay_color: transparentize($shirt, .15)
   h1, h2
-    @include span-columns(8)
-    @include shift(2)
+    @include span-columns(12)
+    font-weight: 800
     margin-bottom: 0
+    font-style: italic
+    font-size: 3em
+    background-color: $overlay_color
+  p
+    @include span-columns(12)
+    background-color: $overlay_color
+    font-size: 2em
 
-section#dates
-  .subhead, .info
-    margin-bottom: 2 * 0.33em
+section
+  @include outer-container
+  margin-bottom: 1em
+  .quote
+    .blockquote
+      font-size: 2em
+      font-weight: 800
+      font-style: italic
+    .cite
+
+section#quals
+  @include row(table)
+  margin-bottom: 0
+  .quote
+    @include span-columns(8)
+    @include pad()
+  .dates
+    @include span-columns(4)
+    @include pad()
+    @include omega()
+    background-color: $light_bluegrey
+
+section#finals
+  @include row(table)
+  .dates
+    @include span-columns(3)
+    @include pad()
+    background-color: $tan
+  .quote
+    @include span-columns(9)
+    @include pad()
+    @include omega()
+
+section#pride
+  @include row(table)
+  h1
+    @include span-columns(12)
+    @include omega()
+    @include pad()
+    font-weight: 400
+    font-style: italic
+    text-align: center
+    background-color: $lefty
+    color: $honky
 
 section#links
-  .subhead
-    padding: 0.5em 0.1em 0.33em
+  #historic, #related
+    @include fill-parent()
+    @include row(table)
+    .year
+      @include span-columns(4)
+      @include pad()
+      &#y2015
+        background-color: $shirt
+      &#y2014
+        background-color: $honky
+      &#y2013
+        @include omega()
+        background-color: $light_bluegrey
+    .orga
+      @include span-columns(6)
+      @include pad()
+      &#legitbs
+        background-color: $tan
+      &#other
+        @include omega()
+        background-color: $shirt
+  a:link, a:visited
+    text-decoration: none
+    border: 1px solid black
+    border-radius: 0.4em
+    padding: 0.2em
+  a:hover
+    color: white
+    background-color: black
+    border-color: white
