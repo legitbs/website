@@ -16,15 +16,18 @@ $light_bluegrey: lighten($bluegrey, 25%)
 $tielight: #8b858b
 $light_tielight: lighten($tielight, 25%)
 
+$background_color: lighten($shirt, 6%)
+
 @import "bourbon/bourbon"
 @import "neat/neat"
 
 body
   font-family: $body_font
   color: $lefty
-  background-color: lighten($shirt, 6%)
+  background-color: $background_color
 
 h1, h2, h3, h4, h5, h6
+  margin-top: 0
   font-family: $body_font
 
 a:link, a:visited
@@ -32,57 +35,90 @@ a:link, a:visited
 a:hover
   color: $bluegrey
 
+section
+  @include outer-container
+  margin-bottom: 1em
+  .quote
+    @include pad(2em)
+    .blockquote
+      font-size: 2em
+      font-weight: 800
+      font-style: italic
+      padding: 0.5em
+      $quotation_mark_color: lighten($lefty, 30%)
+      &:before
+        content: "“"
+        color: $quotation_mark_color
+      &:after
+        content: "”"
+        color: $quotation_mark_color
+    .cite
+
 section#hero
-  background-image: url("/images/AdobeStock_69625568_WM.jpeg")
+  background-image: url("/images/AdobeStock_69625568_WM.glitched.jpeg")
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  padding-top: 1em
-  $overlay_color: transparentize($shirt, .15)
+  padding-top: 4.5em
+  /* $overlay_color: transparentize($shirt, .15)
+  $overlay_color: $background_color
+  margin-bottom: 0
   h1, h2
     @include span-columns(12)
     font-weight: 800
-    margin-bottom: 0
+    margin-top: 1em
+    margin-bottom: 3.8em
     font-style: italic
     font-size: 3em
     background-color: $overlay_color
   p
     @include span-columns(12)
+    padding: 0.5em 0
     background-color: $overlay_color
     font-size: 2em
 
-section
-  @include outer-container
-  margin-bottom: 1em
-  .quote
-    .blockquote
-      font-size: 2em
-      font-weight: 800
-      font-style: italic
-    .cite
+section#logos
+  @include outer-container()
+  #as_featured
+    @include span-columns(2)
+  .logo
+    @include span-columns(1)
 
-section#quals
-  @include row(table)
-  margin-bottom: 0
-  .quote
-    @include span-columns(8)
-    @include pad()
-  .dates
-    @include span-columns(4)
-    @include pad()
+section#tagline
+  @include outer-container()
+  color: $honky
+  background-color: $lefty
+  p
+    @include span-columns(12)
     @include omega()
-    background-color: $light_bluegrey
+    @include pad(0 default)
+    font-weight: 400
+    font-style: italic
+    text-align: center
+    font-size: 1.5em
 
-section#finals
-  @include row(table)
-  .dates
-    @include span-columns(3)
-    @include pad()
-    background-color: $tan
-  .quote
-    @include span-columns(9)
-    @include pad()
-    @include omega()
+section#dates
+  @include outer-container()
+  #quals
+    @include row(table)
+    margin-bottom: 0
+    .quote
+      @include span-columns(8)
+    .dates
+      @include span-columns(4)
+      @include pad()
+      @include omega()
+      background-color: $tan
+
+  #finals
+    @include row(table)
+    .dates
+      @include span-columns(3)
+      @include pad()
+      background-color: $light_bluegrey
+    .quote
+      @include span-columns(9)
+      @include omega()
 
 section#pride
   @include row(table)
@@ -98,10 +134,10 @@ section#pride
 
 section#links
   #historic, #related
-    @include fill-parent()
     @include row(table)
+    margin-bottom: 1em
     .year
-      @include span-columns(4)
+      @include span-columns(4 of 12)
       @include pad()
       &#y2015
         background-color: $shirt
@@ -111,7 +147,7 @@ section#links
         @include omega()
         background-color: $light_bluegrey
     .orga
-      @include span-columns(6)
+      @include span-columns(6 of 12)
       @include pad()
       &#legitbs
         background-color: $tan
@@ -119,10 +155,12 @@ section#links
         @include omega()
         background-color: $shirt
   a:link, a:visited
+    display: inline-block
     text-decoration: none
     border: 1px solid black
     border-radius: 0.4em
     padding: 0.2em
+    margin: 0.2em
   a:hover
     color: white
     background-color: black
