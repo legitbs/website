@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800,800italic)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,800,800italic)
 
 $body_font: "Open Sans", "Helvetica Neue", Helvetica, sans-serif, Arial
 
@@ -122,15 +122,17 @@ section#dates
 
 section#pride
   @include row(table)
-  h1
+  font-weight: 400
+  font-style: italic
+  text-align: center
+  background-color: $lefty
+  color: $honky
+  margin-bottom: 0
+  p
     @include span-columns(12)
-    @include omega()
     @include pad()
-    font-weight: 400
-    font-style: italic
-    text-align: center
-    background-color: $lefty
-    color: $honky
+    @include omega()
+    font-size: 1.5em
 
 section#links
   #historic, #related
@@ -139,6 +141,40 @@ section#links
     .year
       @include span-columns(4 of 12)
       @include pad()
+      position: relative
+      text-align: center
+      .highlight
+        background-color: red
+        color: white
+        font-size: 0.8em
+        position: absolute
+        display: inline-block
+        right: -1em
+        top: 1em
+        padding: 0.2em 2em
+        font-weight: 300
+        z-index: 2
+        text-transform: uppercase
+      h2
+        font-size: 5em
+        font-weight: 300
+        margin-bottom: 0
+      .winner
+        font-size: 2.2em
+        margin-bottom: 0.5em
+        &:before, &:after
+          content: " "
+          display: inline-block
+          width: 39px
+          height: 64px
+          vertical-align: -0.5em
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+        &:before
+          background-image: url("/images/photo-laurel-left-78x128.png")
+        &:after
+          background-image: url("/images/photo-laurel-right-78x128.png")
       &#y2015
         background-color: $shirt
       &#y2014
