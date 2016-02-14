@@ -18,6 +18,8 @@ $light_tielight: lighten($tielight, 25%)
 
 $background_color: lighten($shirt, 6%)
 
+$regscreen: min-width 480px
+
 @import "bourbon/bourbon"
 @import "neat/neat"
 
@@ -42,10 +44,13 @@ section
   .quote
     @include pad(2em)
     .blockquote
-      font-size: 2em
-      font-weight: 800
+      font-weight: 700
       font-style: italic
-      padding: 0.5em
+      font-size: 1.2em
+      @include media($regscreen)
+        font-size: 2em
+        padding: 0.5em
+        font-weight: 800
       $quotation_mark_color: lighten($lefty, 30%)
       &:before
         content: "“"
@@ -56,27 +61,24 @@ section
     .cite
 
 section#hero
-  background-image: url("/images/AdobeStock_69625568_WM.jpeg")
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: cover
-  padding-top: 4.5em
   /* $overlay_color: transparentize($shirt, .15)
   $overlay_color: $background_color
   margin-bottom: 0
   h1, h2
     @include span-columns(12)
     font-weight: 800
-    margin-top: 1em
-    margin-bottom: 3.8em
     font-style: italic
-    font-size: 3em
     background-color: $overlay_color
-  p
-    @include span-columns(12)
-    padding: 0.5em 0
-    background-color: $overlay_color
-    font-size: 2em
+  @include media($regscreen)
+    background-image: url("/images/AdobeStock_69625568_WM.jpeg")
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    padding-top: 4.5em
+    h1, h2
+      margin-top: 1em
+      margin-bottom: 3.8em
+      font-size: 3em
 
 section#tagline
   @include outer-container()
@@ -90,14 +92,18 @@ section#tagline
     font-weight: 400
     font-style: italic
     text-align: center
-    font-size: 1.5em
+  @include media($regscreen)
+    p
+      font-size: 1.5em
 
 section#dates
   @include outer-container()
+  background-color: $lefty
   background-image: url("/images/2015-attackmode-dimmer.jpg")
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
+  background-attachment: fixed
   margin-bottom: 0
   .dates
     @include pad()
@@ -105,42 +111,53 @@ section#dates
       font-weight: bold
   .quote
     color: $honky
-    text-outline: 2px solid black
     a:link, a:visited
       color: $honky
   #quals
     .quote
-      @include span-columns(8)
     .dates
-      @include span-columns(4)
-      @include omega()
       background-color: $tan
       text-align: right
   #justquote
     .quote
-      @include span-columns(12)
-      @include omega()
       text-align: center
   #finals
     .dates
-      @include span-columns(3)
       background-color: $light_bluegrey
     .quote
-      @include span-columns(9)
-      @include omega()
       text-align: right
+  @include media($regscreen)
+    #quals
+      .quote
+        @include span-columns(8)
+      .dates
+        @include span-columns(4)
+        @include omega()
+    #justquote
+      .quote
+        @include span-columns(12)
+        @include omega()
+    #finals
+      .dates
+        @include span-columns(3)
+      .quote
+        @include span-columns(9)
+        @include omega()
+
 
 section#prequals
   margin-bottom: 0
   div
     font-size: 1.2em
-  #howto
-    @include span-columns(4)
-    @include pad()
+  @include media($regscreen)
+    #howto
+      @include span-columns(4)
+      @include pad()
+    #contests
+      @include span-columns(8)
+      @include omega()
+      @include pad()
   #contests
-    @include span-columns(8)
-    @include omega()
-    @include pad()
     table
       text-align: center
       font-size: 0.8em
@@ -171,13 +188,9 @@ section#pride
 
 section#links
   #historic, #related
-    @include row(table)
-    margin-bottom: 1em
     .year
-      @include span-columns(4 of 12)
-      @include pad()
-      position: relative
       text-align: center
+      position: relative
       .highlight
         background-color: red
         color: white
@@ -218,8 +231,6 @@ section#links
         @include omega()
         background-color: $light_bluegrey
     .orga
-      @include span-columns(6 of 12)
-      @include pad()
       &#legitbs
         background-color: $tan
       &#other
@@ -227,6 +238,16 @@ section#links
         background-color: $shirt
       .info
         margin-left: -0.2em
+  @include media($regscreen)
+    #historic, #related
+      @include row(table)
+      .year
+        @include span-columns(4 of 12)
+        @include pad()
+      .orga
+        @include span-columns(6 of 12)
+        @include pad()
+
   a:link, a:visited
     display: inline-block
     text-decoration: none
