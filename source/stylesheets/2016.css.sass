@@ -25,6 +25,7 @@ body
   font-family: $body_font
   color: $lefty
   background-color: $background_color
+  margin: 0
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
@@ -55,7 +56,7 @@ section
     .cite
 
 section#hero
-  background-image: url("/images/AdobeStock_69625568_WM.glitched.jpeg")
+  background-image: url("/images/AdobeStock_69625568_WM.jpeg")
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
@@ -77,17 +78,11 @@ section#hero
     background-color: $overlay_color
     font-size: 2em
 
-section#logos
-  @include outer-container()
-  #as_featured
-    @include span-columns(2)
-  .logo
-    @include span-columns(1)
-
 section#tagline
   @include outer-container()
   color: $honky
   background-color: $lefty
+  margin-bottom: 0
   p
     @include span-columns(12)
     @include omega()
@@ -99,26 +94,66 @@ section#tagline
 
 section#dates
   @include outer-container()
+  background-image: url("/images/2015-attackmode-dimmer.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  margin-bottom: 0
+  .dates
+    @include pad()
+    .actual_dates
+      font-weight: bold
+  .quote
+    color: $honky
+    text-outline: 2px solid black
+    a:link, a:visited
+      color: $honky
   #quals
-    @include row(table)
-    margin-bottom: 0
     .quote
       @include span-columns(8)
     .dates
       @include span-columns(4)
-      @include pad()
       @include omega()
       background-color: $tan
-
+      text-align: right
+  #justquote
+    .quote
+      @include span-columns(12)
+      @include omega()
+      text-align: center
   #finals
-    @include row(table)
     .dates
       @include span-columns(3)
-      @include pad()
       background-color: $light_bluegrey
     .quote
       @include span-columns(9)
       @include omega()
+      text-align: right
+
+section#prequals
+  margin-bottom: 0
+  div
+    font-size: 1.2em
+  #howto
+    @include span-columns(4)
+    @include pad()
+  #contests
+    @include span-columns(8)
+    @include omega()
+    @include pad()
+    table
+      text-align: center
+      font-size: 0.8em
+      a:link, a:visited
+        font-weight: bold
+      thead
+        tr
+          background-color: lighten($shirt, 8%)
+      tbody
+        tr:nth-child(even)
+          background-color: lighten($shirt, 8%)
+        tr:nth-child(odd)
+          background-color: lighten($shirt, 2%)
 
 section#pride
   @include row(table)
@@ -190,6 +225,8 @@ section#links
       &#other
         @include omega()
         background-color: $shirt
+      .info
+        margin-left: -0.2em
   a:link, a:visited
     display: inline-block
     text-decoration: none

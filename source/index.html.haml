@@ -14,11 +14,7 @@
         challengers known.
       %p
         The future of Capture the Flag is now, and it's never been brighter.
-    %section#logos
-      #as_featured As featured on:
-      .logo MSNBC
-      .logo BBC
-      .logo TWIET
+
     %section#dates
       #quals
         .quote
@@ -29,25 +25,39 @@
             %a{href: 'https://twitter.com/superkojiman/status/600090035065610242'}
               Harold Rodriguez, @superkojiman
         .dates
-          %h1 Quals
+          %h1 Qualifiers
           %p
+            Online, free, and for security enthusiasts and hackers of any skill
+            level. Registration starts
+            %strong April 1.
+          %p.actual_dates
             Midnight UTC, May 21, 2016
             %br
             %em through
             %br
             Midnight UTC, May 23, 2016
 
+      #justquote
+        .quote
+          .blockquote
+            Defcon had some of the evilest, trickiest challenges I've ever faced
+            in a CTF. And it was super fun because of it.
+          .cite
+            %a{href: 'http://capturetheswag.blogspot.com.au/2015/05/defcon-ctf-2015-cat-western-1-point.html'}
+              CaptureTheSwag
+
       #finals
         .dates
           %h1 Finals
+          %p
+            Witness the top hackers in the world battle it out head-to-head live
+            at DEF CON in Las Vegas.
           %p
             August 5, 2016
             %br
             %em through
             %br
             August 7, 2016
-          %p
-            At DEF CON in Las Vegas
         .quote
           .blockquote
             +1 to this - the organizers was fantastic this year. Infrastructure
@@ -56,6 +66,74 @@
           .cite
             %a{href: 'https://www.reddit.com/r/netsec/comments/1k1oh4/we_are_the_plaid_parliament_of_pwning_ask_us/cbkhxa6'}
               rzhou, PPP
+
+    %section#prequals
+      #howto
+        %h1 Qualifying for Finals
+        %p
+          You can qualify for our finals in Las Vegas by winning one of several
+          different competitions online and around the world, or placing well in
+          our qualifiers held online May 21-23.
+      #contests
+        %table
+          %thead
+            %tr
+              %th Contest
+              %th Dates
+              %th Notes
+          %tbody
+            %tr
+              %td
+                %a{href: '/2015'} DEF CON CTF 2015
+              %td May 16 - Aug. 9 2015
+              %td Qualified DEFKOR
+            %tr
+              %td
+                %a{href: 'http://ctf.hitcon.org/'} HITCON CTF
+              %td Oct. 17 - Dec. 6 2015
+              %td TBD
+            %tr
+              %td
+                %a{href: 'https://ructf.org/e/2015/'} RuCTFE
+              %td Nov. 21, 2015
+              %td Qualified StratumAuhuur
+            %tr
+              %td
+                %a{href: 'http://ctf.seccon.jp/'} SECCON CTF
+              %td Dec. 5 2015 - Jan. 31 2016
+              %td TBD
+            %tr
+              %td
+                %a{href: 'https://32c3ctf.ccc.ac/'} 32C3 CTF
+              %td Dec. 27 - 29 2015
+              %td Qualified pasten
+            %tr
+              %td
+                %a{href: 'http://bostonkeyparty.net/'} Boston Key Party
+              %td Mar. 4 - 6 2016
+              %td Online Jeopardy style
+            %tr
+              %td
+                %a{href: 'https://ctf.0ops.sjtu.cn/'} 0ctf
+              %td Mar. 12 - Apr. 24, 2016
+              %td Online Jeopardy quals, on-site finals
+            %tr
+              %td
+                %a{href: 'https://twitter.com/plaidctf'} PlaidCTF
+              %td Apr. 15 - 17, 2016
+              %td Online Jeopardy style
+            %tr
+              %td
+                %a{href: 'https://legitbs.net/'} DEF CON CTF 2016 Qualifiers
+              %td May 21 - 23, 2016
+              %td Online Jeopardy style, qualifying multiple teams
+            %tr
+              %td
+                %a{href: 'http://cybergrandchallenge.com/'}
+                  DARPA Cyber Grand Challenge
+              %td August 4, 2016
+              %td All-machine competition, on-site in Las Vegas
+
 
     %section#pride
       %p
@@ -66,7 +144,7 @@
       #historic
         .year#y2015
           %h2 2015
-          .winner DEF KOR
+          .winner DEFKOR
           .info
             %a{href: '/2015/'} Site
             %a{href: '/statdump_2015/'} Quals stats
