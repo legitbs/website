@@ -75,8 +75,15 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.build_before = true
-  deploy.remote = 'github'
+# activate :deploy do |deploy|
+#   deploy.method = :git
+#   deploy.build_before = true
+#   deploy.remote = 'github'
+# end
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket = 'staging.legitbs.net'
+  s3_sync.region = 'us-east-1'
+  s3_sync.aws_access_key_id = ENV['S3_ACCESS_KEY_ID']
+  s3_sync.aws_secret_access_key = ENV['S3_ACCESS_KEY_SECRET']
 end
