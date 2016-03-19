@@ -71,7 +71,9 @@ section#hero
     background-color: $overlay_color
   @include media($regscreen)
     background-image: url("/images/AdobeStock_69625568-1088x591.jpeg")
-    @media (min-resolution: 2dppx)
+    @include media(min-resolution 2dppx)
+      background-image: url("/images/AdobeStock_69625568-2176x1182.jpeg")
+    @include media(-webkit-min-device-pixel-ratio 2)
       background-image: url("/images/AdobeStock_69625568-2176x1182.jpeg")
     background-position: center center
     background-repeat: no-repeat
