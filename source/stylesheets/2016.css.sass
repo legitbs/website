@@ -70,7 +70,9 @@ section#hero
     font-style: italic
     background-color: $overlay_color
   @include media($regscreen)
-    background-image: url("/images/AdobeStock_69625568_WM.jpeg")
+    background-image: url("/images/AdobeStock_69625568-1088x591.jpeg")
+    @media (min-resolution: 2dppx)
+      background-image: url("/images/AdobeStock_69625568-2176x1182.jpeg")
     background-position: center center
     background-repeat: no-repeat
     background-size: cover
@@ -100,7 +102,7 @@ section#tagline
 
 section#dates
   @include outer-container()
-  background-color: $lefty
+  background-color: black
   background-image: url("/images/2015-attackmode-dimmer.jpg")
   background-position: center center
   background-repeat: no-repeat
@@ -216,16 +218,16 @@ section#links
         &:before, &:after
           content: " "
           display: inline-block
-          width: 39px
+          width: 23px
           height: 64px
           vertical-align: -0.5em
           background-position: center center
           background-repeat: no-repeat
           background-size: cover
         &:before
-          background-image: url("/images/photo-laurel-left-78x128.png")
+          background-image: url("/images/abstract-laurel-left-93x256.png")
         &:after
-          background-image: url("/images/photo-laurel-right-78x128.png")
+          background-image: url("/images/abstract-laurel-right-93x256.png")
       &#y2015
         background-color: $shirt
       &#y2014
