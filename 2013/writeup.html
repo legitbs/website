@@ -1,0 +1,95 @@
+<p>Hello!</p>
+
+<p>We're absolutely and completely thrilled at the response to our game this year!
+As we said during the closing ceremonies, we're honored and proud that you all
+competed with us, and would like once again to thank:</p>
+
+<ul>
+  <li>Dark Tangent and the other DEF CON organizers, for supporting our plans to host.</li>
+  <li>The DEF CON Goons, for helping make the contest in Vegas a fun and enjoyable
+venue.</li>
+  <li>The twenty teams that competed in finals, for running a friendly, honorable, 
+and skillful game. You all did a great job, no matter where you ended up on 
+the scoreboard.</li>
+  <li>The 898 teams that competed in the qualifying game in June, for your 
+spectacular show of skill in solving our challenges over 2400 times.</li>
+  <li>And finally, we'd like to thank our friends, families, and significant others,
+for forgiving our long nights and exhausting weekends over the last several 
+months.</li>
+</ul>
+
+<p>While we did get a small chance to explain the game on Sunday night, we'd like
+to share a more detailed and thoughtful set of results.</p>
+
+<h1 id="zero-sum">Zero Sum</h1>
+
+<p>The finals game this year was zero-sum: the game started with 50,000 flags,
+allocated 2500 per team. It ended with 50,000 flags, although less evenly 
+distributed.</p>
+
+<p>aside:
+What about the missing 7830 flags? They were with the twenty-first team,
+Legitimate Business Syndicate. Read on for why!</p>
+
+<p>What this meant for the game flow was a terrible calculus for leading teams. 
+Teams with no flags will obviously not be very lucrative targets. Teams with
+large stockpiles of flags were also more likely to turn any exploit launched at 
+them around as a new attack, devaluing the exploit.</p>
+
+<h1 id="one-hour-left">One Hour Left</h1>
+
+<p><img alt="Scoreboard with one hour left" src="one_hour_left.png" /></p>
+
+<p>Witn an hour left in the game Sunday afternoon, we had PPP at the top of the 
+leaderboard, followed by "men in black hats" and "raon_ASRT," who had finished
+Saturday with shockingly close scores. The black-hatted gentlemen were leading 
+by fewer 240 flags, which meant that the Korean team would be able to mount a 
+comeback for the win.</p>
+
+<h1 id="two-mistakes">Two Mistakes</h1>
+
+<p>We made a few mistakes and misjudgements during the game, from network settings
+causing a few captured tokens to expire without capture, to scoring logic errors
+that left Legitimate Business Syndicate with more flags than all but PPP, we
+have a few things to fix next year. The two mentioned mistakes have an impact
+on game scoring.</p>
+
+<p>The misconfigured network caused teams to be incorrectly throttled in their 
+connections to the REST API that redeemed tokens for flag captures. This meant
+that some teams weren't able to redeem captured tokens due to the busy and 
+hostile network environment.</p>
+
+<p>We have reprocessed those expired tokens based on logs and scorebot data, and 
+that they disproportionately and unfairly affected individual teams unevenly. 
+They are included in the complete and final results below.</p>
+
+<p>The scoring logic error that left remainder flags in our possession affected
+all teams equally; while this may have resulted in different scores, we believe
+that not only did it affect all teams equally and fairly, we also hold that
+changing this would invalidate many teams' actions during the game. All twenty
+competing teams played the game as implemented, not the game we wish we did
+after the fact.</p>
+
+<p>We will not factor the flags that fell on the floor into the final results 
+below.</p>
+
+<h1 id="four-observations">Four Observations</h1>
+
+<ol>
+  <li>Each token was worth nineteen points, split between every team that
+redeemed it. Fourteen teams figured out that if they redeemed their
+own tokens, they'd deprive other teams of valuable flags.</li>
+  <li>Non-virtualized team hardware removed most of our concerns about CPU
+starvation due to malicious action. The remaining concerns were based
+on cooling capacity and reduction thereof when the lid was off the box
+holding team hardware.</li>
+  <li>4.</li>
+</ol>
+
+<h1 id="final-results">Final Results</h1>
+
+<ol>
+  <li>PPP, 13369 flags</li>
+  <li>men in black hats, 7321 flags</li>
+  <li>raon_ASRT, 7085 flags</li>
+</ol>
