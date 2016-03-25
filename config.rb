@@ -75,11 +75,11 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-# activate :deploy do |deploy|
-#   deploy.method = :git
-#   deploy.build_before = true
-#   deploy.remote = 'github'
-# end
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+  deploy.remote = 'github'
+end
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket = 'staging.legitbs.net'
