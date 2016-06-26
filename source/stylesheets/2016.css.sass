@@ -172,12 +172,13 @@ section#prequals
     font-size: 1.2em
   @include media($regscreen)
     #howto
-      @include span-columns(4)
+      @include span-columns(6)
     #contests
-      @include span-columns(8)
+      @include span-columns(6)
       @include omega()
   #contests
     table
+      float: right
       text-align: center
       font-size: 0.8em
       a:link, a:visited
