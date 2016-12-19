@@ -1,0 +1,29 @@
+$mustard: #F0B62F
+$dark_grape: #0F0533
+
+$body_font: Ubuntu, "Helvetica Neue", Helvetica, sans-serif
+$display_font: "Permanent Marker", Chalkboard, "Comic Sans", cursive
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu')
+@import "bourbon/bourbon"
+@import "neat/neat"
+
+body, html
+  background-color: $dark_grape
+  color: $mustard
+
+body
+  margin: 1em
+
+header
+  @include outer-container
+  font-size: 18px
+  font-family: $display_font
+  clear: both
+
+  h2
+    text-align: right
+  h1, h2
+    @include span-columns(6)
+    font-size: 36px
+    font-weight: regular
