@@ -17,3 +17,4 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'bitters'
 gem 'neat'
+gem 'sassc'

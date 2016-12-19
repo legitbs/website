@@ -1,11 +1,13 @@
 $mustard: #F0B62F
 $dark_grape: #0F0533
 
+$light_mustard: lighten($mustard, 15%)
+
 $body_font: Ubuntu, "Helvetica Neue", Helvetica, sans-serif
 $display_font: "Permanent Marker", Chalkboard, "Comic Sans", cursive
 
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu')
-@import "bourbon/bourbon"
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu:400,700')
+/* @import "bourbon/bourbon"
 @import "neat/neat"
 
 body, html
@@ -14,16 +16,87 @@ body, html
 
 body
   margin: 1em
+  font-family: $body_font
+
+a:link
+  color: $light_mustard
+  text-decoration: none
+  border: 1px solid $light_mustard
+  border-radius: 4px
+  padding: 4px
+  display: inline-block
+  margin: 4px
+a:visited
+  color: $light_mustard
+a:hover
+  color: white
+  text-decoration: none
+
+a:link.nobtn
+  border: none
+  text-decoration: underline
+  display: inline
+  padding: 0
+  margin: auto
+
+h1, h2, h3, h4, h5, h6
+  font-family: $display_font
+  font-weight: normal
 
 header
   @include outer-container
-  font-size: 18px
-  font-family: $display_font
-  clear: both
-
-  h2
-    text-align: right
-  h1, h2
+  h1
     @include span-columns(6)
     font-size: 36px
-    font-weight: regular
+    margin-top: 0
+    &.orgas
+      text-align: right
+
+section#hero
+  @include outer-container
+  height: 480px
+  canvas
+    width: 100%
+    height: 100%
+    border: 1px solid $mustard
+
+section#details, section#links
+  @include outer-container
+  >div
+    h1
+      margin-bottom: 0
+    dl
+      dt
+        font-family: $display_font
+        display: inline
+        font-size: 1.5em
+        margin-right: 0.5em
+      dd
+        display: inline
+        margin-left: 0
+      dd:after
+        display: block
+        content: ''
+    ul
+      list-style-type: none
+      padding-left: 0
+      li
+        a:first-child
+          margin-left: 0
+    table
+      th
+        text-align: left
+        font-weight: 700
+
+section#details
+  div#this-year
+    @include span-columns(4)
+  div#other-qualifiers
+    @include span-columns(8)
+section#links >div
+  @include span-columns(4)
+
+footer
+  @include outer-container
+  p
+    @include span-columns(12)

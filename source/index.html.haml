@@ -2,13 +2,110 @@
 %html
   %head
     %title DEF CON CTF 2017
-    %link{rel: 'stylesheet', href: 'stylesheets/2017.css'}
+    = stylesheet_link_tag 'all'
     %meta{name: 'viewport', content: 'width=device-width'}
   %body
     %header
-      %h1 DEF CON Capture the Flag 2017
-      %h2 Legitimate Business Syndicate
-    %div#canvas-holder
+      %h1.event DEF CON Capture the Flag 2017
+      %h1.orgas Legitimate Business Syndicate
+    %section#hero
+      %canvas
+
+    %section#details
+      #this-year
+        %h1 DEF CON CTF 2017
+        %dl
+          %dt Online Qualifiers
+          %dd April 29-April 30
+          %dt Finals at DEF CON
+          %dd July 28-July 30
+      #other-qualifiers
+        %h1 Other Qualifying Contests
+        %table
+          %thead
+            %tr
+              %th Contest
+              %th Start
+              %th End
+              %th &nbsp;
+          %tr
+            %th
+              %a.nobtn{href: 'https://legitbs.net/'} DEF CON CTF
+            %td May 20, 2016
+            %td August 7, 2016
+            %td Qualified PPP
+          %tr
+            %th
+              %a.nobtn{href: 'https://ructfe.org'} RuCTFE
+            %td November 12, 2016
+            %td November 12, 2016
+            %td Qualified Eat Sleep Pwn Repeat
+          %tr
+            %th
+              %a.nobtn{href: 'http://ctf.hitcon.org'} HITCON CTF
+            %td October 8, 2016
+            %td December 3, 2016
+            %td Qualified Cykorkinesis
+          %tr
+            %th
+              %a.nobtn{href: 'https://33c3ctf.ccc.ac/announcements/'} ccc ctf
+            %td December 27, 2016
+            %td December 29, 2016
+            %td Online Jeopardy
+          %tr
+            %th
+              %a.nobtn{href: 'http://bostonkey.party'} Boston Key Party
+            %td February 24, 2017
+            %td February 25, 2017
+            %td Online Jeopardy
+          %tr
+            %th
+              %a.nobtn{href: 'https://ictf.cs.ucsb.edu/index.html'} UCSB iCTF
+            %td March 3, 2017
+            %td March 3, 2017
+            %td Online Attack-Defense
+          %tr
+            %th
+              %a.nobtn{href: 'https://ctf.0ops.net'} 0ctf
+            %td March 18, 2017
+            %td July 1, 2017
+            %td Online Jeopardy, On-site Jeopardy
+          %tr
+            %th
+              %a.nobtn{href: 'https://twitter.com/PlaidCTF'} PlaidCTF
+            %td April 21, 2017
+            %td April 21, 2017
+            %td Online Jeopardy
+
+    %section#links
+      #previous-years
+        %h1 Previous Years
+        %dl
+          - %w{2013 2014 2015 2016}.each do |y|
+            %dt= y
+            %dd
+              %a{href: "/#{y}/"} Site
+              %a{href: "/statdump_#{y}/"} Quals Stats
+      #legitbs-links
+        %h1 Legitimate Business Syndicate
+        %ul
+          %li
+            %a{href: 'https://blog.legitbs.net'} Blog
+          %li
+            %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
+          %li
+            %a{href: 'https://github.com/legitbs'} GitHub
+      #dcctf-links
+        %h1 DEF CON and CTF
+        %ul
+          %li
+            %a{href: 'https://defcon.org/'} DEF CON
+          %li
+            %a{href: 'https://www.defcon.org/html/links/dc-ctf.html'}
+              DEF CON CTF Archive
+          %li
+            %a{href: 'https://ctftime.org/'} CTFtime
+
     %footer
       %p
         &copy; 2012-2017 Legitimate Business Syndicate
