@@ -1,0 +1,4589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-12-20T18:35:24Z</created><keywords></keywords><modified>2016-12-20T18:35:24Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="Map #3-image" name="Map #3"><init_from>file://C:\Users\bkerl\OneDrive\Documents\3dsMax\sceneassets\amp\amp-labels-diffuse.png</init_from></image>
+    <image id="Map #4-image" name="Map #4"><init_from>file://C:\Users\bkerl\OneDrive\Documents\3dsMax\sceneassets\amp\amp-labels-specular.png</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="Material #58" name="Material #58">
+      <instance_effect url="#Material #58-fx"/>
+    </material>
+    <material id="Material #59" name="Material #59">
+      <instance_effect url="#Material #59-fx"/>
+    </material>
+    <material id="Material #60" name="Material #60">
+      <instance_effect url="#Material #60-fx"/>
+    </material>
+    <material id="Material #57 Slot #4" name="Material #57 Slot #4">
+      <instance_effect url="#Material #57 Slot #4-fx"/>
+    </material>
+    <material id="Material #57 Slot #5" name="Material #57 Slot #5">
+      <instance_effect url="#Material #57 Slot #5-fx"/>
+    </material>
+    <material id="Material #57 Slot #6" name="Material #57 Slot #6">
+      <instance_effect url="#Material #57 Slot #6-fx"/>
+    </material>
+    <material id="Material #57 Slot #7" name="Material #57 Slot #7">
+      <instance_effect url="#Material #57 Slot #7-fx"/>
+    </material>
+    <material id="Material #57 Slot #8" name="Material #57 Slot #8">
+      <instance_effect url="#Material #57 Slot #8-fx"/>
+    </material>
+    <material id="Material #57 Slot #9" name="Material #57 Slot #9">
+      <instance_effect url="#Material #57 Slot #9-fx"/>
+    </material>
+    <material id="Material #57 Slot #10" name="Material #57 Slot #10">
+      <instance_effect url="#Material #57 Slot #10-fx"/>
+    </material>
+    <material id="Material #63" name="Material #63">
+      <instance_effect url="#Material #63-fx"/>
+    </material>
+    <material id="Material #64" name="Material #64">
+      <instance_effect url="#Material #64-fx"/>
+    </material>
+    <material id="Material #61" name="Material #61">
+      <instance_effect url="#Material #61-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material #58-fx" name="Material #58">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.078431  0.078431 0.078431 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.078431  0.078431 0.078431 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #59-fx" name="Material #59">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.588000  0.588000 0.588000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #3-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <texture texture="Map #4-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #60-fx" name="Material #60">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.247059  0.882353 0.247059 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.247059  0.882353 0.247059 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #4-fx" name="Material #57 Slot #4">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #5-fx" name="Material #57 Slot #5">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #6-fx" name="Material #57 Slot #6">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #7-fx" name="Material #57 Slot #7">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #8-fx" name="Material #57 Slot #8">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #9-fx" name="Material #57 Slot #9">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #57 Slot #10-fx" name="Material #57 Slot #10">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #63-fx" name="Material #63">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.094118  0.094118 0.094118 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.094118  0.094118 0.094118 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #64-fx" name="Material #64">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.235294  0.341176 0.145098 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.921569  0.921569 0.921569 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.921569  0.921569 0.921569 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material #61-fx" name="Material #61">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.650980  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.400000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.400000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Floor-lib" name="FloorMesh">
+      <mesh>
+        <source id="Floor-POSITION">
+          <float_array id="Floor-POSITION-array" count="12">
+-200.000000 -200.000000 0.000000
+200.000000 -200.000000 0.000000
+-200.000000 200.000000 0.000000
+200.000000 200.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Floor-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Floor-Normal0">
+          <float_array id="Floor-Normal0-array" count="18">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Floor-Normal0-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Floor-UV0">
+          <float_array id="Floor-UV0-array" count="16">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Floor-UV0-array" count="8" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Floor-VERTEX">
+          <input semantic="POSITION" source="#Floor-POSITION"/>
+        </vertices>
+        <triangles count="2"><input semantic="VERTEX" offset="0" source="#Floor-VERTEX"/><input semantic="NORMAL" offset="1" source="#Floor-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Floor-UV0"/><p> 2 0 6 0 1 4 3 2 7 1 3 5 3 4 7 0 5 4</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Stage-lib" name="StageMesh">
+      <mesh>
+        <source id="Stage-POSITION">
+          <float_array id="Stage-POSITION-array" count="24">
+-100.000000 -50.000000 0.000000
+100.000000 -50.000000 0.000000
+-100.000000 50.000000 0.000000
+100.000000 50.000000 0.000000
+-100.000000 -50.000000 10.000000
+100.000000 -50.000000 10.000000
+-100.000000 50.000000 10.000000
+100.000000 50.000000 10.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Stage-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Stage-Normal0">
+          <float_array id="Stage-Normal0-array" count="108">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Stage-Normal0-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Stage-UV0">
+          <float_array id="Stage-UV0-array" count="48">
+1.000000 0.000000
+0.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Stage-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Stage-VERTEX">
+          <input semantic="POSITION" source="#Stage-POSITION"/>
+        </vertices>
+        <triangles count="12"><input semantic="VERTEX" offset="0" source="#Stage-VERTEX"/><input semantic="NORMAL" offset="1" source="#Stage-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Stage-UV0"/><p> 2 0 2 3 1 3 0 2 0 1 3 1 0 4 0 3 5 3 7 6 7 6 7 6 4 8 4 7 9 7 4 10 4 5 11 5 5 12 11 4 13 10 0 14 8 5 15 11 0 16 8 1 17 9 7 18 15 5 19 14 1 20 12 7 21 15 1 22 12 3 23 13 6 24 19 7 25 18 3 26 16 6 27 19 3 28 16 2 29 17 4 30 23 6 31 22 2 32 20 4 33 23 2 34 20 0 35 21</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Amp-lib" name="AmpMesh">
+      <mesh>
+        <source id="Amp-POSITION">
+          <float_array id="Amp-POSITION-array" count="168">
+-5.000000 -5.000000 0.000000
+-4.500003 -5.000000 0.000000
+4.500002 -5.000000 0.000000
+5.000000 -5.000000 0.000000
+-5.000000 5.000000 0.000000
+-4.500003 5.000000 0.000000
+4.500002 5.000000 0.000000
+5.000000 5.000000 0.000000
+-5.000000 -5.000000 10.000000
+-4.500003 -4.999999 10.000000
+4.500002 -5.000000 10.000000
+5.000000 -5.000000 10.000000
+-5.000000 5.000000 10.000000
+-4.500003 5.000001 10.000000
+4.500002 5.000000 10.000000
+5.000000 5.000000 10.000000
+-5.000000 -5.000000 0.500000
+-4.500003 -5.000000 0.500000
+4.500002 -5.000000 0.500000
+5.000000 -5.000000 0.500000
+5.000000 5.000000 0.500000
+4.500003 5.000000 0.500000
+-4.500002 5.000000 0.500000
+-5.000000 5.000000 0.500000
+-5.000000 -5.000000 7.000000
+-4.500003 -5.000000 7.000000
+4.500002 -5.000000 7.000000
+5.000000 -5.000000 7.000000
+5.000000 5.000000 7.000000
+4.500003 5.000000 7.000000
+-4.500002 5.000000 7.000000
+-5.000000 5.000000 7.000000
+-5.000000 -5.000000 7.500000
+-4.500003 -4.999999 7.500000
+4.500002 -5.000000 7.500000
+5.000000 -5.000000 7.500000
+5.000000 5.000000 7.500000
+4.500003 5.000000 7.500000
+-4.500002 5.000001 7.500000
+-5.000000 5.000000 7.500000
+-5.000000 -5.000000 9.500000
+-4.500003 -4.999999 9.500000
+4.500002 -5.000000 9.500000
+5.000000 -5.000000 9.500000
+5.000000 5.000000 9.500000
+4.500003 5.000000 9.500000
+-4.500002 5.000001 9.500000
+-5.000000 5.000000 9.500000
+-4.500003 -3.999999 7.500000
+4.500002 -4.000000 7.500000
+-4.500003 -3.999999 9.500000
+4.500002 -4.000000 9.500000
+-4.500003 -4.500000 0.500000
+4.500002 -4.500000 0.500000
+-4.500003 -4.500000 7.000000
+4.500002 -4.500000 7.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Amp-POSITION-array" count="56" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Amp-Normal0">
+          <float_array id="Amp-Normal0-array" count="972">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000002
+-0.000000 -1.000000 0.000002
+0.000001 -1.000000 0.000001
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000001 -1.000000 0.000001
+-0.000000 -1.000000 0.000002
+0.000001 -1.000000 0.000001
+0.000001 -1.000000 0.000001
+0.000003 -1.000000 0.000000
+0.000001 -1.000000 0.000001
+-0.000000 -1.000000 0.000002
+-0.000000 -1.000000 0.000000
+-0.000001 -1.000000 0.000001
+-0.000001 -1.000000 0.000001
+0.000001 -1.000000 0.000001
+-0.000000 -1.000000 0.000002
+-0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000001
+-0.000000 -1.000000 0.000000
+0.000003 -1.000000 0.000000
+0.000001 -1.000000 0.000001
+0.000002 -1.000000 0.000000
+0.000002 -1.000000 0.000000
+0.000003 -1.000000 0.000000
+0.000003 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000001 -1.000000 0.000001
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000001
+0.000003 -1.000000 0.000000
+0.000002 -1.000000 0.000000
+0.000001 -1.000000 0.000000
+0.000001 -1.000000 0.000000
+0.000003 -1.000000 0.000000
+0.000003 -1.000000 0.000000
+0.000002 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+0.000001 -1.000000 0.000000
+0.000002 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+-0.000001 -1.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-0.000000 1.000000 -0.000001
+-0.000000 1.000000 -0.000001
+0.000000 1.000000 -0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-0.000000 1.000000 -0.000001
+0.000000 1.000000 0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000001 1.000000 0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000001
+-0.000001 1.000000 -0.000001
+-0.000001 1.000000 -0.000001
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000001
+0.000000 1.000000 0.000000
+-0.000002 1.000000 -0.000001
+-0.000002 1.000000 -0.000001
+-0.000001 1.000000 -0.000001
+-0.000000 1.000000 -0.000001
+0.000001 1.000000 0.000000
+0.000000 1.000000 -0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000000 1.000000 -0.000000
+-0.000001 1.000000 -0.000001
+-0.000001 1.000000 -0.000000
+-0.000001 1.000000 -0.000000
+0.000001 1.000000 0.000000
+0.000000 1.000000 -0.000000
+-0.000001 1.000000 -0.000001
+-0.000002 1.000000 -0.000001
+-0.000003 1.000000 0.000000
+-0.000003 1.000000 0.000000
+-0.000001 1.000000 -0.000000
+-0.000001 1.000000 -0.000001
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+-0.000001 1.000000 -0.000000
+-0.000001 1.000000 -0.000000
+-0.000001 1.000000 -0.000000
+0.000001 1.000000 0.000000
+0.000001 1.000000 0.000000
+-0.000001 1.000000 -0.000000
+-0.000003 1.000000 0.000000
+-0.000003 1.000000 -0.000000
+-0.000003 1.000000 -0.000000
+-0.000001 1.000000 -0.000000
+-0.000001 1.000000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Amp-Normal0-array" count="324" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Amp-UV0">
+          <float_array id="Amp-UV0-array" count="112">
+-0.055555 -3.749999
+0.000000 -3.749999
+1.000000 -3.749999
+1.055555 -3.749999
+-0.055555 -3.749999
+0.000000 -3.749999
+1.000000 -3.749999
+1.055556 -3.749999
+-0.055555 1.250000
+0.000000 1.250000
+1.000000 1.250000
+1.055555 1.250000
+-0.055555 1.250000
+0.000000 1.250000
+1.000000 1.250000
+1.055556 1.250000
+-0.055555 -3.499999
+0.000000 -3.499999
+1.000000 -3.499999
+1.055555 -3.499999
+1.055556 -3.499999
+1.000000 -3.499999
+0.000000 -3.499999
+-0.055555 -3.499999
+-0.055555 -0.250000
+0.000000 -0.250000
+1.000000 -0.250000
+1.055555 -0.250000
+1.055556 -0.250000
+1.000000 -0.250000
+0.000000 -0.250000
+-0.055555 -0.250000
+-0.055555 0.000000
+0.000000 0.000000
+1.000000 0.000000
+1.055555 0.000000
+1.055556 0.000000
+1.000000 0.000000
+0.000000 0.000000
+-0.055555 0.000000
+-0.055555 1.000000
+0.000000 1.000000
+1.000000 1.000000
+1.055555 1.000000
+1.055556 1.000000
+1.000000 1.000000
+0.000000 1.000000
+-0.055555 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 -3.499999
+1.000000 -3.499999
+0.000000 -0.250000
+1.000000 -0.250000
+</float_array>
+          <technique_common>
+            <accessor source="#Amp-UV0-array" count="56" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Amp-UV1">
+          <float_array id="Amp-UV1-array" count="104">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 0.200000
+1.000000 0.200000
+0.000000 0.400000
+1.000000 0.400000
+0.000000 0.600000
+1.000000 0.600000
+0.000000 0.800000
+1.000000 0.800000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+0.333333 0.000000
+0.666667 0.000000
+1.000000 0.000000
+0.000000 0.200000
+0.333333 0.200000
+0.666667 0.200000
+1.000000 0.200000
+0.000000 0.400000
+0.333333 0.400000
+0.666667 0.400000
+1.000000 0.400000
+0.000000 0.600000
+0.333333 0.600000
+0.666667 0.600000
+1.000000 0.600000
+0.000000 0.800000
+0.333333 0.800000
+0.666667 0.800000
+1.000000 0.800000
+0.000000 1.000000
+0.333333 1.000000
+0.666667 1.000000
+1.000000 1.000000
+0.000000 0.000000
+0.333333 0.000000
+0.666667 0.000000
+1.000000 0.000000
+0.000000 1.000000
+0.333333 1.000000
+0.666667 1.000000
+1.000000 1.000000
+0.333333 0.600000
+0.666667 0.600000
+0.333333 0.800000
+0.666667 0.800000
+0.333333 0.200000
+0.666667 0.200000
+0.333333 0.400000
+0.666667 0.400000
+</float_array>
+          <technique_common>
+            <accessor source="#Amp-UV1-array" count="52" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Amp-VERTEX">
+          <input semantic="POSITION" source="#Amp-POSITION"/>
+        </vertices>
+        <triangles count="98" material="Material #58"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 8 18 8 36 9 19 9 37 13 20 13 41 13 21 13 41 12 22 12 40 8 23 8 36 9 24 9 37 10 25 10 38 14 26 14 42 14 27 14 42 13 28 13 41 9 29 9 37 10 30 10 38 11 31 11 39 15 32 15 43 15 33 15 43 14 34 14 42 10 35 10 38 0 36 0 12 1 37 1 13 17 38 17 17 17 39 17 17 16 40 16 16 0 41 0 12 1 42 1 13 2 43 2 14 18 44 18 18 18 45 18 18 17 46 17 17 1 47 1 13 2 48 2 14 3 49 3 15 19 50 19 19 19 51 19 19 18 52 18 18 2 53 2 14 16 54 16 16 17 55 17 17 25 56 25 21 25 57 25 21 24 58 24 20 16 59 16 16 18 66 18 18 19 67 19 19 27 68 27 23 27 69 27 23 26 70 26 22 18 71 18 18 24 72 24 20 25 73 25 21 33 74 33 25 33 75 33 25 32 76 32 24 24 77 24 20 25 78 25 21 26 79 26 22 34 80 34 26 34 81 34 26 33 82 33 25 25 83 25 21 26 84 26 22 27 85 27 23 35 86 35 27 35 87 35 27 34 88 34 26 26 89 26 22 32 90 32 24 33 91 33 25 41 92 41 29 41 93 41 29 40 94 40 28 32 95 32 24 34 102 34 26 35 103 35 27 43 104 43 31 43 105 43 31 42 106 42 30 34 107 34 26 40 108 40 28 41 109 41 29 9 110 9 33 9 111 9 33 8 112 8 32 40 113 40 28 41 114 41 29 42 115 42 30 10 116 10 34 10 117 10 34 9 118 9 33 41 119 41 29 42 120 42 30 43 121 43 31 11 122 11 35 11 123 11 35 10 124 10 34 42 125 42 30 3 126 3 0 7 127 7 1 20 128 20 3 20 129 20 3 19 130 19 2 3 131 3 0 19 132 19 2 20 133 20 3 28 134 28 5 28 135 28 5 27 136 27 4 19 137 19 2 27 138 27 4 28 139 28 5 36 140 36 7 36 141 36 7 35 142 35 6 27 143 27 4 35 144 35 6 36 145 36 7 44 146 44 9 44 147 44 9 43 148 43 8 35 149 35 6 43 150 43 8 44 151 44 9 15 152 15 11 15 153 15 11 11 154 11 10 43 155 43 8 7 156 7 12 6 157 6 13 21 158 21 17 21 159 21 17 20 160 20 16 7 161 7 12 6 162 6 13 5 163 5 14 22 164 22 18 22 165 22 18 21 166 21 17 6 167 6 13 5 168 5 14 4 169 4 15 23 170 23 19 23 171 23 19 22 172 22 18 5 173 5 14 20 174 20 16 21 175 21 17 29 176 29 21 29 177 29 21 28 178 28 20 20 179 20 16 21 180 21 17 22 181 22 18 30 182 30 22 30 183 30 22 29 184 29 21 21 185 21 17 22 186 22 18 23 187 23 19 31 188 31 23 31 189 31 23 30 190 30 22 22 191 22 18 28 192 28 20 29 193 29 21 37 194 37 25 37 195 37 25 36 196 36 24 28 197 28 20 29 198 29 21 30 199 30 22 38 200 38 26 38 201 38 26 37 202 37 25 29 203 29 21 30 204 30 22 31 205 31 23 39 206 39 27 39 207 39 27 38 208 38 26 30 209 30 22 36 210 36 24 37 211 37 25 45 212 45 29 45 213 45 29 44 214 44 28 36 215 36 24 37 216 37 25 38 217 38 26 46 218 46 30 46 219 46 30 45 220 45 29 37 221 37 25 38 222 38 26 39 223 39 27 47 224 47 31 47 225 47 31 46 226 46 30 38 227 38 26 44 228 44 28 45 229 45 29 14 230 14 33 14 231 14 33 15 232 15 32 44 233 44 28 45 234 45 29 46 235 46 30 13 236 13 34 13 237 13 34 14 238 14 33 45 239 45 29 46 240 46 30 47 241 47 31 12 242 12 35 12 243 12 35 13 244 13 34 46 245 46 30 4 246 4 0 0 247 0 1 16 248 16 3 16 249 16 3 23 250 23 2 4 251 4 0 23 252 23 2 16 253 16 3 24 254 24 5 24 255 24 5 31 256 31 4 23 257 23 2 31 258 31 4 24 259 24 5 32 260 32 7 32 261 32 7 39 262 39 6 31 263 31 4 39 264 39 6 32 265 32 7 40 266 40 9 40 267 40 9 47 268 47 8 39 269 39 6 47 270 47 8 40 271 40 9 8 272 8 11 8 273 8 11 12 274 12 10 47 275 47 8 33 276 33 25 34 277 34 26 49 278 49 45 49 279 49 45 48 280 48 44 33 281 33 25 41 282 41 29 33 283 33 25 48 284 48 44 48 285 48 44 50 286 50 46 41 287 41 29 34 288 34 26 42 289 42 30 51 290 51 47 51 291 51 47 49 292 49 45 34 293 34 26 42 294 42 30 41 295 41 29 50 296 50 46 50 297 50 46 51 298 51 47 42 299 42 30 17 300 17 17 18 301 18 18 53 302 53 49 53 303 53 49 52 304 52 48 17 305 17 17 25 306 25 21 17 307 17 17 52 308 52 48 52 309 52 48 54 310 54 50 25 311 25 21 18 312 18 18 26 313 26 22 55 314 55 51 55 315 55 51 53 316 53 49 18 317 18 18 26 318 26 22 25 319 25 21 54 320 54 50 54 321 54 50 55 322 55 51 26 323 26 22</p></triangles>
+        <triangles count="8" material="Material #59"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 0 0 0 39 4 1 4 43 5 2 5 42 5 3 5 42 1 4 1 38 0 5 0 39 1 6 1 38 5 7 5 42 6 8 6 41 6 9 6 41 2 10 2 37 1 11 1 38 2 12 2 37 6 13 6 41 7 14 7 40 7 15 7 40 3 16 3 36 2 17 2 37 48 96 48 44 49 97 49 45 51 98 51 47 51 99 51 47 50 100 50 46 48 101 48 44</p></triangles>
+        <triangles count="2" material="Material #60"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 52 60 52 48 53 61 53 49 55 62 55 51 55 63 55 51 54 64 54 50 52 65 52 48</p></triangles>
+        <triangles count="0" material="Material #57 Slot #4"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #5"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #6"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #7"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #8"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #9"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="0" material="Material #57 Slot #10"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobVolume-lib" name="KnobVolumeMesh">
+      <mesh>
+        <source id="KnobVolume-POSITION">
+          <float_array id="KnobVolume-POSITION-array" count="138">
+0.000000 0.000000 0.000000
+0.666664 0.000000 0.000000
+0.560834 0.360426 0.000000
+0.276942 0.606419 0.000000
+-0.094876 0.659878 0.000000
+-0.436572 0.503831 0.000000
+-0.639660 0.187821 0.000000
+-0.639660 -0.187821 0.000000
+-0.436572 -0.503831 0.000000
+-0.094876 -0.659878 0.000000
+0.276942 -0.606419 0.000000
+0.560834 -0.360426 0.000000
+0.666664 0.000000 0.126268
+0.560834 0.360426 0.126268
+0.276942 0.606419 0.126268
+-0.094876 0.659878 0.126268
+-0.436572 0.503831 0.126268
+-0.639660 0.187821 0.126268
+-0.639660 -0.187821 0.126268
+-0.436572 -0.503831 0.126268
+-0.094876 -0.659878 0.126268
+0.276942 -0.606419 0.126268
+0.560834 -0.360426 0.126268
+-0.000000 0.000000 0.899988
+0.406110 0.000000 0.399988
+0.341641 0.219560 0.399988
+0.168704 0.369411 0.399988
+-0.057795 0.401976 0.399988
+-0.265945 0.306917 0.399988
+-0.389660 0.114414 0.399988
+-0.389660 -0.114414 0.399988
+-0.265945 -0.306917 0.399988
+-0.057795 -0.401976 0.399988
+0.276942 -0.606420 0.399988
+0.341641 -0.219560 0.399988
+0.301888 0.000000 0.899988
+0.253964 0.163213 0.899988
+0.125409 0.274607 0.899988
+-0.042963 0.298815 0.899988
+-0.197695 0.228152 0.899988
+-0.289660 0.085052 0.899988
+-0.289660 -0.085052 0.899988
+-0.197695 -0.228152 0.899988
+-0.042963 -0.298815 0.899988
+0.125409 -0.274607 0.899988
+0.253964 -0.163213 0.899988
+</float_array>
+          <technique_common>
+            <accessor source="#KnobVolume-POSITION-array" count="46" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobVolume-Normal0">
+          <float_array id="KnobVolume-Normal0-array" count="792">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+1.000000 -0.000000 0.000000
+0.841253 0.540641 -0.000000
+1.000000 0.000000 0.000000
+1.000000 -0.000000 0.000000
+0.841253 0.540641 -0.000000
+0.841253 0.540641 -0.000000
+0.841253 0.540641 -0.000000
+0.415415 0.909632 0.000000
+0.841253 0.540641 -0.000000
+0.841253 0.540641 -0.000000
+0.415415 0.909632 0.000000
+0.415415 0.909632 0.000000
+0.415415 0.909632 0.000000
+-0.142315 0.989821 0.000000
+0.415415 0.909632 0.000000
+0.415415 0.909632 0.000000
+-0.142315 0.989821 -0.000000
+-0.142315 0.989821 0.000000
+-0.142315 0.989821 -0.000000
+-0.654861 0.755749 -0.000000
+-0.142315 0.989821 0.000000
+-0.142315 0.989821 -0.000000
+-0.654861 0.755749 -0.000000
+-0.654861 0.755749 -0.000000
+-0.654861 0.755749 -0.000000
+-0.959493 0.281732 -0.000000
+-0.654861 0.755749 -0.000000
+-0.654861 0.755749 -0.000000
+-0.959493 0.281732 -0.000000
+-0.959493 0.281732 -0.000000
+-0.959493 0.281732 -0.000000
+-0.959493 -0.281733 0.000000
+-0.959493 0.281732 -0.000000
+-0.959493 0.281732 -0.000000
+-0.959493 -0.281733 0.000000
+-0.959493 -0.281733 0.000000
+-0.959493 -0.281733 0.000000
+-0.654861 -0.755750 -0.000000
+-0.959493 -0.281733 0.000000
+-0.959493 -0.281733 0.000000
+-0.654860 -0.755750 -0.000000
+-0.654861 -0.755750 -0.000000
+-0.654860 -0.755750 -0.000000
+-0.142315 -0.989822 -0.000000
+-0.654861 -0.755750 -0.000000
+-0.654860 -0.755750 -0.000000
+-0.142315 -0.989821 0.000000
+-0.142315 -0.989822 -0.000000
+-0.142315 -0.989821 0.000000
+0.415415 -0.909632 0.000000
+-0.142315 -0.989822 -0.000000
+-0.142315 -0.989821 0.000000
+0.415415 -0.909632 0.000000
+0.415415 -0.909632 0.000000
+0.415415 -0.909632 0.000000
+0.841254 -0.540641 0.000000
+0.415415 -0.909632 0.000000
+0.415415 -0.909632 0.000000
+0.841254 -0.540641 0.000000
+0.841254 -0.540641 0.000000
+0.841254 -0.540641 0.000000
+1.000000 0.000000 0.000000
+0.841254 -0.540641 0.000000
+0.841254 -0.540641 0.000000
+1.000000 -0.000000 0.000000
+1.000000 0.000000 0.000000
+-0.000000 0.000001 1.000000
+-0.000000 0.000001 1.000000
+-0.000000 0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.000001 0.000000 1.000000
+-0.000001 0.000000 1.000000
+-0.000001 0.000000 1.000000
+0.000001 0.000000 1.000000
+0.000001 0.000000 1.000000
+0.000001 0.000000 1.000000
+-0.000001 -0.000000 1.000000
+-0.000001 -0.000000 1.000000
+-0.000001 -0.000000 1.000000
+-0.000000 0.000000 1.000000
+-0.000000 0.000000 1.000000
+-0.000000 0.000000 1.000000
+0.724311 -0.000000 0.689473
+0.609329 0.391592 0.689473
+0.609329 0.391592 0.689473
+0.609329 0.391592 0.689473
+0.724311 0.000000 0.689473
+0.724311 -0.000000 0.689473
+0.609329 0.391592 0.689473
+0.300890 0.658857 0.689473
+0.300890 0.658857 0.689473
+0.300890 0.658857 0.689473
+0.609329 0.391592 0.689473
+0.609329 0.391592 0.689473
+0.300890 0.658857 0.689473
+-0.103080 0.716939 0.689473
+-0.103080 0.716939 0.689473
+-0.103080 0.716939 0.689473
+0.300890 0.658857 0.689473
+0.300890 0.658857 0.689473
+-0.103080 0.716939 0.689473
+-0.474323 0.547398 0.689473
+-0.474323 0.547398 0.689473
+-0.474323 0.547398 0.689473
+-0.103080 0.716939 0.689473
+-0.103080 0.716939 0.689473
+-0.474323 0.547398 0.689473
+-0.694972 0.204062 0.689473
+-0.694972 0.204062 0.689473
+-0.694972 0.204062 0.689473
+-0.474323 0.547398 0.689473
+-0.474323 0.547398 0.689473
+-0.694972 0.204062 0.689473
+-0.694971 -0.204062 0.689473
+-0.694971 -0.204062 0.689473
+-0.694971 -0.204062 0.689473
+-0.694972 0.204062 0.689473
+-0.694972 0.204062 0.689473
+-0.694971 -0.204062 0.689473
+-0.474323 -0.547398 0.689473
+-0.474323 -0.547398 0.689473
+-0.474323 -0.547398 0.689473
+-0.694971 -0.204062 0.689473
+-0.694971 -0.204062 0.689473
+-0.474323 -0.547398 0.689473
+-0.256225 -0.784568 0.564626
+-0.343298 -0.659935 0.668306
+-0.343298 -0.659935 0.668306
+-0.474323 -0.547398 0.689473
+-0.474323 -0.547398 0.689473
+-0.256225 -0.784568 0.564626
+0.573274 -0.790874 0.214185
+0.580997 -0.771836 0.258288
+0.580997 -0.771836 0.258288
+-0.343298 -0.659935 0.668306
+-0.256225 -0.784568 0.564626
+0.573274 -0.790874 0.214185
+0.609329 -0.391592 0.689473
+0.747239 -0.314542 0.585404
+0.747239 -0.314542 0.585404
+0.580997 -0.771836 0.258288
+0.573274 -0.790874 0.214185
+0.609329 -0.391592 0.689473
+0.724311 -0.000000 0.689473
+0.724311 0.000000 0.689473
+0.724311 0.000000 0.689473
+0.747239 -0.314542 0.585404
+0.609329 -0.391592 0.689473
+0.978959 0.000000 0.204058
+0.823553 0.529265 0.204058
+0.823553 0.529265 0.204058
+0.823553 0.529265 0.204058
+0.978959 0.000000 0.204058
+0.978959 0.000000 0.204058
+0.823553 0.529265 0.204058
+0.406674 0.890492 0.204058
+0.406674 0.890492 0.204058
+0.406674 0.890492 0.204058
+0.823553 0.529265 0.204058
+0.823553 0.529265 0.204058
+0.406674 0.890492 0.204058
+-0.139321 0.968994 0.204058
+-0.139321 0.968994 0.204058
+-0.139321 0.968994 0.204058
+0.406674 0.890492 0.204058
+0.406674 0.890492 0.204058
+-0.139321 0.968994 0.204058
+-0.641082 0.739848 0.204057
+-0.641082 0.739848 0.204058
+-0.641082 0.739848 0.204058
+-0.139321 0.968994 0.204058
+-0.139321 0.968994 0.204058
+-0.641082 0.739848 0.204057
+-0.939304 0.275804 0.204058
+-0.939304 0.275804 0.204058
+-0.939304 0.275804 0.204058
+-0.641082 0.739848 0.204058
+-0.641082 0.739848 0.204057
+-0.939304 0.275804 0.204058
+-0.939304 -0.275805 0.204058
+-0.939304 -0.275805 0.204058
+-0.939304 -0.275805 0.204058
+-0.939304 0.275804 0.204058
+-0.939304 0.275804 0.204058
+-0.939304 -0.275805 0.204058
+-0.641082 -0.739848 0.204058
+-0.641082 -0.739848 0.204058
+-0.641082 -0.739848 0.204058
+-0.939304 -0.275805 0.204058
+-0.939304 -0.275805 0.204058
+-0.641082 -0.739848 0.204058
+-0.395319 -0.874401 0.281328
+-0.139320 -0.968994 0.204058
+-0.139320 -0.968994 0.204058
+-0.641082 -0.739848 0.204058
+-0.641082 -0.739848 0.204058
+-0.395319 -0.874401 0.281328
+-0.482543 -0.790073 0.378070
+-0.089514 -0.956825 0.276538
+-0.089514 -0.956825 0.276538
+-0.139320 -0.968994 0.204058
+-0.395319 -0.874401 0.281328
+0.915509 -0.279242 0.289597
+0.957044 -0.217017 0.192278
+0.854708 -0.392022 0.340282
+0.854708 -0.392022 0.340282
+0.536482 -0.619134 0.573463
+0.915509 -0.279242 0.289597
+0.957044 -0.217017 0.192278
+0.978959 0.000000 0.204058
+0.978959 0.000000 0.204058
+0.978959 0.000000 0.204058
+0.854708 -0.392022 0.340282
+0.957044 -0.217017 0.192278
+</float_array>
+          <technique_common>
+            <accessor source="#KnobVolume-Normal0-array" count="264" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobVolume-UV0">
+          <float_array id="KnobVolume-UV0-array" count="110">
+0.500000 0.000000
+0.750000 0.000000
+0.840909 0.000000
+0.931818 0.000000
+0.022727 0.000000
+0.113636 0.000000
+0.204545 0.000000
+0.295455 0.000000
+0.386364 0.000000
+0.477273 0.000000
+0.568182 0.000000
+0.659091 0.000000
+0.750000 1.000000
+0.840909 1.000000
+0.931818 1.000000
+0.022727 1.000000
+0.113636 1.000000
+0.204545 1.000000
+0.295455 1.000000
+0.386364 1.000000
+0.477273 1.000000
+0.568182 1.000000
+0.659091 1.000000
+0.500000 1.000000
+-0.068182 0.000000
+-0.068182 0.000000
+-0.068182 1.000000
+-0.068182 0.000000
+-0.068182 1.000000
+0.750000 1.000000
+0.840909 1.000000
+0.659091 1.000000
+0.500000 1.000000
+0.931818 1.000000
+-0.068182 1.000000
+0.022727 1.000000
+0.113636 1.000000
+0.204545 1.000000
+0.295455 1.000000
+0.386364 1.000000
+0.477273 1.000000
+0.568182 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.840909 1.000000
+0.659091 1.000000
+0.931818 1.000000
+-0.068182 1.000000
+0.022727 1.000000
+0.113636 1.000000
+0.204545 1.000000
+0.295455 1.000000
+0.386364 1.000000
+0.477273 1.000000
+0.568182 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobVolume-UV0-array" count="55" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobVolume-VERTEX">
+          <input semantic="POSITION" source="#KnobVolume-POSITION"/>
+        </vertices>
+        <triangles count="73" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobVolume-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobVolume-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobVolume-UV0"/><p> 1 33 1 13 34 13 12 35 12 1 36 1 2 37 2 13 38 13 2 39 2 14 40 14 13 41 13 2 42 2 3 43 3 14 44 14 3 45 25 15 46 15 14 47 26 3 48 27 4 49 4 15 50 15 4 51 4 16 52 16 15 53 15 4 54 4 5 55 5 16 56 16 5 57 5 17 58 17 16 59 16 5 60 5 6 61 6 17 62 17 6 63 6 18 64 18 17 65 17 6 66 6 7 67 7 18 68 18 7 69 7 19 70 19 18 71 18 7 72 7 8 73 8 19 74 19 8 75 8 20 76 20 19 77 19 8 78 8 9 79 9 20 80 20 9 81 9 21 82 21 20 83 20 9 84 9 10 85 10 21 86 21 10 87 10 22 88 22 21 89 21 10 90 10 11 91 11 22 92 22 11 93 11 12 94 12 22 95 22 11 96 11 1 97 1 12 98 12 23 99 23 35 100 43 36 101 44 23 102 23 36 103 44 37 104 46 23 105 23 37 106 47 38 107 48 23 108 23 38 109 48 39 110 49 23 111 23 39 112 49 40 113 50 23 114 23 40 115 50 41 116 51 23 117 23 41 118 51 42 119 52 23 120 23 42 121 52 43 122 53 23 123 23 43 124 53 44 125 54 23 126 23 44 127 54 45 128 45 23 129 23 45 130 45 35 131 43 12 132 12 13 133 13 25 134 30 25 135 30 24 136 29 12 137 12 13 138 13 14 139 14 26 140 33 26 141 33 25 142 30 13 143 13 14 144 28 15 145 15 27 146 35 27 147 35 26 148 34 14 149 28 15 150 15 16 151 16 28 152 36 28 153 36 27 154 35 15 155 15 16 156 16 17 157 17 29 158 37 29 159 37 28 160 36 16 161 16 17 162 17 18 163 18 30 164 38 30 165 38 29 166 37 17 167 17 18 168 18 19 169 19 31 170 39 31 171 39 30 172 38 18 173 18 19 174 19 20 175 20 32 176 40 32 177 40 31 178 39 19 179 19 20 180 20 21 181 21 33 182 41 33 183 41 32 184 40 20 185 20 21 186 21 22 187 22 34 188 31 34 189 31 33 190 41 21 191 21 22 192 22 12 193 12 24 194 29 24 195 29 34 196 31 22 197 22 24 198 29 25 199 30 36 200 44 36 201 44 35 202 43 24 203 29 25 204 30 26 205 33 37 206 46 37 207 46 36 208 44 25 209 30 26 210 34 27 211 35 38 212 48 38 213 48 37 214 47 26 215 34 27 216 35 28 217 36 39 218 49 39 219 49 38 220 48 27 221 35 28 222 36 29 223 37 40 224 50 40 225 50 39 226 49 28 227 36 29 228 37 30 229 38 41 230 51 41 231 51 40 232 50 29 233 37 30 234 38 31 235 39 42 236 52 42 237 52 41 238 51 30 239 38 31 240 39 32 241 40 43 242 53 43 243 53 42 244 52 31 245 39 34 258 31 24 259 29 35 260 43 35 261 43 45 262 45 34 263 31</p></triangles>
+        <triangles count="15" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobVolume-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobVolume-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobVolume-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 24 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 1 31 1 11 32 11 32 246 40 33 247 41 44 248 54 44 249 54 43 250 53 32 251 40 33 252 41 34 253 31 45 254 45 45 255 45 44 256 54 33 257 41</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="OnLightBulb-lib" name="OnLightBulbMesh">
+      <mesh>
+        <source id="OnLightBulb-POSITION">
+          <float_array id="OnLightBulb-POSITION-array" count="42">
+0.000000 0.000000 0.000000
+0.150000 0.000000 0.000000
+0.075000 0.129904 0.000000
+-0.075000 0.129904 0.000000
+-0.150000 -0.000000 0.000000
+-0.075000 -0.129904 0.000000
+0.075000 -0.129904 0.000000
+0.150000 0.000000 0.100000
+0.075000 0.129904 0.100000
+-0.075000 0.129904 0.100000
+-0.150000 -0.000000 0.100000
+-0.075000 -0.129904 0.100000
+0.075000 -0.129904 0.100000
+0.000000 0.000000 0.100000
+</float_array>
+          <technique_common>
+            <accessor source="#OnLightBulb-POSITION-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="OnLightBulb-Normal0">
+          <float_array id="OnLightBulb-Normal0-array" count="216">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+1.000000 -0.000000 0.000000
+0.500000 0.866025 0.000000
+1.000000 -0.000000 0.000000
+1.000000 -0.000000 0.000000
+0.500000 0.866025 0.000000
+0.500000 0.866025 0.000000
+0.500000 0.866025 0.000000
+-0.500000 0.866025 0.000000
+0.500000 0.866025 0.000000
+0.500000 0.866025 0.000000
+-0.500000 0.866025 0.000000
+-0.500000 0.866025 0.000000
+-0.500000 0.866025 0.000000
+-1.000000 -0.000000 0.000000
+-0.500000 0.866025 0.000000
+-0.500000 0.866025 0.000000
+-1.000000 -0.000000 0.000000
+-1.000000 -0.000000 0.000000
+-1.000000 -0.000000 0.000000
+-0.500000 -0.866025 0.000000
+-1.000000 -0.000000 0.000000
+-1.000000 -0.000000 0.000000
+-0.500000 -0.866025 0.000000
+-0.500000 -0.866025 0.000000
+-0.500000 -0.866025 0.000000
+0.500000 -0.866025 0.000000
+-0.500000 -0.866025 0.000000
+-0.500000 -0.866025 0.000000
+0.500000 -0.866025 0.000000
+0.500000 -0.866025 0.000000
+0.500000 -0.866025 0.000000
+1.000000 -0.000000 0.000000
+0.500000 -0.866025 0.000000
+0.500000 -0.866025 0.000000
+1.000000 -0.000000 0.000000
+1.000000 -0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#OnLightBulb-Normal0-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="OnLightBulb-UV0">
+          <float_array id="OnLightBulb-UV0-array" count="38">
+0.500000 0.000000
+0.750000 0.000000
+0.916667 0.000000
+0.083333 0.000000
+0.250000 0.000000
+0.416667 0.000000
+0.583333 0.000000
+0.750000 1.000000
+0.916667 1.000000
+0.083333 1.000000
+0.250000 1.000000
+0.416667 1.000000
+0.583333 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#OnLightBulb-UV0-array" count="19" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="OnLightBulb-VERTEX">
+          <input semantic="POSITION" source="#OnLightBulb-POSITION"/>
+        </vertices>
+        <triangles count="24" material="Material #61"><input semantic="VERTEX" offset="0" source="#OnLightBulb-VERTEX"/><input semantic="NORMAL" offset="1" source="#OnLightBulb-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#OnLightBulb-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 14 0 6 0 4 7 4 3 8 3 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 1 16 1 6 17 6 1 18 1 8 19 8 7 20 7 1 21 1 2 22 2 8 23 8 2 24 15 9 25 9 8 26 16 2 27 17 3 28 3 9 29 9 3 30 3 10 31 10 9 32 9 3 33 3 4 34 4 10 35 10 4 36 4 11 37 11 10 38 10 4 39 4 5 40 5 11 41 11 5 42 5 12 43 12 11 44 11 5 45 5 6 46 6 12 47 12 6 48 6 7 49 7 12 50 12 6 51 6 1 52 1 7 53 7 13 54 13 7 55 7 8 56 8 13 57 13 8 58 18 9 59 9 13 60 13 9 61 9 10 62 10 13 63 13 10 64 10 11 65 11 13 66 13 11 67 11 12 68 12 13 69 13 12 70 12 7 71 7</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobMonths-lib" name="KnobMonthsMesh">
+      <mesh>
+        <source id="KnobMonths-POSITION">
+          <float_array id="KnobMonths-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMonths-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobMonths-Normal0">
+          <float_array id="KnobMonths-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMonths-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobMonths-UV0">
+          <float_array id="KnobMonths-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMonths-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobMonths-VERTEX">
+          <input semantic="POSITION" source="#KnobMonths-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobMonths-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobMonths-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobMonths-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobMonths-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobMonths-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobMonths-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobWeeks-lib" name="KnobWeeksMesh">
+      <mesh>
+        <source id="KnobWeeks-POSITION">
+          <float_array id="KnobWeeks-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobWeeks-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobWeeks-Normal0">
+          <float_array id="KnobWeeks-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobWeeks-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobWeeks-UV0">
+          <float_array id="KnobWeeks-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobWeeks-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobWeeks-VERTEX">
+          <input semantic="POSITION" source="#KnobWeeks-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobWeeks-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobWeeks-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobWeeks-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobWeeks-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobWeeks-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobWeeks-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobDays-lib" name="KnobDaysMesh">
+      <mesh>
+        <source id="KnobDays-POSITION">
+          <float_array id="KnobDays-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobDays-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobDays-Normal0">
+          <float_array id="KnobDays-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobDays-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobDays-UV0">
+          <float_array id="KnobDays-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobDays-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobDays-VERTEX">
+          <input semantic="POSITION" source="#KnobDays-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobDays-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobDays-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobDays-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobDays-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobDays-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobDays-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobHours-lib" name="KnobHoursMesh">
+      <mesh>
+        <source id="KnobHours-POSITION">
+          <float_array id="KnobHours-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobHours-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobHours-Normal0">
+          <float_array id="KnobHours-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobHours-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobHours-UV0">
+          <float_array id="KnobHours-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobHours-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobHours-VERTEX">
+          <input semantic="POSITION" source="#KnobHours-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobHours-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobHours-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobHours-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobHours-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobHours-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobHours-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobMinutes-lib" name="KnobMinutesMesh">
+      <mesh>
+        <source id="KnobMinutes-POSITION">
+          <float_array id="KnobMinutes-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMinutes-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobMinutes-Normal0">
+          <float_array id="KnobMinutes-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMinutes-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobMinutes-UV0">
+          <float_array id="KnobMinutes-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobMinutes-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobMinutes-VERTEX">
+          <input semantic="POSITION" source="#KnobMinutes-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobMinutes-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobMinutes-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobMinutes-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobMinutes-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobMinutes-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobMinutes-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="KnobSeconds-lib" name="KnobSecondsMesh">
+      <mesh>
+        <source id="KnobSeconds-POSITION">
+          <float_array id="KnobSeconds-POSITION-array" count="150">
+-0.000000 -0.008614 0.000000
+-0.333330 -0.008614 0.000000
+-0.288672 -0.175279 -0.000000
+-0.166665 -0.297286 -0.000000
+-0.000000 -0.341944 -0.000000
+0.166665 -0.297286 -0.000000
+0.288672 -0.175279 -0.000000
+0.333330 -0.008614 0.000000
+0.288672 0.158051 0.000000
+0.166665 0.280059 0.000000
+0.000000 0.324717 0.000000
+-0.166665 0.280059 0.000000
+-0.288672 0.158052 0.000000
+-0.333330 -0.008614 0.123330
+-0.288672 -0.175279 0.123330
+-0.166665 -0.297286 0.123330
+-0.000000 -0.341944 0.123330
+0.166665 -0.297286 0.123330
+0.288672 -0.175279 0.123330
+0.333330 -0.008614 0.123330
+0.288672 0.158051 0.123330
+0.166665 0.280059 0.123330
+0.000000 0.324716 0.123330
+-0.166665 0.280059 0.123330
+-0.288672 0.158052 0.123330
+0.000000 -0.008614 0.701683
+-0.126275 -0.008614 0.401683
+-0.109357 -0.071751 0.401683
+-0.063137 -0.117971 0.401683
+0.000000 -0.134889 0.401683
+0.063137 -0.117971 0.401683
+0.109357 -0.071751 0.401683
+0.126275 -0.008614 0.401683
+0.109357 0.054524 0.401684
+0.063138 0.100743 0.401684
+0.000000 0.324386 0.401684
+-0.063137 0.100743 0.401684
+-0.109357 0.054524 0.401684
+-0.074511 -0.008614 0.701683
+-0.064529 -0.045870 0.701683
+-0.037256 -0.073143 0.701683
+0.000000 -0.083125 0.701683
+0.037256 -0.073143 0.701683
+0.064529 -0.045870 0.701683
+0.074511 -0.008614 0.701683
+0.064529 0.028641 0.701683
+0.037256 0.055914 0.701684
+0.000000 0.065897 0.701684
+-0.037255 0.055914 0.701684
+-0.064528 0.028642 0.701683
+</float_array>
+          <technique_common>
+            <accessor source="#KnobSeconds-POSITION-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobSeconds-Normal0">
+          <float_array id="KnobSeconds-Normal0-array" count="864">
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+-0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+0.000000 0.000001 -1.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.866025 -0.500000 -0.000000
+-0.866025 -0.500000 -0.000000
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+-0.500000 -0.866025 -0.000001
+-0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.000000 -1.000000 -0.000001
+0.000000 -1.000000 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.500000 -0.866025 -0.000001
+0.500000 -0.866025 -0.000001
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866025 -0.500000 -0.000000
+0.866025 -0.500000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+1.000000 -0.000000 -0.000000
+1.000000 -0.000000 -0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.866026 0.500000 0.000000
+0.866026 0.500000 0.000000
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.500000 0.866025 0.000001
+0.500000 0.866025 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000001
+0.000001 1.000000 0.000001
+0.000001 1.000000 0.000001
+-0.499999 0.866026 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.499999 0.866026 0.000001
+-0.499999 0.866026 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-0.866025 0.500000 0.000000
+-0.866025 0.500000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+0.000001 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+-0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+0.000000 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+-0.000001 -0.000001 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.802360 -0.000000 0.596841
+-0.802359 -0.000000 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.694864 -0.401180 0.596841
+-0.694864 -0.401180 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+-0.401180 -0.694864 0.596841
+-0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+-0.000000 -0.802360 0.596841
+-0.000000 -0.802360 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.401180 -0.694864 0.596841
+0.401180 -0.694864 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000001 0.596841
+0.694864 -0.401180 0.596841
+0.694864 -0.401180 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.802360 -0.000001 0.596841
+0.802360 -0.000000 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+0.700760 0.452084 0.551866
+0.700760 0.452084 0.551866
+0.694864 0.401179 0.596841
+0.694864 0.401179 0.596841
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.184903 0.885911 0.425410
+-0.184903 0.885911 0.425410
+0.700760 0.452084 0.551866
+0.591555 0.694540 0.409483
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.683567 0.569453 0.456575
+-0.683567 0.569453 0.456575
+-0.184903 0.885911 0.425410
+-0.185220 0.948621 0.256538
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.683567 0.569453 0.456575
+-0.401179 0.694864 0.596841
+-0.694864 0.401180 0.596841
+-0.802359 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.802360 -0.000000 0.596841
+-0.694864 0.401180 0.596841
+-0.694864 0.401180 0.596841
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.492718 -0.853415 0.170033
+-0.853415 -0.492719 0.170033
+-0.853415 -0.492719 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+0.000000 -0.985438 0.170033
+-0.492718 -0.853415 0.170033
+-0.492719 -0.853415 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.492718 -0.853415 0.170033
+0.000000 -0.985438 0.170033
+-0.000000 -0.985438 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.492718 -0.853415 0.170033
+0.492719 -0.853415 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.985438 0.000001 0.170033
+0.985438 0.000001 0.170033
+0.853415 -0.492719 0.170033
+0.853415 -0.492719 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492718 0.170034
+0.985438 0.000001 0.170033
+0.985438 -0.000000 0.170033
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.492720 0.853414 0.170034
+0.492720 0.853414 0.170034
+0.853415 0.492718 0.170034
+0.853415 0.492719 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+0.185780 0.867401 0.461629
+0.185780 0.867401 0.461629
+0.492720 0.853414 0.170034
+0.833369 0.513598 0.204236
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.610963 0.702294 0.365387
+-0.610963 0.702294 0.365387
+0.185780 0.867401 0.461629
+0.015579 0.823723 0.566779
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+-0.610963 0.702294 0.365387
+-0.860196 0.488266 0.147173
+-0.853414 0.492719 0.170034
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.985438 -0.000000 0.170033
+-0.853414 0.492719 0.170034
+-0.853414 0.492719 0.170034
+</float_array>
+          <technique_common>
+            <accessor source="#KnobSeconds-Normal0-array" count="288" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="KnobSeconds-UV0">
+          <float_array id="KnobSeconds-UV0-array" count="118">
+0.500000 0.000000
+0.750000 0.000000
+0.833333 0.000000
+0.916667 0.000000
+0.000000 0.000000
+0.083333 0.000000
+0.166667 0.000000
+0.250000 0.000000
+0.333333 0.000000
+0.416667 0.000000
+0.500000 0.000000
+0.583333 0.000000
+0.666667 0.000000
+0.750000 1.000000
+0.833333 1.000000
+0.916667 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+-0.083333 0.000000
+-0.083333 0.000000
+-0.083333 1.000000
+-0.083333 0.000000
+-0.083333 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.500000 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+0.500000 1.000000
+0.750000 1.000000
+0.833333 1.000000
+0.666667 1.000000
+0.916667 1.000000
+-0.083333 1.000000
+0.000000 1.000000
+0.083333 1.000000
+0.166667 1.000000
+0.250000 1.000000
+0.333333 1.000000
+0.416667 1.000000
+0.500000 1.000000
+0.583333 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#KnobSeconds-UV0-array" count="59" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="KnobSeconds-VERTEX">
+          <input semantic="POSITION" source="#KnobSeconds-POSITION"/>
+        </vertices>
+        <triangles count="80" material="Material #63"><input semantic="VERTEX" offset="0" source="#KnobSeconds-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobSeconds-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobSeconds-UV0"/><p> 1 36 1 14 37 14 13 38 13 1 39 1 2 40 2 14 41 14 2 42 2 15 43 15 14 44 14 2 45 2 3 46 3 15 47 15 3 48 27 16 49 16 15 50 28 3 51 29 4 52 4 16 53 16 4 54 4 17 55 17 16 56 16 4 57 4 5 58 5 17 59 17 5 60 5 18 61 18 17 62 17 5 63 5 6 64 6 18 65 18 6 66 6 19 67 19 18 68 18 6 69 6 7 70 7 19 71 19 7 72 7 20 73 20 19 74 19 7 75 7 8 76 8 20 77 20 8 78 8 21 79 21 20 80 20 8 81 8 9 82 9 21 83 21 9 84 9 22 85 22 21 86 21 9 87 9 10 88 10 22 89 22 10 90 10 23 91 23 22 92 22 10 93 10 11 94 11 23 95 23 11 96 11 24 97 24 23 98 23 11 99 11 12 100 12 24 101 24 12 102 12 13 103 13 24 104 24 12 105 12 1 106 1 13 107 13 25 108 25 38 109 46 39 110 47 25 111 25 39 112 47 40 113 49 25 114 25 40 115 50 41 116 51 25 117 25 41 118 51 42 119 52 25 120 25 42 121 52 43 122 53 25 123 25 43 124 53 44 125 54 25 126 25 44 127 54 45 128 55 25 129 25 45 130 55 46 131 56 25 132 25 46 133 56 47 134 57 25 135 25 47 136 57 48 137 58 25 138 25 48 139 58 49 140 48 25 141 25 49 142 48 38 143 46 13 144 13 14 145 14 27 146 32 27 147 32 26 148 31 13 149 13 14 150 14 15 151 15 28 152 35 28 153 35 27 154 32 14 155 14 15 156 30 16 157 16 29 158 37 29 159 37 28 160 36 15 161 30 16 162 16 17 163 17 30 164 38 30 165 38 29 166 37 16 167 16 17 168 17 18 169 18 31 170 39 31 171 39 30 172 38 17 173 17 18 174 18 19 175 19 32 176 40 32 177 40 31 178 39 18 179 18 19 180 19 20 181 20 33 182 41 33 183 41 32 184 40 19 185 19 20 186 20 21 187 21 34 188 42 34 189 42 33 190 41 20 191 20 21 192 21 22 193 22 35 194 43 35 195 43 34 196 42 21 197 21 22 198 22 23 199 23 36 200 44 36 201 44 35 202 43 22 203 22 23 204 23 24 205 24 37 206 33 37 207 33 36 208 44 23 209 23 24 210 24 13 211 13 26 212 31 26 213 31 37 214 33 24 215 24 26 216 31 27 217 32 39 218 47 39 219 47 38 220 46 26 221 31 27 222 32 28 223 35 40 224 49 40 225 49 39 226 47 27 227 32 28 228 36 29 229 37 41 230 51 41 231 51 40 232 50 28 233 36 29 234 37 30 235 38 42 236 52 42 237 52 41 238 51 29 239 37 30 240 38 31 241 39 43 242 53 43 243 53 42 244 52 30 245 38 31 246 39 32 247 40 44 248 54 44 249 54 43 250 53 31 251 39 32 252 40 33 253 41 45 254 55 45 255 55 44 256 54 32 257 40 33 258 41 34 259 42 46 260 56 46 261 56 45 262 55 33 263 41 36 276 44 37 277 33 49 278 48 49 279 48 48 280 58 36 281 44 37 282 33 26 283 31 38 284 46 38 285 46 49 286 48 37 287 33</p></triangles>
+        <triangles count="16" material="Material #64"><input semantic="VERTEX" offset="0" source="#KnobSeconds-VERTEX"/><input semantic="NORMAL" offset="1" source="#KnobSeconds-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#KnobSeconds-UV0"/><p> 0 0 0 2 1 2 1 2 1 0 3 0 3 4 3 2 5 2 0 6 0 4 7 4 3 8 26 0 9 0 5 10 5 4 11 4 0 12 0 6 13 6 5 14 5 0 15 0 7 16 7 6 17 6 0 18 0 8 19 8 7 20 7 0 21 0 9 22 9 8 23 8 0 24 0 10 25 10 9 26 9 0 27 0 11 28 11 10 29 10 0 30 0 12 31 12 11 32 11 0 33 0 1 34 1 12 35 12 34 264 42 35 265 43 47 266 57 47 267 57 46 268 56 34 269 42 35 270 43 36 271 44 48 272 58 48 273 58 47 274 57 35 275 43</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="_ncl1_6" name="_ncl1_6">
+      <technique_common>
+        <point>
+          <color sid="color">1.000000 0.000000 0.000000</color>
+        </point>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.100000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_13" name="_ncl1_13">
+      <technique_common>
+        <spot>
+          <color sid="color">0.929412 1.000000 0.760784</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.100000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_18" name="_ncl1_18">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_19" name="_ncl1_19">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_20" name="_ncl1_20">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_21" name="_ncl1_21">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_22" name="_ncl1_22">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_23" name="_ncl1_23">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_24" name="_ncl1_24">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_25" name="_ncl1_25">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+    <light id="_ncl1_26" name="_ncl1_26">
+      <technique_common>
+        <spot>
+          <color sid="color">0.956863 1.000000 1.000000</color>
+          <falloff_angle sid="angle">65.000000</falloff_angle>
+        </spot>
+      </technique_common>
+      <technique profile="MAYA">
+        <intensity sid="intensity">0.500000</intensity>
+      </technique>
+    </light>
+  </library_lights>
+  <library_cameras>
+    <camera id="_ncl1_14" name="_ncl1_14">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">45.000001</xfov>
+            <aspect_ratio>2.500000</aspect_ratio>
+            <znear sid="znear">10.000000</znear>
+            <zfar sid="zfar">4000.000000</zfar>
+          </perspective>
+        </technique_common>
+        <technique profile="FCOLLADA"><vertical_aperture>1.440000</vertical_aperture><horizontal_aperture>3.600000</horizontal_aperture><lens_squeeze>1.000000</lens_squeeze></technique>
+      </optics>
+    </camera>
+    <camera id="_ncl1_15" name="_ncl1_15">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">45.000001</xfov>
+            <aspect_ratio>2.500000</aspect_ratio>
+            <znear sid="znear">10.000000</znear>
+            <zfar sid="zfar">4000.000000</zfar>
+          </perspective>
+        </technique_common>
+        <technique profile="FCOLLADA"><vertical_aperture>1.440000</vertical_aperture><horizontal_aperture>3.600000</horizontal_aperture><lens_squeeze>1.000000</lens_squeeze></technique>
+      </optics>
+    </camera>
+    <camera id="_ncl1_16" name="_ncl1_16">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">45.000001</xfov>
+            <aspect_ratio>2.500000</aspect_ratio>
+            <znear sid="znear">10.000000</znear>
+            <zfar sid="zfar">4000.000000</zfar>
+          </perspective>
+        </technique_common>
+        <technique profile="FCOLLADA"><vertical_aperture>1.440000</vertical_aperture><horizontal_aperture>3.600000</horizontal_aperture><lens_squeeze>1.000000</lens_squeeze></technique>
+      </optics>
+    </camera>
+  </library_cameras>
+  <library_visual_scenes>
+    <visual_scene id="legit-stage-2017" name="legit-stage-2017">
+      <node name="Floor" id="Floor" sid="Floor"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Floor-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Stage" id="Stage" sid="Stage"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 150.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Stage-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Amp" id="Amp" sid="Amp"><matrix sid="matrix">1.000000 0.000000 0.000000 -85.000000 0.000000 1.000000 0.000000 35.000000 0.000000 0.000000 1.000000 10.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Amp-lib"><bind_material><technique_common><instance_material symbol="Material #58" target="#Material #58"/><instance_material symbol="Material #59" target="#Material #59"/><instance_material symbol="Material #60" target="#Material #60"/><instance_material symbol="Material #57 Slot #4" target="#Material #57 Slot #4"/><instance_material symbol="Material #57 Slot #5" target="#Material #57 Slot #5"/><instance_material symbol="Material #57 Slot #6" target="#Material #57 Slot #6"/><instance_material symbol="Material #57 Slot #7" target="#Material #57 Slot #7"/><instance_material symbol="Material #57 Slot #8" target="#Material #57 Slot #8"/><instance_material symbol="Material #57 Slot #9" target="#Material #57 Slot #9"/><instance_material symbol="Material #57 Slot #10" target="#Material #57 Slot #10"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="ControlPanel" id="ControlPanel" sid="ControlPanel"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -4.000000 0.000000 0.000000 1.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobVolume" id="KnobVolume" sid="KnobVolume"><matrix sid="matrix">1.000000 0.000000 0.000000 3.333298 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobVolume-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="OnLightBulb" id="OnLightBulb" sid="OnLightBulb"><matrix sid="matrix">1.000000 0.000000 0.000000 2.333313 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#OnLightBulb-lib"><bind_material><technique_common><instance_material symbol="Material #61" target="#Material #61"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="OnLight" id="OnLight" sid="OnLight"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 -1.000000 0.000015 0.000000 1.000000 -0.000000 0.445068 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_6"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node><node name="KnobMonths" id="KnobMonths" sid="KnobMonths"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMonths-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobWeeks" id="KnobWeeks" sid="KnobWeeks"><matrix sid="matrix">1.000000 0.000000 0.000000 -2.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobWeeks-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobDays" id="KnobDays" sid="KnobDays"><matrix sid="matrix">1.000000 0.000000 0.000000 -1.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobDays-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobHours" id="KnobHours" sid="KnobHours"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobHours-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobMinutes" id="KnobMinutes" sid="KnobMinutes"><matrix sid="matrix">1.000000 0.000000 0.000000 0.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMinutes-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobSeconds" id="KnobSeconds" sid="KnobSeconds"><matrix sid="matrix">1.000000 0.000000 0.000000 1.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobSeconds-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="Fspot001" id="Fspot001" sid="Fspot001"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.999954 0.000000 0.000000 -1.000000 -20.550507 0.000000 1.000000 0.000000 9.166660 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_13"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1.Target" id="AmpCam1.Target" sid="AmpCam1.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -2.664001 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.693190 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1" id="AmpCam1" sid="AmpCam1"><matrix sid="matrix">0.961346 -0.111305 -0.251844 -5.088760 -0.275343 -0.388615 -0.879298 -12.698853 0.000000 0.914653 -0.404240 4.801147 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_14"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam1.Target</target></technique></extra></node><node name="AmpCam2" id="AmpCam2" sid="AmpCam2"><matrix sid="matrix">0.984195 0.005154 0.177015 4.823105 0.177090 -0.028644 -0.983778 -13.540665 -0.000000 0.999576 -0.029104 8.275789 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_15"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam2.Target</target></technique></extra></node><node name="AmpCam2.Target" id="AmpCam2.Target" sid="AmpCam2.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 3.148331 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.551144 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam3" id="AmpCam3" sid="AmpCam3"><matrix sid="matrix">0.988010 -0.037803 0.149688 1.306747 0.154387 0.241920 -0.957935 -16.647766 -0.000000 0.969560 0.244856 11.062244 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_16"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam3.Target</target></technique></extra></node><node name="AmpCam3.Target" id="AmpCam3.Target" sid="AmpCam3.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -0.633202 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 7.888920 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node></node>
+      <node name="CeilingGrid" id="CeilingGrid" sid="CeilingGrid"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 200.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="WorkLight01" id="WorkLight01" sid="WorkLight01"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_18"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight02" id="WorkLight02" sid="WorkLight02"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_19"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight03" id="WorkLight03" sid="WorkLight03"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_20"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight04" id="WorkLight04" sid="WorkLight04"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_21"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight05" id="WorkLight05" sid="WorkLight05"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_22"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight06" id="WorkLight06" sid="WorkLight06"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_23"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight07" id="WorkLight07" sid="WorkLight07"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_24"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight08" id="WorkLight08" sid="WorkLight08"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_25"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight09" id="WorkLight09" sid="WorkLight09"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_26"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#legit-stage-2017"></instance_visual_scene>
+  </scene>
+</COLLADA>
