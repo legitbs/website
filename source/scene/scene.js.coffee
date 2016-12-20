@@ -132,7 +132,7 @@ jQuery ($)->
               cp_mat.map = st(texture)
             @scene.textureLoader.load @specularTextureFile, (texture)->
               cp_mat.specularMap = st(texture)
-    diffuseTextureFile: 'scene/amp-labels-diffuse.png'
+    diffuseTextureFile: 'scene/checkerboard.png' #'scene/amp-labels-diffuse.png'
     specularTextureFile: 'scene/amp-labels-specular.png'
 
   class WorkLight
