@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
-  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-12-20T18:35:24Z</created><keywords></keywords><modified>2016-12-20T18:35:24Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-12-20T23:05:44Z</created><keywords></keywords><modified>2016-12-20T23:05:44Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_images>
-    <image id="Map #3-image" name="Map #3"><init_from>file://C:\Users\bkerl\OneDrive\Documents\3dsMax\sceneassets\amp\amp-labels-diffuse.png</init_from></image>
-    <image id="Map #4-image" name="Map #4"><init_from>file://C:\Users\bkerl\OneDrive\Documents\3dsMax\sceneassets\amp\amp-labels-specular.png</init_from></image>
+    <image id="Map #5-image" name="Map #5"><init_from>file://</init_from></image>
   </library_images>
   <library_materials>
-    <material id="Material #58" name="Material #58">
-      <instance_effect url="#Material #58-fx"/>
+    <material id="leatherette" name="leatherette">
+      <instance_effect url="#leatherette-fx"/>
     </material>
-    <material id="Material #59" name="Material #59">
-      <instance_effect url="#Material #59-fx"/>
+    <material id="control panel" name="control panel">
+      <instance_effect url="#control panel-fx"/>
     </material>
-    <material id="Material #60" name="Material #60">
-      <instance_effect url="#Material #60-fx"/>
+    <material id="speaker cover" name="speaker cover">
+      <instance_effect url="#speaker cover-fx"/>
     </material>
-    <material id="Material #57 Slot #4" name="Material #57 Slot #4">
-      <instance_effect url="#Material #57 Slot #4-fx"/>
-    </material>
-    <material id="Material #57 Slot #5" name="Material #57 Slot #5">
-      <instance_effect url="#Material #57 Slot #5-fx"/>
-    </material>
-    <material id="Material #57 Slot #6" name="Material #57 Slot #6">
-      <instance_effect url="#Material #57 Slot #6-fx"/>
-    </material>
-    <material id="Material #57 Slot #7" name="Material #57 Slot #7">
-      <instance_effect url="#Material #57 Slot #7-fx"/>
-    </material>
-    <material id="Material #57 Slot #8" name="Material #57 Slot #8">
-      <instance_effect url="#Material #57 Slot #8-fx"/>
-    </material>
-    <material id="Material #57 Slot #9" name="Material #57 Slot #9">
-      <instance_effect url="#Material #57 Slot #9-fx"/>
-    </material>
-    <material id="Material #57 Slot #10" name="Material #57 Slot #10">
-      <instance_effect url="#Material #57 Slot #10-fx"/>
+    <material id="Map #5-diffuse-Material" name="Map #5-diffuse-Material">
+      <instance_effect url="#Map #5-diffuse-Material-fx"/>
     </material>
     <material id="Material #63" name="Material #63">
       <instance_effect url="#Material #63-fx"/>
@@ -47,7 +28,7 @@
     </material>
   </library_materials>
   <library_effects>
-    <effect id="Material #58-fx" name="Material #58">
+    <effect id="leatherette-fx" name="leatherette">
       <profile_COMMON>
         <technique sid="standard">
           <phong>
@@ -82,7 +63,7 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="Material #59-fx" name="Material #59">
+    <effect id="control panel-fx" name="control panel">
       <profile_COMMON>
         <technique sid="standard">
           <phong>
@@ -93,26 +74,10 @@
               <color sid="ambient">0.588000  0.588000 0.588000 1.000000</color>
             </ambient>
             <diffuse>
-              <texture texture="Map #3-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
+              <color sid="diffuse">0.588000  0.588000 0.588000 1.000000</color>
             </diffuse>
             <specular>
-              <texture texture="Map #4-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
+              <color sid="specular">0.441000  0.441000 0.441000 1.000000</color>
             </specular>
             <shininess>
               <float sid="shininess">2.000000</float>
@@ -133,7 +98,7 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="Material #60-fx" name="Material #60">
+    <effect id="speaker cover-fx" name="speaker cover">
       <profile_COMMON>
         <technique sid="standard">
           <phong>
@@ -168,7 +133,7 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="Material #57 Slot #4-fx" name="Material #57 Slot #4">
+    <effect id="Map #5-diffuse-Material-fx" name="Map #5-diffuse-Material">
       <profile_COMMON>
         <technique sid="standard">
           <phong>
@@ -176,239 +141,22 @@
               <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
             </emission>
             <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+              <texture texture="Map #5-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
             </diffuse>
             <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
             </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #5-fx" name="Material #57 Slot #5">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #6-fx" name="Material #57 Slot #6">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #7-fx" name="Material #57 Slot #7">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #8-fx" name="Material #57 Slot #8">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #9-fx" name="Material #57 Slot #9">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="Material #57 Slot #10-fx" name="Material #57 Slot #10">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">1.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
           </phong>
         </technique>
       </profile_COMMON>
@@ -1092,62 +840,62 @@
         </source>
         <source id="Amp-UV0">
           <float_array id="Amp-UV0-array" count="112">
--0.055555 -3.749999
-0.000000 -3.749999
-1.000000 -3.749999
-1.055555 -3.749999
--0.055555 -3.749999
-0.000000 -3.749999
-1.000000 -3.749999
-1.055556 -3.749999
--0.055555 1.250000
-0.000000 1.250000
-1.000000 1.250000
-1.055555 1.250000
--0.055555 1.250000
-0.000000 1.250000
-1.000000 1.250000
-1.055556 1.250000
--0.055555 -3.499999
-0.000000 -3.499999
-1.000000 -3.499999
-1.055555 -3.499999
-1.055556 -3.499999
-1.000000 -3.499999
-0.000000 -3.499999
--0.055555 -3.499999
--0.055555 -0.250000
-0.000000 -0.250000
-1.000000 -0.250000
-1.055555 -0.250000
-1.055556 -0.250000
-1.000000 -0.250000
-0.000000 -0.250000
--0.055555 -0.250000
--0.055555 0.000000
 0.000000 0.000000
 1.000000 0.000000
-1.055555 0.000000
-1.055556 0.000000
-1.000000 0.000000
+0.000000 0.200000
+1.000000 0.200000
+0.000000 0.400000
+1.000000 0.400000
+0.000000 0.600000
+1.000000 0.600000
+0.000000 0.800000
+1.000000 0.800000
+0.000000 1.000000
+1.000000 1.000000
 0.000000 0.000000
--0.055555 0.000000
--0.055555 1.000000
+0.333333 0.000000
+0.666667 0.000000
+1.000000 0.000000
+0.000000 0.200000
+0.333333 0.200000
+0.666667 0.200000
+1.000000 0.200000
+0.000000 0.400000
+0.333333 0.400000
+0.666667 0.400000
+1.000000 0.400000
+0.000000 0.600000
+0.333333 0.600000
+0.666667 0.600000
+1.000000 0.600000
+0.000000 0.800000
+0.333333 0.800000
+0.666667 0.800000
+1.000000 0.800000
 0.000000 1.000000
+0.333333 1.000000
+0.666667 1.000000
 1.000000 1.000000
-1.055555 1.000000
-1.055556 1.000000
-1.000000 1.000000
-0.000000 1.000000
--0.055555 1.000000
 0.000000 0.000000
+0.333333 0.000000
+0.666667 0.000000
 1.000000 0.000000
 0.000000 1.000000
+0.333333 1.000000
+0.666667 1.000000
 1.000000 1.000000
-0.000000 -3.499999
-1.000000 -3.499999
-0.000000 -0.250000
-1.000000 -0.250000
+0.333333 0.600000
+0.666667 0.600000
+0.333333 0.800000
+0.666667 0.800000
+0.333333 0.200000
+0.666667 0.200000
+0.333333 0.400000
+0.666667 0.400000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
 </float_array>
           <technique_common>
             <accessor source="#Amp-UV0-array" count="56" stride="2">
@@ -1156,81 +904,13 @@
             </accessor>
           </technique_common>
         </source>
-        <source id="Amp-UV1">
-          <float_array id="Amp-UV1-array" count="104">
-0.000000 0.000000
-1.000000 0.000000
-0.000000 0.200000
-1.000000 0.200000
-0.000000 0.400000
-1.000000 0.400000
-0.000000 0.600000
-1.000000 0.600000
-0.000000 0.800000
-1.000000 0.800000
-0.000000 1.000000
-1.000000 1.000000
-0.000000 0.000000
-0.333333 0.000000
-0.666667 0.000000
-1.000000 0.000000
-0.000000 0.200000
-0.333333 0.200000
-0.666667 0.200000
-1.000000 0.200000
-0.000000 0.400000
-0.333333 0.400000
-0.666667 0.400000
-1.000000 0.400000
-0.000000 0.600000
-0.333333 0.600000
-0.666667 0.600000
-1.000000 0.600000
-0.000000 0.800000
-0.333333 0.800000
-0.666667 0.800000
-1.000000 0.800000
-0.000000 1.000000
-0.333333 1.000000
-0.666667 1.000000
-1.000000 1.000000
-0.000000 0.000000
-0.333333 0.000000
-0.666667 0.000000
-1.000000 0.000000
-0.000000 1.000000
-0.333333 1.000000
-0.666667 1.000000
-1.000000 1.000000
-0.333333 0.600000
-0.666667 0.600000
-0.333333 0.800000
-0.666667 0.800000
-0.333333 0.200000
-0.666667 0.200000
-0.333333 0.400000
-0.666667 0.400000
-</float_array>
-          <technique_common>
-            <accessor source="#Amp-UV1-array" count="52" stride="2">
-              <param name="S" type="float"/>
-              <param name="T" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
         <vertices id="Amp-VERTEX">
           <input semantic="POSITION" source="#Amp-POSITION"/>
         </vertices>
-        <triangles count="98" material="Material #58"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 8 18 8 36 9 19 9 37 13 20 13 41 13 21 13 41 12 22 12 40 8 23 8 36 9 24 9 37 10 25 10 38 14 26 14 42 14 27 14 42 13 28 13 41 9 29 9 37 10 30 10 38 11 31 11 39 15 32 15 43 15 33 15 43 14 34 14 42 10 35 10 38 0 36 0 12 1 37 1 13 17 38 17 17 17 39 17 17 16 40 16 16 0 41 0 12 1 42 1 13 2 43 2 14 18 44 18 18 18 45 18 18 17 46 17 17 1 47 1 13 2 48 2 14 3 49 3 15 19 50 19 19 19 51 19 19 18 52 18 18 2 53 2 14 16 54 16 16 17 55 17 17 25 56 25 21 25 57 25 21 24 58 24 20 16 59 16 16 18 66 18 18 19 67 19 19 27 68 27 23 27 69 27 23 26 70 26 22 18 71 18 18 24 72 24 20 25 73 25 21 33 74 33 25 33 75 33 25 32 76 32 24 24 77 24 20 25 78 25 21 26 79 26 22 34 80 34 26 34 81 34 26 33 82 33 25 25 83 25 21 26 84 26 22 27 85 27 23 35 86 35 27 35 87 35 27 34 88 34 26 26 89 26 22 32 90 32 24 33 91 33 25 41 92 41 29 41 93 41 29 40 94 40 28 32 95 32 24 34 102 34 26 35 103 35 27 43 104 43 31 43 105 43 31 42 106 42 30 34 107 34 26 40 108 40 28 41 109 41 29 9 110 9 33 9 111 9 33 8 112 8 32 40 113 40 28 41 114 41 29 42 115 42 30 10 116 10 34 10 117 10 34 9 118 9 33 41 119 41 29 42 120 42 30 43 121 43 31 11 122 11 35 11 123 11 35 10 124 10 34 42 125 42 30 3 126 3 0 7 127 7 1 20 128 20 3 20 129 20 3 19 130 19 2 3 131 3 0 19 132 19 2 20 133 20 3 28 134 28 5 28 135 28 5 27 136 27 4 19 137 19 2 27 138 27 4 28 139 28 5 36 140 36 7 36 141 36 7 35 142 35 6 27 143 27 4 35 144 35 6 36 145 36 7 44 146 44 9 44 147 44 9 43 148 43 8 35 149 35 6 43 150 43 8 44 151 44 9 15 152 15 11 15 153 15 11 11 154 11 10 43 155 43 8 7 156 7 12 6 157 6 13 21 158 21 17 21 159 21 17 20 160 20 16 7 161 7 12 6 162 6 13 5 163 5 14 22 164 22 18 22 165 22 18 21 166 21 17 6 167 6 13 5 168 5 14 4 169 4 15 23 170 23 19 23 171 23 19 22 172 22 18 5 173 5 14 20 174 20 16 21 175 21 17 29 176 29 21 29 177 29 21 28 178 28 20 20 179 20 16 21 180 21 17 22 181 22 18 30 182 30 22 30 183 30 22 29 184 29 21 21 185 21 17 22 186 22 18 23 187 23 19 31 188 31 23 31 189 31 23 30 190 30 22 22 191 22 18 28 192 28 20 29 193 29 21 37 194 37 25 37 195 37 25 36 196 36 24 28 197 28 20 29 198 29 21 30 199 30 22 38 200 38 26 38 201 38 26 37 202 37 25 29 203 29 21 30 204 30 22 31 205 31 23 39 206 39 27 39 207 39 27 38 208 38 26 30 209 30 22 36 210 36 24 37 211 37 25 45 212 45 29 45 213 45 29 44 214 44 28 36 215 36 24 37 216 37 25 38 217 38 26 46 218 46 30 46 219 46 30 45 220 45 29 37 221 37 25 38 222 38 26 39 223 39 27 47 224 47 31 47 225 47 31 46 226 46 30 38 227 38 26 44 228 44 28 45 229 45 29 14 230 14 33 14 231 14 33 15 232 15 32 44 233 44 28 45 234 45 29 46 235 46 30 13 236 13 34 13 237 13 34 14 238 14 33 45 239 45 29 46 240 46 30 47 241 47 31 12 242 12 35 12 243 12 35 13 244 13 34 46 245 46 30 4 246 4 0 0 247 0 1 16 248 16 3 16 249 16 3 23 250 23 2 4 251 4 0 23 252 23 2 16 253 16 3 24 254 24 5 24 255 24 5 31 256 31 4 23 257 23 2 31 258 31 4 24 259 24 5 32 260 32 7 32 261 32 7 39 262 39 6 31 263 31 4 39 264 39 6 32 265 32 7 40 266 40 9 40 267 40 9 47 268 47 8 39 269 39 6 47 270 47 8 40 271 40 9 8 272 8 11 8 273 8 11 12 274 12 10 47 275 47 8 33 276 33 25 34 277 34 26 49 278 49 45 49 279 49 45 48 280 48 44 33 281 33 25 41 282 41 29 33 283 33 25 48 284 48 44 48 285 48 44 50 286 50 46 41 287 41 29 34 288 34 26 42 289 42 30 51 290 51 47 51 291 51 47 49 292 49 45 34 293 34 26 42 294 42 30 41 295 41 29 50 296 50 46 50 297 50 46 51 298 51 47 42 299 42 30 17 300 17 17 18 301 18 18 53 302 53 49 53 303 53 49 52 304 52 48 17 305 17 17 25 306 25 21 17 307 17 17 52 308 52 48 52 309 52 48 54 310 54 50 25 311 25 21 18 312 18 18 26 313 26 22 55 314 55 51 55 315 55 51 53 316 53 49 18 317 18 18 26 318 26 22 25 319 25 21 54 320 54 50 54 321 54 50 55 322 55 51 26 323 26 22</p></triangles>
-        <triangles count="8" material="Material #59"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 0 0 0 39 4 1 4 43 5 2 5 42 5 3 5 42 1 4 1 38 0 5 0 39 1 6 1 38 5 7 5 42 6 8 6 41 6 9 6 41 2 10 2 37 1 11 1 38 2 12 2 37 6 13 6 41 7 14 7 40 7 15 7 40 3 16 3 36 2 17 2 37 48 96 48 44 49 97 49 45 51 98 51 47 51 99 51 47 50 100 50 46 48 101 48 44</p></triangles>
-        <triangles count="2" material="Material #60"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p> 52 60 52 48 53 61 53 49 55 62 55 51 55 63 55 51 54 64 54 50 52 65 52 48</p></triangles>
-        <triangles count="0" material="Material #57 Slot #4"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #5"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #6"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #7"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #8"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #9"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
-        <triangles count="0" material="Material #57 Slot #10"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><input semantic="TEXCOORD" offset="3" set="1" source="#Amp-UV1"/><p></p></triangles>
+        <triangles count="98" material="Map #5-diffuse-Material"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><p> 8 18 36 9 19 37 13 20 41 13 21 41 12 22 40 8 23 36 9 24 37 10 25 38 14 26 42 14 27 42 13 28 41 9 29 37 10 30 38 11 31 39 15 32 43 15 33 43 14 34 42 10 35 38 0 36 12 1 37 13 17 38 17 17 39 17 16 40 16 0 41 12 1 42 13 2 43 14 18 44 18 18 45 18 17 46 17 1 47 13 2 48 14 3 49 15 19 50 19 19 51 19 18 52 18 2 53 14 16 54 16 17 55 17 25 56 21 25 57 21 24 58 20 16 59 16 18 66 18 19 67 19 27 68 23 27 69 23 26 70 22 18 71 18 24 72 20 25 73 21 33 74 25 33 75 25 32 76 24 24 77 20 25 78 21 26 79 22 34 80 26 34 81 26 33 82 25 25 83 21 26 84 22 27 85 23 35 86 27 35 87 27 34 88 26 26 89 22 32 90 24 33 91 25 41 92 29 41 93 29 40 94 28 32 95 24 34 102 26 35 103 27 43 104 31 43 105 31 42 106 30 34 107 26 40 108 28 41 109 29 9 110 33 9 111 33 8 112 32 40 113 28 41 114 29 42 115 30 10 116 34 10 117 34 9 118 33 41 119 29 42 120 30 43 121 31 11 122 35 11 123 35 10 124 34 42 125 30 3 126 0 7 127 1 20 128 3 20 129 3 19 130 2 3 131 0 19 132 2 20 133 3 28 134 5 28 135 5 27 136 4 19 137 2 27 138 4 28 139 5 36 140 7 36 141 7 35 142 6 27 143 4 35 144 6 36 145 7 44 146 9 44 147 9 43 148 8 35 149 6 43 150 8 44 151 9 15 152 11 15 153 11 11 154 10 43 155 8 7 156 12 6 157 13 21 158 17 21 159 17 20 160 16 7 161 12 6 162 13 5 163 14 22 164 18 22 165 18 21 166 17 6 167 13 5 168 14 4 169 15 23 170 19 23 171 19 22 172 18 5 173 14 20 174 16 21 175 17 29 176 21 29 177 21 28 178 20 20 179 16 21 180 17 22 181 18 30 182 22 30 183 22 29 184 21 21 185 17 22 186 18 23 187 19 31 188 23 31 189 23 30 190 22 22 191 18 28 192 20 29 193 21 37 194 25 37 195 25 36 196 24 28 197 20 29 198 21 30 199 22 38 200 26 38 201 26 37 202 25 29 203 21 30 204 22 31 205 23 39 206 27 39 207 27 38 208 26 30 209 22 36 210 24 37 211 25 45 212 29 45 213 29 44 214 28 36 215 24 37 216 25 38 217 26 46 218 30 46 219 30 45 220 29 37 221 25 38 222 26 39 223 27 47 224 31 47 225 31 46 226 30 38 227 26 44 228 28 45 229 29 14 230 33 14 231 33 15 232 32 44 233 28 45 234 29 46 235 30 13 236 34 13 237 34 14 238 33 45 239 29 46 240 30 47 241 31 12 242 35 12 243 35 13 244 34 46 245 30 4 246 0 0 247 1 16 248 3 16 249 3 23 250 2 4 251 0 23 252 2 16 253 3 24 254 5 24 255 5 31 256 4 23 257 2 31 258 4 24 259 5 32 260 7 32 261 7 39 262 6 31 263 4 39 264 6 32 265 7 40 266 9 40 267 9 47 268 8 39 269 6 47 270 8 40 271 9 8 272 11 8 273 11 12 274 10 47 275 8 33 276 25 34 277 26 49 278 45 49 279 45 48 280 44 33 281 25 41 282 29 33 283 25 48 284 44 48 285 44 50 286 46 41 287 29 34 288 26 42 289 30 51 290 47 51 291 47 49 292 45 34 293 26 42 294 30 41 295 29 50 296 46 50 297 46 51 298 47 42 299 30 17 300 17 18 301 18 53 302 49 53 303 49 52 304 48 17 305 17 25 306 21 17 307 17 52 308 48 52 309 48 54 310 50 25 311 21 18 312 18 26 313 22 55 314 51 55 315 51 53 316 49 18 317 18 26 318 22 25 319 21 54 320 50 54 321 50 55 322 51 26 323 22</p></triangles>
+        <triangles count="98" material="leatherette"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><p> 8 18 36 9 19 37 13 20 41 13 21 41 12 22 40 8 23 36 9 24 37 10 25 38 14 26 42 14 27 42 13 28 41 9 29 37 10 30 38 11 31 39 15 32 43 15 33 43 14 34 42 10 35 38 0 36 12 1 37 13 17 38 17 17 39 17 16 40 16 0 41 12 1 42 13 2 43 14 18 44 18 18 45 18 17 46 17 1 47 13 2 48 14 3 49 15 19 50 19 19 51 19 18 52 18 2 53 14 16 54 16 17 55 17 25 56 21 25 57 21 24 58 20 16 59 16 18 66 18 19 67 19 27 68 23 27 69 23 26 70 22 18 71 18 24 72 20 25 73 21 33 74 25 33 75 25 32 76 24 24 77 20 25 78 21 26 79 22 34 80 26 34 81 26 33 82 25 25 83 21 26 84 22 27 85 23 35 86 27 35 87 27 34 88 26 26 89 22 32 90 24 33 91 25 41 92 29 41 93 29 40 94 28 32 95 24 34 102 26 35 103 27 43 104 31 43 105 31 42 106 30 34 107 26 40 108 28 41 109 29 9 110 33 9 111 33 8 112 32 40 113 28 41 114 29 42 115 30 10 116 34 10 117 34 9 118 33 41 119 29 42 120 30 43 121 31 11 122 35 11 123 35 10 124 34 42 125 30 3 126 0 7 127 1 20 128 3 20 129 3 19 130 2 3 131 0 19 132 2 20 133 3 28 134 5 28 135 5 27 136 4 19 137 2 27 138 4 28 139 5 36 140 7 36 141 7 35 142 6 27 143 4 35 144 6 36 145 7 44 146 9 44 147 9 43 148 8 35 149 6 43 150 8 44 151 9 15 152 11 15 153 11 11 154 10 43 155 8 7 156 12 6 157 13 21 158 17 21 159 17 20 160 16 7 161 12 6 162 13 5 163 14 22 164 18 22 165 18 21 166 17 6 167 13 5 168 14 4 169 15 23 170 19 23 171 19 22 172 18 5 173 14 20 174 16 21 175 17 29 176 21 29 177 21 28 178 20 20 179 16 21 180 17 22 181 18 30 182 22 30 183 22 29 184 21 21 185 17 22 186 18 23 187 19 31 188 23 31 189 23 30 190 22 22 191 18 28 192 20 29 193 21 37 194 25 37 195 25 36 196 24 28 197 20 29 198 21 30 199 22 38 200 26 38 201 26 37 202 25 29 203 21 30 204 22 31 205 23 39 206 27 39 207 27 38 208 26 30 209 22 36 210 24 37 211 25 45 212 29 45 213 29 44 214 28 36 215 24 37 216 25 38 217 26 46 218 30 46 219 30 45 220 29 37 221 25 38 222 26 39 223 27 47 224 31 47 225 31 46 226 30 38 227 26 44 228 28 45 229 29 14 230 33 14 231 33 15 232 32 44 233 28 45 234 29 46 235 30 13 236 34 13 237 34 14 238 33 45 239 29 46 240 30 47 241 31 12 242 35 12 243 35 13 244 34 46 245 30 4 246 0 0 247 1 16 248 3 16 249 3 23 250 2 4 251 0 23 252 2 16 253 3 24 254 5 24 255 5 31 256 4 23 257 2 31 258 4 24 259 5 32 260 7 32 261 7 39 262 6 31 263 4 39 264 6 32 265 7 40 266 9 40 267 9 47 268 8 39 269 6 47 270 8 40 271 9 8 272 11 8 273 11 12 274 10 47 275 8 33 276 25 34 277 26 49 278 45 49 279 45 48 280 44 33 281 25 41 282 29 33 283 25 48 284 44 48 285 44 50 286 46 41 287 29 34 288 26 42 289 30 51 290 47 51 291 47 49 292 45 34 293 26 42 294 30 41 295 29 50 296 46 50 297 46 51 298 47 42 299 30 17 300 17 18 301 18 53 302 49 53 303 49 52 304 48 17 305 17 25 306 21 17 307 17 52 308 48 52 309 48 54 310 50 25 311 21 18 312 18 26 313 22 55 314 51 55 315 51 53 316 49 18 317 18 26 318 22 25 319 21 54 320 50 54 321 50 55 322 51 26 323 22</p></triangles>
+        <triangles count="8" material="control panel"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><p> 0 0 39 4 1 43 5 2 42 5 3 42 1 4 38 0 5 39 1 6 38 5 7 42 6 8 41 6 9 41 2 10 37 1 11 38 2 12 37 6 13 41 7 14 40 7 15 40 3 16 36 2 17 37 48 96 52 49 97 53 51 98 54 51 99 54 50 100 55 48 101 52</p></triangles>
+        <triangles count="2" material="speaker cover"><input semantic="VERTEX" offset="0" source="#Amp-VERTEX"/><input semantic="NORMAL" offset="1" source="#Amp-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Amp-UV0"/><p> 52 60 48 53 61 49 55 62 51 55 63 51 54 64 50 52 65 48</p></triangles>
       </mesh>
     </geometry>
     <geometry id="KnobVolume-lib" name="KnobVolumeMesh">
@@ -4578,8 +4258,7 @@
   </library_cameras>
   <library_visual_scenes>
     <visual_scene id="legit-stage-2017" name="legit-stage-2017">
-      <node name="Floor" id="Floor" sid="Floor"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Floor-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Stage" id="Stage" sid="Stage"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 150.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Stage-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Amp" id="Amp" sid="Amp"><matrix sid="matrix">1.000000 0.000000 0.000000 -85.000000 0.000000 1.000000 0.000000 35.000000 0.000000 0.000000 1.000000 10.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Amp-lib"><bind_material><technique_common><instance_material symbol="Material #58" target="#Material #58"/><instance_material symbol="Material #59" target="#Material #59"/><instance_material symbol="Material #60" target="#Material #60"/><instance_material symbol="Material #57 Slot #4" target="#Material #57 Slot #4"/><instance_material symbol="Material #57 Slot #5" target="#Material #57 Slot #5"/><instance_material symbol="Material #57 Slot #6" target="#Material #57 Slot #6"/><instance_material symbol="Material #57 Slot #7" target="#Material #57 Slot #7"/><instance_material symbol="Material #57 Slot #8" target="#Material #57 Slot #8"/><instance_material symbol="Material #57 Slot #9" target="#Material #57 Slot #9"/><instance_material symbol="Material #57 Slot #10" target="#Material #57 Slot #10"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="ControlPanel" id="ControlPanel" sid="ControlPanel"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -4.000000 0.000000 0.000000 1.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobVolume" id="KnobVolume" sid="KnobVolume"><matrix sid="matrix">1.000000 0.000000 0.000000 3.333298 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobVolume-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="OnLightBulb" id="OnLightBulb" sid="OnLightBulb"><matrix sid="matrix">1.000000 0.000000 0.000000 2.333313 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#OnLightBulb-lib"><bind_material><technique_common><instance_material symbol="Material #61" target="#Material #61"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="OnLight" id="OnLight" sid="OnLight"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 -1.000000 0.000015 0.000000 1.000000 -0.000000 0.445068 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_6"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node><node name="KnobMonths" id="KnobMonths" sid="KnobMonths"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMonths-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobWeeks" id="KnobWeeks" sid="KnobWeeks"><matrix sid="matrix">1.000000 0.000000 0.000000 -2.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobWeeks-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobDays" id="KnobDays" sid="KnobDays"><matrix sid="matrix">1.000000 0.000000 0.000000 -1.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobDays-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobHours" id="KnobHours" sid="KnobHours"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobHours-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobMinutes" id="KnobMinutes" sid="KnobMinutes"><matrix sid="matrix">1.000000 0.000000 0.000000 0.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMinutes-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobSeconds" id="KnobSeconds" sid="KnobSeconds"><matrix sid="matrix">1.000000 0.000000 0.000000 1.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobSeconds-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="Fspot001" id="Fspot001" sid="Fspot001"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.999954 0.000000 0.000000 -1.000000 -20.550507 0.000000 1.000000 0.000000 9.166660 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_13"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1.Target" id="AmpCam1.Target" sid="AmpCam1.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -2.664001 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.693190 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1" id="AmpCam1" sid="AmpCam1"><matrix sid="matrix">0.961346 -0.111305 -0.251844 -5.088760 -0.275343 -0.388615 -0.879298 -12.698853 0.000000 0.914653 -0.404240 4.801147 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_14"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam1.Target</target></technique></extra></node><node name="AmpCam2" id="AmpCam2" sid="AmpCam2"><matrix sid="matrix">0.984195 0.005154 0.177015 4.823105 0.177090 -0.028644 -0.983778 -13.540665 -0.000000 0.999576 -0.029104 8.275789 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_15"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam2.Target</target></technique></extra></node><node name="AmpCam2.Target" id="AmpCam2.Target" sid="AmpCam2.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 3.148331 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.551144 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam3" id="AmpCam3" sid="AmpCam3"><matrix sid="matrix">0.988010 -0.037803 0.149688 1.306747 0.154387 0.241920 -0.957935 -16.647766 -0.000000 0.969560 0.244856 11.062244 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_16"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam3.Target</target></technique></extra></node><node name="AmpCam3.Target" id="AmpCam3.Target" sid="AmpCam3.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -0.633202 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 7.888920 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node></node>
-      <node name="CeilingGrid" id="CeilingGrid" sid="CeilingGrid"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 200.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="WorkLight01" id="WorkLight01" sid="WorkLight01"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_18"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight02" id="WorkLight02" sid="WorkLight02"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_19"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight03" id="WorkLight03" sid="WorkLight03"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_20"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight04" id="WorkLight04" sid="WorkLight04"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_21"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight05" id="WorkLight05" sid="WorkLight05"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_22"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight06" id="WorkLight06" sid="WorkLight06"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_23"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight07" id="WorkLight07" sid="WorkLight07"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_24"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight08" id="WorkLight08" sid="WorkLight08"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_25"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight09" id="WorkLight09" sid="WorkLight09"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_26"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
+      <node name="Floor" id="Floor" sid="Floor"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Floor-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Stage" id="Stage" sid="Stage"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 150.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Stage-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="Amp" id="Amp" sid="Amp"><matrix sid="matrix">1.000000 0.000000 0.000000 -85.000000 0.000000 1.000000 0.000000 35.000000 0.000000 0.000000 1.000000 10.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Amp-lib"><bind_material><technique_common><instance_material symbol="Map #5-diffuse-Material" target="#Map #5-diffuse-Material"/><instance_material symbol="leatherette" target="#leatherette"/><instance_material symbol="control panel" target="#control panel"/><instance_material symbol="speaker cover" target="#speaker cover"/><instance_material symbol="Map #5-diffuse-Material" target="#Map #5-diffuse-Material"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="ControlPanel" id="ControlPanel" sid="ControlPanel"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -4.000000 0.000000 0.000000 1.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobVolume" id="KnobVolume" sid="KnobVolume"><matrix sid="matrix">1.000000 0.000000 0.000000 3.333298 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobVolume-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="OnLightBulb" id="OnLightBulb" sid="OnLightBulb"><matrix sid="matrix">1.000000 0.000000 0.000000 2.333313 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#OnLightBulb-lib"><bind_material><technique_common><instance_material symbol="Material #61" target="#Material #61"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="OnLight" id="OnLight" sid="OnLight"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 -1.000000 0.000015 0.000000 1.000000 -0.000000 0.445068 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_6"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node><node name="KnobMonths" id="KnobMonths" sid="KnobMonths"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMonths-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobWeeks" id="KnobWeeks" sid="KnobWeeks"><matrix sid="matrix">1.000000 0.000000 0.000000 -2.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobWeeks-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobDays" id="KnobDays" sid="KnobDays"><matrix sid="matrix">1.000000 0.000000 0.000000 -1.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobDays-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobHours" id="KnobHours" sid="KnobHours"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.666641 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobHours-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobMinutes" id="KnobMinutes" sid="KnobMinutes"><matrix sid="matrix">1.000000 0.000000 0.000000 0.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobMinutes-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="KnobSeconds" id="KnobSeconds" sid="KnobSeconds"><matrix sid="matrix">1.000000 0.000000 0.000000 1.333359 0.000000 0.000000 -1.000000 -4.000000 0.000000 1.000000 0.000000 8.500000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#KnobSeconds-lib"><bind_material><technique_common><instance_material symbol="Material #63" target="#Material #63"/><instance_material symbol="Material #64" target="#Material #64"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="Fspot001" id="Fspot001" sid="Fspot001"><matrix sid="matrix">1.000000 0.000000 0.000000 -3.999954 0.000000 0.000000 -1.000000 -20.550507 0.000000 1.000000 0.000000 9.166660 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_13"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1.Target" id="AmpCam1.Target" sid="AmpCam1.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -2.664001 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.693190 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam1" id="AmpCam1" sid="AmpCam1"><matrix sid="matrix">0.961346 -0.111305 -0.251844 -5.088760 -0.275343 -0.388615 -0.879298 -12.698853 0.000000 0.914653 -0.404240 4.801147 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_14"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam1.Target</target></technique></extra></node><node name="AmpCam2" id="AmpCam2" sid="AmpCam2"><matrix sid="matrix">0.984195 0.005154 0.177015 4.823105 0.177090 -0.028644 -0.983778 -13.540665 -0.000000 0.999576 -0.029104 8.275789 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_15"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam2.Target</target></technique></extra></node><node name="AmpCam2.Target" id="AmpCam2.Target" sid="AmpCam2.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 3.148331 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 8.551144 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="AmpCam3" id="AmpCam3" sid="AmpCam3"><matrix sid="matrix">0.988010 -0.037803 0.149688 1.306747 0.154387 0.241920 -0.957935 -16.647766 -0.000000 0.969560 0.244856 11.062244 0.000000 0.000000 0.000000 1.000000</matrix><instance_camera url="#_ncl1_16"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique><technique profile="FBX"><target>#AmpCam3.Target</target></technique></extra></node><node name="AmpCam3.Target" id="AmpCam3.Target" sid="AmpCam3.Target"><matrix sid="matrix">-0.000000 -0.000000 -1.000000 -0.633202 -1.000000 0.000000 0.000000 -4.232941 -0.000000 1.000000 -0.000000 7.888920 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node><node name="CeilingGrid" id="CeilingGrid" sid="CeilingGrid"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 200.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="WorkLight01" id="WorkLight01" sid="WorkLight01"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_18"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight02" id="WorkLight02" sid="WorkLight02"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_19"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight03" id="WorkLight03" sid="WorkLight03"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 170.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_20"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight04" id="WorkLight04" sid="WorkLight04"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_21"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight05" id="WorkLight05" sid="WorkLight05"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_22"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight06" id="WorkLight06" sid="WorkLight06"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 70.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_23"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight07" id="WorkLight07" sid="WorkLight07"><matrix sid="matrix">1.000000 0.000000 0.000000 -100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_24"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight08" id="WorkLight08" sid="WorkLight08"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_25"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="WorkLight09" id="WorkLight09" sid="WorkLight09"><matrix sid="matrix">1.000000 0.000000 0.000000 100.000000 0.000000 1.000000 0.000000 -30.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_light url="#_ncl1_26"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node>
       <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>

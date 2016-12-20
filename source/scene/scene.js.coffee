@@ -1,5 +1,7 @@
 jQuery ($)->
 
+  window.lightdebug = true
+  
   TTT = THREE
 
   AMBER = 0xF5B34A
@@ -7,18 +9,16 @@ jQuery ($)->
   class HackerRoom
     constructor: (@canvas)->
       @updater = new Updater
-      @initializeLoader()
       @initializeScene()
       @initializeRoom()
-    initializeLoader: ()->
-      @loader = new TTT.LoadingManager()
     initializeScene: ()->
       @scene = new TTT.Scene
+      @scene.textureLoader = new TTT.TextureLoader
     initializeCamera: ()->
       @camera = new Camera @canvas, @scene
       @updater.add @camera
     initializeRoom: ()->
-      @room = new Room @scene, @loader, @roomFinished.bind(this)
+      @room = new Room @scene, @roomFinished.bind(this)
       @updater.add @room
     roomFinished: ()->
       @updater.add @room
@@ -46,6 +46,12 @@ jQuery ($)->
   class Renderable
     render: ()->
       # noop
+    setupTexture: (texture)->
+      texture.anisotropy = 16
+      texture.repeat.set 1, 1
+      texture.mapFilter = texture.magFilter = TTT.LinearFilter
+      texture.mapping = TTT.UVMapping
+      texture
 
   class TexturedMesh
     constructor: (@object)->
@@ -67,9 +73,9 @@ jQuery ($)->
     textureFilePicker: ()-> @textureFile
 
   class Room extends Renderable
-    constructor: (@scene, @manager, @callback)->
-      @loader = new THREE.ColladaLoader @manager
-      @loader.load 'legit-stage-2017.DAE', @loaded.bind(this)
+    constructor: (@scene, @callback)->
+      @loader = new THREE.ColladaLoader
+      @loader.load 'scene/legit-stage-2017.DAE', @loaded.bind(this)
     loaded: (o)->
       @sceneParent = o.scene.children[0]
       @sceneParent.scale.set 0.15, 0.15, 0.15
@@ -82,8 +88,11 @@ jQuery ($)->
         c.castShadow = true unless c.type == 'PointLight'
         c.receiveShadow = true
         c.frustrumCulling = false
-        if c.name == 'IDA Book'
-          @idabook = new IdaBook c
+        if c.name == 'Amp'
+          @amp = new Amp c, @scene
+        else if c.name.match /^WorkLight\d+/
+          @workLights ?= []
+          @workLights.push new WorkLight c, @scene
         else if c.name == 'BeerBottle'
           @bottle = new Bottle c
         else if c.name == 'paper'
@@ -107,6 +116,32 @@ jQuery ($)->
         if c.name == 'display-panel'
           @_displayPanel = c
       return @_displayPanel
+
+  class Amp extends Renderable
+    constructor: (@object, @scene)->
+      @mesh = @object.children[0]
+      @textureMaterials(@mesh.material.materials)
+    textureMaterials: (materials)->
+      for mat in materials
+        switch mat.name
+          when "control panel"
+            cp_mat = mat
+            cp_mat.color = new TTT.Color(0x000000)
+            st = @setupTexture
+            @scene.textureLoader.load @diffuseTextureFile, (texture)->
+              cp_mat.map = st(texture)
+            @scene.textureLoader.load @specularTextureFile, (texture)->
+              cp_mat.specularMap = st(texture)
+    diffuseTextureFile: 'scene/amp-labels-diffuse.png'
+    specularTextureFile: 'scene/amp-labels-specular.png'
+
+  class WorkLight
+    constructor: (@object3d, @scene)->
+      @light = @object3d.children[0]
+      @scene.add @light
+      if window.scenedebug?
+        @helper = new TTT.SpotLightHelper(@light)
+        @scene.add @helper
 
   class IdaBook extends TexturedMesh
     textureFile: 'hacker_room/uv-idabook.png'
@@ -190,17 +225,18 @@ jQuery ($)->
         (1.0 * @canvas.width) / @canvas.height,
         0.1,
         1000)
-      @camera.position.set 0, 4.5, 5
+      @camera.position.set 18, .8, -15
     initializeRenderer: ()->
       @renderer = new TTT.WebGLRenderer
         canvas: @canvas
         antialias: true
         alpha: true
-      @renderer.shadowMapEnabled = true
-      @renderer.shadowMapCullFace = THREE.CullFaceBack
+      @renderer.setPixelRatio 4
+      @renderer.shadowMap.enabled = true
+      @renderer.shadowMap.renderReverseSided = false
     render: ()->
-      xCycle = -0.25 - (0.08 * Math.cos(Date.now() / 10000.0))
-      yCycle = 0.1 * Math.sin((Date.now() + 1000) / 19000.0)
+      xCycle = 0 * (0.08 * Math.cos(Date.now() / 10000.0))
+      yCycle = (-3.141 * .5) + ( 0.1 * Math.sin((Date.now() + 1000) / 19000.0))
       @camera.rotation.set xCycle, yCycle, 0
       @renderer.render @scene, @camera
 
@@ -235,5 +271,4 @@ jQuery ($)->
       yCycle = 0.8 * Math.cos(Date.now() / 20000.0)
       @light.position.set(-21 + xCycle, 10 + yCycle, 25)
 
-
-  window.hackerRoom = new HackerRoom(document.getElementById 'actualScene')
+  window.hackerRoom = new HackerRoom(document.getElementById 'scene')
