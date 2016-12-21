@@ -14,8 +14,9 @@ jQuery ($)->
     initializeScene: ()->
       @scene = new TTT.Scene
       @scene.textureLoader = new TTT.TextureLoader
-    initializeCamera: ()->
+    initializeCamera: (sequences)->
       @camera = new Camera @canvas, @scene
+      @camera.setSequences sequences
       @updater.add @camera
     initializeRoom: ()->
       @room = new Room @scene, @roomFinished.bind(this)
@@ -24,7 +25,7 @@ jQuery ($)->
       @updater.add @room
       # @initializeDirLight()
       # @initializeComputer()
-      @initializeCamera()
+      @initializeCamera(@room.cameraSequences)
       requestAnimationFrame @renderLoop.bind(this)
     # initializeDirLight: ()->
     #   @dirLight = new DirLight @scene, @room.displayPanel()
@@ -78,10 +79,8 @@ jQuery ($)->
       @loader.load 'scene/legit-stage-2017.DAE', @loaded.bind(this)
     loaded: (o)->
       @sceneParent = o.scene.children[0]
-      @sceneParent.scale.set 0.15, 0.15, 0.15
-      @sceneParent.position.set -6, -2, -2
-      @sceneParent.rotation.x = 3.0/2.0 * Math.PI
-      @sceneParent.rotation.z = 3.0/2.0 * Math.PI
+      @sceneParent.rotation.x = 0
+      # @sceneParent.position.set 80, -180, -10
       @sceneParent.updateMatrix()
 
       @sceneParent.traverse (c) =>
@@ -93,6 +92,12 @@ jQuery ($)->
         else if c.name.match /^WorkLight\d+/
           @workLights ?= []
           @workLights.push new WorkLight c, @scene
+        else if c.name.match /Cam\d+$/
+          @cameras ?= {}
+          @cameras[c.name] = c
+        else if m = c.name.match /^(.+Cam\d+).Target$/
+          @cameraTargets ?= {}
+          @cameraTargets[m[1]] = c
         else if c.name == 'BeerBottle'
           @bottle = new Bottle c
         else if c.name == 'paper'
@@ -105,7 +110,8 @@ jQuery ($)->
         else if c.name.match /badge/i
           @badge ?= new Badge
           @badge.addObject c
-          
+
+      @buildCameraSequences()
       @scene.add @sceneParent
       @sceneParent.updateMatrixWorld()
       @didLoad = true
@@ -116,6 +122,15 @@ jQuery ($)->
         if c.name == 'display-panel'
           @_displayPanel = c
       return @_displayPanel
+    buildCameraSequences: ()->
+      @cameraSequences = {}
+      for name, camera of @cameras
+        target = @cameraTargets[name]
+        [match, sequenceName, idx] = name.match(/^(.+)Cam(\d)+$/)
+        @cameraSequences[sequenceName] ?= new CameraSequence()
+        @cameraSequences[sequenceName].register(camera, target, idx)
+      for _name, sequence of @cameraSequences
+        sequence.compact()
 
   class Amp extends Renderable
     constructor: (@object, @scene)->
@@ -148,13 +163,6 @@ jQuery ($)->
 
   class Bottle extends TexturedMesh
     textureFile: 'hacker_room/uv-bottle.png'
-
-  class Paper extends TexturedMesh
-    textureFilePicker: ()->
-      idx = Math.floor(Math.random() * @textureNames.length)
-      pick = @textureNames[idx]
-      "hacker_room/#{pick}"
-    textureNames: ['choripan.png']
 
   class Can extends TexturedMesh
     textureFile: 'hacker_room/uv-can.png'
@@ -216,6 +224,41 @@ jQuery ($)->
           shininess: 30
           map: @screenTexture
 
+  class CameraSequence extends Renderable
+    constructor: ()->
+      @cameras = []
+      @targets = []
+    register: (camera, target, idx)->
+      @cameras[idx] = camera
+      @targets[idx] = target
+    compact: ()->
+      raise "CameraSequence weird" unless @cameras.length == @targets.length
+      until @cameras[0]?
+        @cameras.shift()
+        @targets.shift()
+      @count = @cameras.length
+    setScene: (@sceneCamera)->
+      @vecs = for camera, i in @cameras
+        [camera.getWorldPosition(), @targets[i].getWorldPosition()]
+      true
+    render: ()->
+      t = Date.now()
+      dist = (t % @sequenceLength) / @sequenceLength
+      cur = Math.floor(dist * @count)
+      next = (cur + 1) % @count
+      alpha = (dist * @count) - Math.floor(dist * @count)
+      lerp = if (alpha < 0.5)
+        (4 * Math.pow(alpha, 3))
+      else
+         (1 + 4 * Math.pow((alpha - 1), 3))
+
+      [curCam, curTarg] = @vecs[cur]
+      [nextCam, nextTarg] = @vecs[next]
+      
+      @sceneCamera.position.lerpVectors(curCam, nextCam, lerp)
+      @sceneCamera.lookAt curTarg.clone().lerp(nextTarg, lerp)
+    sequenceLength: 10000
+      
   class Camera extends Renderable
     constructor: (@canvas, @scene)->
       @initializeCamera()
@@ -225,7 +268,7 @@ jQuery ($)->
         (1.0 * @canvas.width) / @canvas.height,
         0.1,
         1000)
-      @camera.position.set 18, .8, -15
+      @camera.up = new TTT.Vector3(0, 0, 1)
     initializeRenderer: ()->
       @renderer = new TTT.WebGLRenderer
         canvas: @canvas
@@ -234,10 +277,17 @@ jQuery ($)->
       @renderer.setPixelRatio 4
       @renderer.shadowMap.enabled = true
       @renderer.shadowMap.renderReverseSided = false
+    setSequences: (@sequences)->
+      @onlySequence = @sequences['Amp']
+      
+      @scene.add new TTT.AxisHelper(5)
+
+      @camera.position.set -20, 2.8, -13
+      @camera.rotation.set 0, -1.5, 0
+      
+      @onlySequence.setScene(@camera)
     render: ()->
-      xCycle = 0 * (0.08 * Math.cos(Date.now() / 10000.0))
-      yCycle = (-3.141 * .5) + ( 0.1 * Math.sin((Date.now() + 1000) / 19000.0))
-      @camera.rotation.set xCycle, yCycle, 0
+      @onlySequence.render()
       @renderer.render @scene, @camera
 
   class DirLight extends Renderable
