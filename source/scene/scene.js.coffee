@@ -1,7 +1,7 @@
 jQuery ($)->
 
   window.lightdebug = true
-  
+
   TTT = THREE
 
   AMBER = 0xF5B34A
@@ -50,6 +50,7 @@ jQuery ($)->
     setupTexture: (texture)->
       texture.anisotropy = 16
       texture.repeat.set 1, 1
+      texture.wrapS = texture.wrapT = TTT.RepeatWrapping
       texture.mapFilter = texture.magFilter = TTT.LinearFilter
       texture.mapping = TTT.UVMapping
       texture
@@ -135,26 +136,39 @@ jQuery ($)->
   class Amp extends Renderable
     constructor: (@object, @scene)->
       @mesh = @object.children[0]
-      @textureMaterials(@mesh.material.materials)
-    textureMaterials: (materials)->
-      for mat in materials
+      @textureMaterials(@mesh.material)
+    textureMaterials: (parentMaterial)->
+      for mat in parentMaterial.materials
         switch mat.name
           when "control panel"
             cp_mat = mat
-            cp_mat.color = new TTT.Color(0x000000)
+            cp_mat.color = new TTT.Color(0x0)
             st = @setupTexture
             @scene.textureLoader.load @diffuseTextureFile, (texture)->
               cp_mat.map = st(texture)
+              cp_mat.needsUpdate = true
             @scene.textureLoader.load @specularTextureFile, (texture)->
               cp_mat.specularMap = st(texture)
-    diffuseTextureFile: 'scene/checkerboard.png' #'scene/amp-labels-diffuse.png'
+              cp_mat.needsUpdate = true
+          when "speaker cover"
+            sk_mat = mat
+            sk_mat.color = new TTT.Color(0x0)
+            st = @setupTexture
+            @scene.textureLoader.load @diffuseTextureFile, (texture)->
+              sk_mat.map = st(texture)
+              sk_mat.needsUpdate = true
+            @scene.textureLoader.load @bumpTextureFile, (texture)->
+              sk_mat.bumpMap = st(texture)
+              sk_mat.needsUpdate = true
+    diffuseTextureFile: 'scene/amp-labels-diffuse.png'
     specularTextureFile: 'scene/amp-labels-specular.png'
+    bumpTextureFile: 'scene/amp-labels-bump.png'
 
   class WorkLight
     constructor: (@object3d, @scene)->
       @light = @object3d.children[0]
       @scene.add @light
-      if window.scenedebug?
+      if window.lightdebug?
         @helper = new TTT.SpotLightHelper(@light)
         @scene.add @helper
 
@@ -254,11 +268,11 @@ jQuery ($)->
 
       [curCam, curTarg] = @vecs[cur]
       [nextCam, nextTarg] = @vecs[next]
-      
+
       @sceneCamera.position.lerpVectors(curCam, nextCam, lerp)
       @sceneCamera.lookAt curTarg.clone().lerp(nextTarg, lerp)
     sequenceLength: 10000
-      
+
   class Camera extends Renderable
     constructor: (@canvas, @scene)->
       @initializeCamera()
@@ -279,12 +293,12 @@ jQuery ($)->
       @renderer.shadowMap.renderReverseSided = false
     setSequences: (@sequences)->
       @onlySequence = @sequences['Amp']
-      
+
       @scene.add new TTT.AxisHelper(5)
 
       @camera.position.set -20, 2.8, -13
       @camera.rotation.set 0, -1.5, 0
-      
+
       @onlySequence.setScene(@camera)
     render: ()->
       @onlySequence.render()
