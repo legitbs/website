@@ -1,6 +1,7 @@
 jQuery ($)->
 
   window.lightdebug = true
+  COUNTDOWN = new Date(1493424000000)
 
   TTT = THREE
 
@@ -90,6 +91,8 @@ jQuery ($)->
         c.frustrumCulling = false
         if c.name == 'Amp'
           @amp = new Amp c, @scene
+        else if c.name == 'OnLightBulb'
+          @onLight = new OnLight c
         else if c.name.match /^WorkLight\d+/
           @workLights ?= []
           @workLights.push new WorkLight c, @scene
@@ -99,6 +102,24 @@ jQuery ($)->
         else if m = c.name.match /^(.+Cam\d+).Target$/
           @cameraTargets ?= {}
           @cameraTargets[m[1]] = c
+        else if c.name == 'KnobSeconds'
+          @knobs ?= {}
+          @knobs['seconds'] = new Knob(c, 60)
+        else if c.name == 'KnobMiniutes'
+          @knobs ?= {}
+          @knobs['minutes'] = new Knob(c, 60 * 60)
+        else if c.name == 'KnobHours'
+          @knobs ?= {}
+          @knobs['hours'] = new Knob(c, 24 * 60 * 60)
+        else if c.name == 'KnobDays'
+          @knobs ?= {}
+          @knobs['days'] = new Knob(c, 7 * 24 * 60 * 60)
+        else if c.name == 'KnobWeeks'
+          @knobs ?= {}
+          @knobs['weeks'] = new Knob(c, 6 * 7 * 24 * 60 * 60)
+        else if c.name == 'KnobMonths'
+          @knobs ?= {}
+          @knobs['months'] = new Knob(c, 30 * 24 * 60 * 60)
         else if c.name == 'BeerBottle'
           @bottle = new Bottle c
         else if c.name == 'paper'
@@ -111,6 +132,13 @@ jQuery ($)->
         else if c.name.match /badge/i
           @badge ?= new Badge
           @badge.addObject c
+        else if c.type == "PointLight"
+          c.distance = 110
+          c.intensity = 2
+        else if c.type.match /Light/
+          c.intensity = 2
+          c.castShadow = true
+          c.shadow.mapWidth = c.shadow.mapHeight = 256
 
       @buildCameraSequences()
       @scene.add @sceneParent
@@ -142,7 +170,7 @@ jQuery ($)->
         switch mat.name
           when "control panel"
             cp_mat = mat
-            cp_mat.color = new TTT.Color(0x0)
+            cp_mat.color = new TTT.Color(0x101010)
             st = @setupTexture
             @scene.textureLoader.load @diffuseTextureFile, (texture)->
               cp_mat.map = st(texture)
@@ -152,7 +180,7 @@ jQuery ($)->
               cp_mat.needsUpdate = true
           when "speaker cover"
             sk_mat = mat
-            sk_mat.color = new TTT.Color(0x0)
+            sk_mat.color = new TTT.Color(0xffffff)
             st = @setupTexture
             @scene.textureLoader.load @diffuseTextureFile, (texture)->
               sk_mat.map = st(texture)
@@ -160,17 +188,38 @@ jQuery ($)->
             @scene.textureLoader.load @bumpTextureFile, (texture)->
               sk_mat.bumpMap = st(texture)
               sk_mat.needsUpdate = true
+          when "leatherette"
+            le_mat = mat
+            le_mat.color = new TTT.Color(0x111111)
+            le_mat.specular = new TTT.Color(0x222222)
+            @scene.textureLoader.load @leatheretteTextureFile, (texture)->
+              le_mat.bumpMap = st(texture)
+              texture.repeat.set 10, 10
+              le_mat.needsUpdate = true
+          else
+            console.log "mystery material #{mat.name} D:"
     diffuseTextureFile: 'scene/amp-labels-diffuse.png'
     specularTextureFile: 'scene/amp-labels-specular.png'
     bumpTextureFile: 'scene/amp-labels-bump.png'
+    leatheretteTextureFile: 'scene/leatherette-bump.png'
 
   class WorkLight
     constructor: (@object3d, @scene)->
       @light = @object3d.children[0]
+      @light.castShadow = true
+      @light.distance = 500
+      shadow = @light.shadow
+      shadow.mapSize.set 256, 256
+      shadow.bias = 0
+      shadow.darkness = 0.0
+      cam = shadow.camera
+      camSize = 100
+      cam.left = cam.bottom = -camSize
+      cam.right = cam.top = camSize
+      @scene.add new TTT.CameraHelper(cam)
       @scene.add @light
-      if window.lightdebug?
-        @helper = new TTT.SpotLightHelper(@light)
-        @scene.add @helper
+      @helper = new TTT.SpotLightHelper(@light)
+      @scene.add @helper
 
   class IdaBook extends TexturedMesh
     textureFile: 'hacker_room/uv-idabook.png'
@@ -192,6 +241,44 @@ jQuery ($)->
         @light.intensity = 0.25
       else
         @light.intensity = 0
+
+  class OnLight extends Renderable
+    constructor: (@bulb)->
+      @mesh = @bulb.children[0]
+      @onRed = new TTT.Color(0xFF0000)
+      @offRed = new TTT.Color(0x440000)
+      @mesh.material.color = new TTT.Color(0)
+      @mesh.receiveShadow = false
+      @mesh.castShadow = false
+      @setupLight()
+      hackerRoom.updater.add this
+    setupLight: ()->
+      @light = @bulb.children[1].children[0]
+      @light.distance = 1
+      @light.decay = 2
+      @light.castShadow = true
+      shadow = @light.shadow
+      shadow.mapWidth = shadow.mapHeight = 256
+      shadow.bias = .01
+    render: ()->
+      cycle = 0.5 + Math.sin(Date.now() * 0.005)
+      if cycle > 1
+        @light.intensity = 1
+        @mesh.material.emissive = @onRed
+      else
+        @light.intensity = 0
+        @mesh.material.emissive = @offRed
+
+  class Knob extends Renderable
+    constructor: (@object, @period)->
+      @mesh = @object.children[0]
+      hackerRoom.updater.add this
+    render: ()->
+      diff = (COUNTDOWN - new Date()) / 1000
+      diff = 0 if diff < 0
+      remainder = diff % @period
+      rotation = -2 * Math.PI * (remainder / @period)
+      @mesh.rotation.set 0, 0, rotation
 
   class Badge
     constructor: ()->
@@ -278,7 +365,7 @@ jQuery ($)->
       @initializeCamera()
       @initializeRenderer()
     initializeCamera: ()->
-      @camera = new TTT.PerspectiveCamera(55,
+      @camera = new TTT.PerspectiveCamera(25,
         (1.0 * @canvas.width) / @canvas.height,
         0.1,
         1000)
