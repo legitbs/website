@@ -382,7 +382,7 @@ jQuery ($)->
 
       @sceneCamera.position.lerpVectors(curCam, nextCam, lerp)
       @sceneCamera.lookAt curTarg.clone().lerp(nextTarg, lerp)
-    sequenceLength: 10000
+    sequenceLength: 100000
 
   class Camera extends Renderable
     constructor: (@canvas, @scene)->
