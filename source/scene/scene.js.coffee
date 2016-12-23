@@ -119,7 +119,7 @@ jQuery ($)->
           @knobs['weeks'] = new Knob(c, 6 * 7 * 24 * 60 * 60)
         else if c.name == 'KnobMonths'
           @knobs ?= {}
-          @knobs['months'] = new Knob(c, 30 * 24 * 60 * 60)
+          @knobs['months'] = new Knob(c, 5 * 30 * 24 * 60 * 60)
         else if c.name == 'BeerBottle'
           @bottle = new Bottle c
         else if c.name == 'paper'
@@ -129,14 +129,38 @@ jQuery ($)->
           @cans.push new Can c
         else if c.name == 'odroid heartbeat'
           @heartbeat = new OdroidHeartbeat c
+        else if c.name == 'Omni001'
+          omni = c.children[0]
+          @scene.add omni
+          console.log c.getWorldPosition()
+          console.log c.position
+          omni.position.copy c.position
+          omni.intensity = 2
+          omni.distance = 500
+          omni.decay = 2
+          omni.castShadow = true
+          shadow = omni.shadow
+          shadow.mapWidth = shadow.mapHeight = 128
+          shadow.bias = 0.1
+        else if c.name == 'Fspot001'
+          spot = c.children[0]
+          @scene.add spot
+          spot.position.copy c.position
+          spot.intensity = 5
+          spot.decay = 2
+          spot.distance = 100
+          spot.castShadow = true
+          shadow = spot.shadow =
+            new TTT.LightShadow(new TTT.PerspectiveCamera(50, 1, 1, 20))
+          shadow.mapWidth = shadow.mapHeight = 256
+          shadow.bias = .11
         else if c.name.match /badge/i
           @badge ?= new Badge
           @badge.addObject c
-        else if c.type == "PointLight"
-          c.distance = 110
-          c.intensity = 2
         else if c.type.match /Light/
           c.intensity = 2
+          c.decay = 2
+          c.distance = 100
           c.castShadow = true
           c.shadow.mapWidth = c.shadow.mapHeight = 256
 
@@ -258,7 +282,7 @@ jQuery ($)->
       @light.decay = 2
       @light.castShadow = true
       shadow = @light.shadow
-      shadow.mapWidth = shadow.mapHeight = 256
+      shadow.mapWidth = shadow.mapHeight = 4
       shadow.bias = .01
     render: ()->
       cycle = 0.5 + Math.sin(Date.now() * 0.005)
@@ -364,6 +388,7 @@ jQuery ($)->
     constructor: (@canvas, @scene)->
       @initializeCamera()
       @initializeRenderer()
+      # @initializeControls()
     initializeCamera: ()->
       @camera = new TTT.PerspectiveCamera(25,
         (1.0 * @canvas.width) / @canvas.height,
@@ -387,7 +412,11 @@ jQuery ($)->
       @camera.rotation.set 0, -1.5, 0
 
       @onlySequence.setScene(@camera)
+    initializeControls: ()->
+      @controls = new TTT.TrackballControls(@camera)
+      @controls.keys = [65, 83, 68]
     render: ()->
+      # @controls.update()
       @onlySequence.render()
       @renderer.render @scene, @camera
 
