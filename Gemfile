@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 gem "middleman", "~> 4.1.14"
 # gem 'middleman-deploy'
 gem 'middleman-s3_sync'
+gem 'mime-types'
 
 # Live-reloading plugin
 gem "middleman-livereload"

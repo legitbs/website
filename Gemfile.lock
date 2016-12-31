@@ -68,6 +68,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     map (6.6.0)
     memoist (0.15.0)
+    mgd (0.2.0)
+      middleman (>= 3.0.0)
+      trollop (= 2.1.2)
     middleman (4.1.14)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
@@ -114,6 +117,9 @@ GEM
       parallel
       ruby-progressbar
       unf
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0221)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -146,6 +152,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    trollop (2.1.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.4)
@@ -159,9 +166,11 @@ PLATFORMS
 
 DEPENDENCIES
   bitters
+  mgd
   middleman (~> 4.1.14)
   middleman-livereload
   middleman-s3_sync
+  mime-types
   neat
   sassc
   tzinfo-data

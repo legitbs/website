@@ -68,15 +68,19 @@ section#details, section#links
     dl
       dt
         font-family: $display_font
-        display: inline
         font-size: 1.5em
         margin-right: 0.5em
       dd
-        display: inline
         margin-left: 0
       dd:after
         display: block
         content: ''
+      &.inline
+        dt
+          display: inline-block
+        dd
+          display: inline
+
     ul
       list-style-type: none
       padding-left: 0
