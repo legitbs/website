@@ -3,7 +3,7 @@ $text_color: #caa4ff
 $hot_color: rgb(203, 69, 39)
 $grid_color: #2a0044
 
-@import "bourbon"
+@import "bourbon/bourbon"
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Michroma)
 
 @mixin mask($image, $size)
@@ -67,7 +67,7 @@ a:link, a:visited
       @return ($w / $h) * 117px
 
     @function left_margin($w, $h)
-      @return -.75 * graf_width($w, $h) 
+      @return -.75 * graf_width($w, $h)
 
     @mixin graf_text($name, $w, $h)
       background: url('../../images/2015-' + $name + '-masked.png') 50%
