@@ -162,6 +162,7 @@ PLATFORMS
 
 DEPENDENCIES
   bitters
+  bourbon
   middleman (~> 4.1.14)
   middleman-livereload
   middleman-s3_sync
