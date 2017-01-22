@@ -1,67 +1,22 @@
-$mustard: #F0B62F
-$dark_grape: #0F0533
-
-$light_mustard: lighten($mustard, 15%)
-
-$body_font: Ubuntu, "Helvetica Neue", Helvetica, sans-serif
-$display_font: "Permanent Marker", Chalkboard, "Comic Sans", cursive
-
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu:400,700')
 /* @import "bourbon/bourbon"
 @import "neat/neat"
 
-body, html
-  background-color: $dark_grape
-  color: $mustard
+@import "branding"
 
-body
-  margin: 1em
-  font-family: $body_font
-
-a:link
-  color: $light_mustard
-  text-decoration: none
-  border: 1px solid $light_mustard
-  border-radius: 4px
-  padding: 4px
-  display: inline-block
-  margin: 4px
-a:visited
-  color: $light_mustard
-a:hover
-  color: white
-  text-decoration: none
-
-a:link.nobtn
-  border: none
-  text-decoration: underline
-  display: inline
-  padding: 0
-  margin: auto
-
-h1, h2, h3, h4, h5, h6
-  font-family: $display_font
-  font-weight: normal
+$bigscreen: min-width 1200px
+$regscreen: min-width 900px
+$smallscreen: max-width 899px
 
 header
-  @include outer-container
   h1
-    @include span-columns(6)
     font-size: 36px
     margin-top: 0
-    &.orgas
-      text-align: right
+    margin-bottom: 0
 
 section#hero
-  @include outer-container
-  height: 480px
-  canvas
-    width: 100%
-    height: 100%
-    border: 1px solid $mustard
+  display: none
 
 section#details, section#links
-  @include outer-container
   >div
     h1
       margin-bottom: 0
@@ -92,15 +47,47 @@ section#details, section#links
         text-align: left
         font-weight: 700
 
-section#details
-  div#this-year
-    @include span-columns(4)
-  div#other-qualifiers
-    @include span-columns(8)
-section#links >div
-  @include span-columns(4)
+@include media($smallscreen)
+  .reg-up
+    display: none
 
-footer
-  @include outer-container
-  p
-    @include span-columns(12)
+@include media($regscreen)
+  header
+    @include outer-container
+    h1
+      @include span-columns(6)
+      font-size: 24px
+      @include media($bigscreen)
+        font-size: 36px
+      &.orgas
+        text-align: right
+
+  section#hero
+    $ratio: 480/1200 // yes this is backwards idgaf
+    display: block
+    @include outer-container
+    height: $ratio * 868px
+    width: 868px
+    @include media($bigscreen)
+      height: 480px
+      width: 1200px
+    canvas
+      width: 100%
+      height: 100%
+      border: 1px solid $mustard
+
+  section#details, section#links
+    @include outer-container
+
+  section#details
+    div#this-year
+      @include span-columns(4)
+    div#other-qualifiers
+      @include span-columns(8)
+  section#links >div
+    @include span-columns(4)
+
+  footer
+    @include outer-container
+    p
+      @include span-columns(12)

@@ -1,0 +1,42 @@
+$mustard: #F0B62F
+$dark_grape: #0F0533
+
+$light_mustard: lighten($mustard, 15%)
+
+$body_font: Ubuntu, "Helvetica Neue", Helvetica, sans-serif
+$display_font: "Permanent Marker", Chalkboard, "Comic Sans", cursive
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu:400,700')
+
+body, html
+  background-color: $dark_grape
+  color: $mustard
+
+body
+  margin: 1em
+  font-family: $body_font
+
+a:link
+  color: $light_mustard
+  text-decoration: none
+  border: 1px solid $light_mustard
+  border-radius: 4px
+  padding: 4px
+  display: inline-block
+  margin: 4px
+a:visited
+  color: $light_mustard
+a:hover
+  color: white
+  text-decoration: none
+
+a:link.nobtn
+  border: none
+  text-decoration: underline
+  display: inline
+  padding: 0
+  margin: auto
+
+h1, h2, h3, h4, h5, h6
+  font-family: $display_font
+  font-weight: normal
