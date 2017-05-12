@@ -13,24 +13,15 @@ header
     margin-top: 0
     margin-bottom: 0
 
-section#hero
-  display: none
-
 section#news
+  @include big_ticket
+  color: $superdark_grape
+  max-width: 20em
   h1
-    text-align: center
-    a:link, a:visited
-      font-weight: 400
-      color: $dark_grape
-      background-color: $light_mustard
-      border: 4px solid $dark_mustard
-      border-radius: 24px
-      padding: 8px 16px
-    a:hover
-      color: $light_mustard
-      background-color: $dark_mustard
-      border-color: $light_mustard
-
+    font-size: 24px
+    margin: 0 auto
+  p
+    margin: 0
 
 section#details, section#links
   >div
@@ -63,41 +54,50 @@ section#details, section#links
         text-align: left
         font-weight: 700
 
+section#links, footer
+  a:link, a:visited
+    color: $hyperlight_mustard
+    border-color: $hyperlight_mustard
+
 @include media($smallscreen)
   .reg-up
     display: none
 
 @include media($regscreen)
+  .poster
+    transform: rotateZ(1.337deg)
+    margin: 2em
+    padding: 1em
+    box-shadow: 2px 2px 10px 4px black
+    color: $superdark_grape
+    background-color: $paper_average
+    background-image: image-url('crinkled-paper-05x.jpg')
+    @media (min-resolution: 2dppx)
+      background-image: image-url('crinkled-paper-1x.jpg')
+    @media (-webkit-min-device-pixel-ratio: 2)
+      background-image: image-url('crinkled-paper-1x.jpg')
+
   header
     @include outer-container
     h1
-      @include span-columns(6)
-      font-size: 24px
-      @include media($bigscreen)
-        font-size: 36px
+      @include span-columns(12)
+      font-size: 36px
+      text-align: center
+      -webkit-text-stroke: .05em $dark_grape
+      text-shadow: 2px 2px 8px black
+      &.event
+        color: $pale_mustard
       &.orgas
-        text-align: right
-
-  section#hero
-    $ratio: 480/1200 // yes this is backwards idgaf
-    display: block
-    @include outer-container
-    height: $ratio * 868px
-    width: 868px
-    @include media($bigscreen)
-      height: 480px
-      width: 1200px
-    canvas
-      width: 100%
-      height: 100%
-      border: 1px solid $mustard
-
-  section#details, section#links, section#news
-    @include outer-container
+        color: $mustard
+      @include media($bigscreen)
+        font-size: 48px
 
   section#news
-    a:link, a:visited
-      font-size: 1.5em
+    transform: rotateZ(2.017deg)
+    margin-left: -1.5em
+
+  section#details, section#links
+    @include outer-container
 
   section#details
     div#this-year
