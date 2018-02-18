@@ -1,0 +1,66 @@
+@import "_mixins.css.scss"
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+$mustard: #FFD900
+$aqua: #0AB284
+$grape: #673065
+$plum: #C017A2
+
+body
+  background-color: $aqua
+  font-family: 'Lato', helvetica, sans-serif
+  width: 100%
+
+  h1
+    margin-left: auto
+    margin-right: auto
+    text-indent: -9990px
+    width: 825px
+    height: 436px
+    @include background-2x("/images/legitbs-seinfeld-big", $w: 825px, $h: 436px)
+  .zones
+    display: flex
+    padding: 0 1em
+    
+  section
+    background-color: $mustard
+    color: $grape
+    width: 25em
+    padding: 0 1em
+    margin: 1em
+    border: 2px solid $grape
+    box-shadow: 2px 2px 0 2px $grape
+
+    dl
+      dt
+        display: inline-block
+      dd
+        display: inline
+      dd:after
+        display: block
+        content: ''
+
+    ul
+      list-style-type: none
+      padding-left: 0
+      li
+        display: inline-block
+        a:first-child
+          margin-left: 0
+        
+    a:link
+      display: inline-block
+      color: $plum
+      border: 1px solid $plum
+      padding: 2px
+      margin: 4px 2px
+      text-decoration: none
+      border-radius: 2px
+    a:visited
+      color: $plum
+
+  footer
+    clear: both
+    padding: 2em
+    text-align: center
+    color: $grape

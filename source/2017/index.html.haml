@@ -1,0 +1,124 @@
+!!! 5
+%html
+  %head
+    %title DEF CON CTF 2017
+    = stylesheet_link_tag '/2017/stylesheets/all'
+    %meta{name: 'viewport', content: 'width=device-width'}
+  %body
+    .poster
+      %header
+        %h1.event DEF CON Capture the Flag 2017
+        %h1.orgas Legitimate Business Syndicate
+      .logosplat
+      %section#news
+        %h1 Live In Concert
+        %p July 28-30, 2017
+        %p DEF CON 25
+        %p Caesars Palace, Las Vegas
+      %section#quals_stats
+        %h1 Qualifiers
+        %p April 29-30, 2017
+        %p Online Jeopardy-Style
+      %section#details
+        #blurb
+          %p
+            Thank you for being part of this year's most intense, most wild, and
+            most rockin' CTF
+            event. This summer, one show only, we experienced three epic days
+            of the
+            hardest-core hackers on Planet Earth blasting binaries, rocking
+            registers, and smashing stacks at the world's biggest hacking
+            conference.
+        #other-qualifiers
+          %h1 Featuring
+          %table
+            %thead
+              %tr
+                %th Qualifying Team
+                %th Score
+
+            %tr
+              %th PPP
+              %td 33850
+            %tr
+              %th HITCON
+              %td 30631
+            %tr
+              %th A*0*E
+              %td 19730
+            %tr
+              %th DEFKOR
+              %td 18474
+            %tr
+              %th Tea Deliverers
+              %td 13941
+            %tr
+              %th pasten
+              %td 11332
+            %tr
+              %th Shellphish
+              %td 10452
+            %tr
+              %th Eat Sleep Pwn Repeat
+              %td 9369
+            %tr
+              %th RRR
+              %td 9088
+            %tr
+              %th Lab RATs
+              %td 8564
+            %tr
+              %th hacking4danbi
+              %td 8521
+            %tr
+              %th Team Rocket &#x2620;&#xfe0e;
+              %td 8496
+            %tr
+              %th Bushwhackers
+              %td 6894
+            %tr
+              %th koreanbadass
+              %td 6766
+            %tr
+              %th !SpamAndHex
+              %td 4405
+
+    %section#links
+      #previous-years
+        %h1 Previous Years
+        %dl.inline
+          - %w{2013 2014 2015 2016}.each do |y|
+            %dt= y
+            %dd
+              %a{href: "/#{y}/"} Site
+              %a{href: "/statdump_#{y}/"} Quals Stats
+      #legitbs-links
+        %h1 Legitimate Business Syndicate
+        %ul
+          %li
+            %a{href: 'https://blog.legitbs.net'} Blog
+          %li
+            %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
+          %li
+            %a{href: 'https://github.com/legitbs'} GitHub
+      #dcctf-links
+        %h1 DEF CON and CTF
+        %ul
+          %li
+            %a{href: 'https://defcon.org/'} DEF CON
+          %li
+            %a{href: 'https://www.defcon.org/html/links/dc-ctf.html'}
+              DEF CON CTF Archive
+          %li
+            %a{href: 'https://ctftime.org/'} CTFtime
+
+    %footer
+      %p
+        &copy; 2012-2017 Legitimate Business Syndicate
+    :javascript
+      !function(l,e,g,i,t,b,s){l.GoogleAnalyticsObject=g;l[g]||(l[g]=function(){
+      (l[g].q=l[g].q||[]).push(arguments)});l[g].l=+new Date;b=e.createElement(i);
+      s=e.getElementsByTagName(i)[0];b.src=t;s.parentNode.insertBefore(b,s)}
+      (window,document,'ga','script','//www.google-analytics.com/analytics.js');
+      ga('create', 'UA-38870141-1', 'legitbs.net');
+      ga('send', 'pageview');
