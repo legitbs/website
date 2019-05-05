@@ -1,7 +1,7 @@
 /* Overpass helper mixins */
 
 //-- This is a map of the current font weights, keyed on their file names
-$supported-weights: (
+$overpass-weights: (
     thin: 200,
     extralight: 300,
     light: 400,
@@ -13,7 +13,7 @@ $supported-weights: (
 );
 
 //-- This is a list of the currently supported font styles
-$supported-styles: (normal italic);
+$overpass-styles: (normal italic);
 
 //-- This simple mixin adds the overpass basic styles to a typography element
 @mixin _overpass-styles {
@@ -30,9 +30,9 @@ $supported-styles: (normal italic);
 //            that maps the key extrabold to the value bolder -> `extrabold: bolder`
 // * The path to dist represents the location of the overpass font files relative to your architecture
 @mixin print-overpass-font-face(
-    $weights: map-keys($supported-weights),
-    $styles: $supported-styles,
-    $weight-map: $supported-weights,
+    $weights: map-keys($overpass-weights),
+    $styles: $overpass-styles,
+    $weight-map: $overpass-weights,
     $path_to_dist: './'
 ) {
     @each $weight in $weights {
@@ -46,6 +46,6 @@ $supported-styles: (normal italic);
             font-weight: map-get($weight-map, $weight);
             font-style: $style;
           }
-      } 
+      }
     }
 }

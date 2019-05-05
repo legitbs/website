@@ -3,6 +3,10 @@
 @import "overpass-mono-webfont/_overpass-mono.scss"
 
 $grape: #490d4c
+$map_bg: #eee
+$map_inset_bg: #ddd
+
+$border_hr: 4px solid $grape
 
 body
   background-color: #ccc
@@ -16,10 +20,23 @@ body
     color: $grape
     display: grid
     padding: 0.5em
-    border-bottom: 4px solid $grape
+    border-bottom: $border_hr
     grid-template-columns: $logo-size 50ch auto
     grid-template-rows: 2em $logo-size/2 $logo-size/2 12em
     grid-template-areas: ". . ." "logo brand ." "logo slogan ." ". . ."
+    @media(max-width: 640px)
+      background: white
+      grid-template-columns: $logo-size auto
+      grid-template-rows: $logo-size/2 $logo-size/2
+      grid-template-areas: "logo brand" "logo slogan"
+    @media(max-width: 580px)
+      display: block
+      .logo
+        display: none
+      h1, h2
+        border: none
+    @media(min-width: 1020px)
+      grid-template-rows: 4em $logo-size/2 $logo-size/2 16em
     .logo, h1, h2
       border: 0 solid white
       box-sizing: border-box
@@ -31,12 +48,12 @@ body
       background-color: white
       border-width: $outborder
     h1, h2
-      font-size: 1.95em
+      font-size: ($logo-size / 3) - 0.05em
       font-weight: heavy
       background-color: white
       margin: 0
       vertical-align: middle
-      padding: 0.2em
+      padding: 0em
     h1
       grid-area: brand
       border-width: $outborder $outborder 0 0
@@ -44,34 +61,96 @@ body
       grid-area: slogan
       border-width: 0 $outborder $outborder 0
 
-  section#history
-    $content-width: 16em
-    .inset
-      background-color: white
-      width: $content-width
-      padding: 1em 1em 1em 2em
+  svg
+    width: 100vw
+    height: 100vw * (680/1280)
+    background-color: $map_bg
+    border-bottom: $border_hr
+    padding-top: 0
+    .cls-1
+      fill: #45a9ff
+
+    .cls-2, .cls-3, .cls-4, .cls-5
+      fill: none
+      stroke-width: 5px
+
+    .cls-2
+      stroke: #490d4c
+      stroke-miterlimit: 10
+
+    .cls-3, .cls-4, .cls-5, .cls-6
+      stroke-miterlimit: 10
+
+    .cls-3
+      stroke: #bd8619
+
+    .cls-4
+      stroke: #7b2c1d
+
+    .cls-5
+      stroke: #066509
+
+    .cls-6
+      fill: #fff
+      stroke: #000
+      stroke-width: 3px
+
+    .cls-7
+      fill: #a617a8
+
+    foreignObject section
+      background-color: $map_inset_bg
+      border-radius: 0.5em
+      padding: 0.5em
       h2
         margin: 0 0 0.25em 0
       table
-        width: $content-width
-        background-color: white
-        tr
-          border-left: 0.125em solid black
-          th
-            background-color: $grape
-            border-radius: 1em
-            color: white
-            padding: 0.25em 0.5em
-            column-width: 4ch
-            font-family: overpass-mono
-          td
-            a
-              &:link
-                display: inline-block
-                color: $grape
+        width: 100%
 
-ul
-  list-style-type: circle
+foreignObject, section
+  h2
+    color: $grape
+  table
+    tr
+      th
+        font-family: overpass-mono
+        text-align: left
+      td
+        a
+          &:link
+            display: inline-block
+            color: $grape
+  ul
+    list-style-type: none
+    padding-left: 0
+
+.no-svg
+  background-color: $map_bg
+  display: grid
+  grid-template-columns: auto auto
+  grid-template-rows: auto auto
+  border-bottom: $border_hr
+  section
+    padding: 1em
+    min-width: 30ch
+
+.no-svg
+  display: none
+
+footer
+  padding: 1em 2em
+
+@media(max-width: 1020px)
+  svg
+    display: none
+  .no-svg
+    display: grid
+
+@media(max-width: 760px)
+  .no-svg
+    grid-template-columns: auto
+    grid-template-rows: auto auto auto auto
+
 
 @include print-overpass-mono-font-face($path_to_dist: './overpass-mono-webfont/')
-@include print-overpass-font-face($path_to_dist: './overpass-webfont/', $weights: (light regular bold heavy))
+@include print-overpass-font-face($path_to_dist: './overpass-webfont/')

@@ -1,7 +1,7 @@
 /* Overpass Mono helper mixins */
 
 //-- This is a map of the current font weights, keyed on their file names
-$supported-weights: (
+$mono-weights: (
     light: 300,
     regular: 400,
     semibold: 500,
@@ -23,8 +23,8 @@ $supported-weights: (
 //            that maps the key bold to the value bolder -> `bold: bolder`
 // * The path to dist represents the location of the overpass font files relative to your architecture
 @mixin print-overpass-mono-font-face(
-    $weights: map-keys($supported-weights),
-    $weight-map: $supported-weights,
+    $weights: map-keys($mono-weights),
+    $weight-map: $mono-weights,
     $path_to_dist: './'
 ) {
     @each $weight in $weights {
