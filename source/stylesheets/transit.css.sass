@@ -1,0 +1,77 @@
+@import "_mixins.css.scss"
+@import "overpass-webfont/_overpass.scss"
+@import "overpass-mono-webfont/_overpass-mono.scss"
+
+$grape: #490d4c
+
+body
+  background-color: #ccc
+  margin: 0
+  @include _overpass-styles
+
+  header
+    @include background-2x("/images/train-to-rubix", $ext: "jpg", $size: cover, $pos: center right)
+    $logo-size: 6em
+    $outborder: 0.25em
+    color: $grape
+    display: grid
+    padding: 0.5em
+    border-bottom: 4px solid $grape
+    grid-template-columns: $logo-size 50ch auto
+    grid-template-rows: 2em $logo-size/2 $logo-size/2 12em
+    grid-template-areas: ". . ." "logo brand ." "logo slogan ." ". . ."
+    .logo, h1, h2
+      border: 0 solid white
+      box-sizing: border-box
+    .logo
+      @include background-2x("/images/negative-grape-square", $size: contain)
+      grid-area: logo
+      width: $logo-size
+      height: $logo-size
+      background-color: white
+      border-width: $outborder
+    h1, h2
+      font-size: 1.95em
+      font-weight: heavy
+      background-color: white
+      margin: 0
+      vertical-align: middle
+      padding: 0.2em
+    h1
+      grid-area: brand
+      border-width: $outborder $outborder 0 0
+    h2
+      grid-area: slogan
+      border-width: 0 $outborder $outborder 0
+
+  section#history
+    $content-width: 16em
+    .inset
+      background-color: white
+      width: $content-width
+      padding: 1em 1em 1em 2em
+      h2
+        margin: 0 0 0.25em 0
+      table
+        width: $content-width
+        background-color: white
+        tr
+          border-left: 0.125em solid black
+          th
+            background-color: $grape
+            border-radius: 1em
+            color: white
+            padding: 0.25em 0.5em
+            column-width: 4ch
+            font-family: overpass-mono
+          td
+            a
+              &:link
+                display: inline-block
+                color: $grape
+
+ul
+  list-style-type: circle
+
+@include print-overpass-mono-font-face($path_to_dist: './overpass-mono-webfont/')
+@include print-overpass-font-face($path_to_dist: './overpass-webfont/', $weights: (light regular bold heavy))

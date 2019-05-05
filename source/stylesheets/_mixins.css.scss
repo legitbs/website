@@ -1,10 +1,10 @@
-@mixin background-2x($path, $ext: "png", $w: auto, $h: auto, $pos: left top, $repeat: no-repeat) {
+@mixin background-2x($path, $ext: "png", $size: auto, $pos: left top, $repeat: no-repeat) {
 
   $at1x_path: "#{$path}.#{$ext}";
   $at2x_path: "#{$path}@2x.#{$ext}";
 
   background-image: url("#{$at1x_path}");
-  background-size: $w $h;
+  background-size: $size;
   background-position: $pos;
   background-repeat: $repeat;
 

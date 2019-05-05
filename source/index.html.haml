@@ -2,48 +2,45 @@
 %html
   %head
     %title Legitimate Business Syndicate
-    = stylesheet_link_tag 'about_nothing'
+    = stylesheet_link_tag 'transit'
     %meta{name: 'viewport', content: 'width=device-width'}
   %body
-    %h1 Legitimate Business Syndicate
+    %header
+      .logo
+      %h1 Legitimate Business Syndicate
+      %h2 Regional Pwnage Authority
 
-    .zones
-      %section#def-con-ctf-links
+    %section#history
+      .inset
         %h2 DEF CON CTF History
-        %dl.inline
+        %table
           - %w{2013 2014 2015 2016 2017}.each do |y|
-            %dt= y
-            %dd
-              %a{href: "/#{y}/"} Site
-              %a{href: "/statdump_#{y}/"} Quals Stats
+            %tr
+              %th= y
+              %td
+                %a{href: "/#{y}/"} Site
+                %a{href: "/statdump_#{y}/"} Quals Stats
 
-      %section#legitbs-links
-        %h2 Legit Links
-        %ul
-          %li
-            %a{href: 'https://blog.legitbs.net'} Blog
-          %li
-            %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
-          %li
-            %a{href: 'https://github.com/legitbs'} GitHub
-      %section#def-con-links
-        %h2 DEF CON and CTF
-        %ul
-          %li
-            %a{href: 'https://defcon.org/'} DEF CON
-          %li
-            %a{href: 'https://www.defcon.org/html/links/dc-ctf.html'}
-              DEF CON CTF Archive
-          %li
-            %a{href: 'https://ctftime.org/'} CTFtime
+    %section#legitbs-links
+      %h2 Legit Links
+      %ul
+        %li
+          %a{href: 'https://blog.legitbs.net'} Blog
+        %li
+          %a{href: 'https://twitter.com/legitbs_ctf'} Twitter
+        %li
+          %a{href: 'https://github.com/legitbs'} GitHub
+    %section#def-con-links
+      %h2 DEF CON and CTF
+      %ul
+        %li
+          %a{href: 'https://defcon.org/'} DEF CON
+        %li
+          %a{href: 'https://www.defcon.org/html/links/dc-ctf.html'}
+            DEF CON CTF Archive
+        %li
+          %a{href: 'https://ctftime.org/'} CTFtime
 
     %footer
       %p
-        &copy; 2012-2018 Legitimate Business Syndicate
-    :javascript
-      !function(l,e,g,i,t,b,s){l.GoogleAnalyticsObject=g;l[g]||(l[g]=function(){
-      (l[g].q=l[g].q||[]).push(arguments)});l[g].l=+new Date;b=e.createElement(i);
-      s=e.getElementsByTagName(i)[0];b.src=t;s.parentNode.insertBefore(b,s)}
-      (window,document,'ga','script','//www.google-analytics.com/analytics.js');
-      ga('create', 'UA-38870141-1', 'legitbs.net');
-      ga('send', 'pageview');
+        &copy; 2012-2019 Legitimate Business Syndicate
