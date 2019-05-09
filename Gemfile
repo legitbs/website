@@ -18,6 +18,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'bitters'
-gem 'neat'
+gem 'neat', '~> 1.8'
 gem 'sassc'
 gem 'bourbon'
