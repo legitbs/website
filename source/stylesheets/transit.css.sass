@@ -15,14 +15,14 @@ body
 
   header
     @include background-2x("/images/train-to-rubix", $ext: "jpg", $size: cover, $pos: center right)
-    $logo-size: 6em
+    $logo-size: 12vw
     $outborder: 0.25em
     color: $grape
     display: grid
     padding: 0.5em
     border-bottom: $border_hr
-    grid-template-columns: $logo-size 50ch auto
-    grid-template-rows: 2em $logo-size/2 $logo-size/2 12em
+    grid-template-columns: $logo-size 55vw auto
+    grid-template-rows: 2em $logo-size/2 $logo-size/2 40vw
     grid-template-areas: ". . ." "logo brand ." "logo slogan ." ". . ."
     @media(max-width: 640px)
       background: white
@@ -36,7 +36,7 @@ body
       h1, h2
         border: none
     @media(min-width: 1020px)
-      grid-template-rows: 4em $logo-size/2 $logo-size/2 16em
+      grid-template-rows: 4em $logo-size/2 $logo-size/2 30vw
     .logo, h1, h2
       border: 0 solid white
       box-sizing: border-box
@@ -48,7 +48,7 @@ body
       background-color: white
       border-width: $outborder
     h1, h2
-      font-size: ($logo-size / 3) - 0.05em
+      font-size: ($logo-size / 3) - .50vw
       font-weight: heavy
       background-color: white
       margin: 0
